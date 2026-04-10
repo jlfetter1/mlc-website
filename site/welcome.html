@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Language Center — Precision Communication for the Global Elite</title>
+    <meta name="description" content="We engineer cultural fluency for high-stakes business environments. Enterprise solutions and executive language mastery.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://modernlanguagecenter.com/wp-content/uploads/2021/01/cropped-favicon-LC-32x32.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <section class="welcome">
+        <img src="https://modernlanguagecenter.com/wp-content/themes/modern-language-center/assets/img/logo-mlc-black.png"
+             alt="Modern Language Center" class="welcome-logo">
+
+        <div class="welcome-lang">
+            <a href="#" class="active">EN</a> / <a href="#">ES</a>
+        </div>
+
+        <a href="index.html" class="welcome-half" id="welcomeCompanies">
+            <div class="welcome-half-bg" style="background-image:url('assets/hero-companies.jpg'); background-color: var(--bg-tertiary);"></div>
+            <div class="welcome-content">
+                <span class="eyebrow">For Companies</span>
+                <h2>Enterprise Language<br>Solutions</h2>
+                <p>Precision communication for high-stakes<br>business environments</p>
+            </div>
+        </a>
+
+        <div class="welcome-divider"></div>
+
+        <a href="individuals.html" class="welcome-half" id="welcomeIndividuals">
+            <div class="welcome-half-bg" style="background-image:url('assets/hero-individuals.jpg'); background-color: var(--bg-tertiary);"></div>
+            <div class="welcome-content">
+                <span class="eyebrow">For Individuals</span>
+                <h2>Executive Language<br>Mastery</h2>
+                <p>Personal programs for ambitious<br>professionals who refuse to plateau</p>
+            </div>
+        </a>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) return;
+
+      // Stagger entrance
+      const contents = document.querySelectorAll('.welcome-content');
+      contents.forEach((el, i) => {
+        gsap.fromTo(el,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8, delay: 0.3 + (i * 0.15), ease: 'power3.out' }
+        );
+      });
+
+      gsap.fromTo('.welcome-logo',
+        { opacity: 0, y: -10 },
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.1, ease: 'power3.out' }
+      );
+    });
+    </script>
+
+</body>
+</html>

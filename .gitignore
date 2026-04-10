@@ -1,0 +1,14 @@
+node_modules/
+MLC_SOLUTIONS_SECTION_SPEC.md
+*.psd
+*.ai
+.DS_Store
+Thumbs.db
+/*.png
+site/assets/*.json
+site/assets/extract-image.js
+site/assets/hero-boardroom.png
+site/assets/hero-executive.png
+site/assets/1834304c-*.png
+site/assets/hf_*.mp4
+site/assets/hero-video-old.mp4
