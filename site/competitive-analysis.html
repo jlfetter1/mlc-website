@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Analysis — Modern Language Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ink: #0a0a0a;
+            --paper: #f6f4f0;
+            --accent: #c45d3e;
+            --accent-light: #e8a48e;
+            --muted: #8a8580;
+            --divider: #d6d2cc;
+            --card: #fffefa;
+            --shadow: rgba(10, 10, 10, 0.06);
+            --green: #2a7d4f;
+            --red: #b03a3a;
+            --blue: #2d6da3;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Cover / Hero */
+        header {
+            padding: 6rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, var(--accent));
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            padding: 0.4rem 1.2rem;
+            border: 1px solid var(--accent-light);
+            border-radius: 100px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.3s;
+        }
+
+        h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.5s;
+        }
+
+        h1 em { color: var(--accent); font-style: italic; }
+
+        .meta {
+            font-size: 0.85rem;
+            color: var(--muted);
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.7s;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: var(--accent);
+            margin: 3rem auto;
+            opacity: 0;
+            animation: scaleIn 0.6s ease forwards 0.9s;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-number {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            line-height: 1;
+            opacity: 0.3;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover { box-shadow: 0 12px 40px var(--shadow); }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+            border-radius: 4px 0 0 4px;
+        }
+
+        .card h3 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p, .card li {
+            font-size: 0.9rem;
+            color: #3a3835;
+            line-height: 1.7;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 0;
+        }
+
+        .card li {
+            padding: 0.25rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-light);
+        }
+
+        /* Score badge */
+        .score-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+            margin-left: 0.75rem;
+        }
+
+        .score-high { background: #e8f5e9; color: var(--green); }
+        .score-mid { background: #fff8e1; color: #b8860b; }
+        .score-low { background: #fce4ec; color: var(--red); }
+
+        /* Color swatches */
+        .swatch-row {
+            display: flex;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+            flex-wrap: wrap;
+        }
+
+        .swatch {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        .swatch-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--divider);
+            flex-shrink: 0;
+        }
+
+        /* Comparison table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--divider);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+            background: var(--card);
+        }
+
+        th {
+            background: var(--paper);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.7rem;
+            color: var(--muted);
+            padding: 0.85rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--divider);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--divider);
+            color: #3a3835;
+            vertical-align: top;
+        }
+
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+
+        .highlight-row td {
+            background: rgba(196, 93, 62, 0.06) !important;
+            font-weight: 500;
+        }
+
+        /* Tags */
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+            background: var(--paper);
+            border: 1px solid var(--divider);
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        /* Executive summary */
+        .summary-box {
+            background: linear-gradient(135deg, #fdf6f3, #fef9f6);
+            border: 1px dashed var(--accent-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .summary-box h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .summary-box p {
+            font-size: 0.92rem;
+            color: #3a3835;
+            line-height: 1.75;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pattern cards */
+        .pattern-card {
+            background: var(--card);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .pattern-card:hover { box-shadow: 0 8px 30px var(--shadow); }
+
+        .pattern-num {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2rem;
+            color: var(--accent);
+            opacity: 0.4;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .pattern-content h4 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 0.4rem;
+        }
+
+        .pattern-content p {
+            font-size: 0.85rem;
+            color: #3a3835;
+            line-height: 1.65;
+        }
+
+        /* Recommendation box */
+        .rec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .rec-item {
+            background: var(--card);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .rec-item h4 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .rec-item p {
+            font-size: 0.82rem;
+            color: #3a3835;
+            line-height: 1.6;
+        }
+
+        /* Flow connector */
+        .flow-connector {
+            display: flex;
+            justify-content: center;
+            padding: 0.25rem 0;
+        }
+
+        .flow-connector svg { color: var(--divider); }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0 4rem;
+            border-top: 1px solid var(--divider);
+        }
+
+        footer p {
+            font-size: 0.75rem;
+            color: var(--muted);
+            letter-spacing: 0.05em;
+        }
+
+        /* Strengths / Weaknesses */
+        .sw-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .strength, .weakness {
+            font-size: 0.82rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+
+        .strength { background: #f0f7f2; color: var(--green); }
+        .weakness { background: #fdf2f2; color: var(--red); }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scaleX(0); }
+            to { opacity: 1; transform: scaleX(1); }
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            header { padding: 4rem 0 2rem; }
+            .card { padding: 1.5rem; }
+            .section-number { font-size: 2rem; }
+            .section-title { font-size: 1.2rem; }
+            .rec-grid { grid-template-columns: 1fr; }
+            .sw-grid { grid-template-columns: 1fr; }
+            table { font-size: 0.72rem; }
+            th, td { padding: 0.6rem 0.5rem; }
+        }
+
+        /* Print */
+        @media print {
+            body::after { display: none; }
+            body { background: white; }
+            .card, .pattern-card, .rec-item { break-inside: avoid; box-shadow: none; }
+            header::before { display: none; }
+            .card, .badge, .meta, h1, .divider, .summary-box {
+                opacity: 1 !important;
+                transform: none !important;
+                animation: none !important;
+            }
+            @page { size: A4; margin: 1.5cm; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- COVER -->
+    <header>
+        <span class="badge">Competitive Analysis</span>
+        <h1>Modern Language Center<br><em>Market Intelligence</em></h1>
+        <p class="meta">Prepared March 29, 2026 &mdash; B2B Corporate Language Training &mdash; Mexico</p>
+    </header>
+
+    <div class="divider"></div>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="summary-box">
+        <h2>Executive Summary</h2>
+        <p>Modern Language Center operates in a competitive B2B corporate language training market in Mexico, with 20+ years of experience and a strong service portfolio. However, the current website significantly underperforms against top competitors in visual design, social proof, and SEO — the three factors most critical to winning B2B vendor evaluations.</p>
+        <p>The top competitor, <strong>be School</strong>, sets the standard with a modern Tailwind-built site, tier-1 client logos (Danone, KPMG, World Bank), and testimonials with company attribution. <strong>International House Mexico</strong> leads in process clarity and HR-focused messaging.</p>
+        <p>MLC's biggest opportunities: add visible social proof, modernize the design language, and build HR-focused messaging around reporting and ROI — the decision-making factors that B2B buyers care about most.</p>
+    </div>
+
+    <!-- SECTION 1: COMPETITOR PROFILES -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Competitor Profiles</h2>
+        </div>
+
+        <!-- be School -->
+        <div class="card">
+            <h3>be School <span class="score-badge score-high">64/80</span></h3>
+            <p style="font-size:0.8rem; color:var(--muted); margin-bottom:0.75rem;">beschool.com.mx &mdash; Mexico City &mdash; Tailwind CSS</p>
+            <div class="swatch-row">
+                <div class="swatch"><div class="swatch-dot" style="background:#FACC15"></div>#FACC15</div>
+                <div class="swatch"><div class="swatch-dot" style="background:#E2007A"></div>#E2007A</div>
+                <div class="swatch"><div class="swatch-dot" style="background:#FFFFFF; border-color:#ccc"></div>#FFFFFF</div>
+            </div>
+            <p style="font-size:0.82rem; margin:0.5rem 0;"><strong>Font:</strong> Figtree &mdash; <strong>Tone:</strong> Modern, high-energy, fun-professional</p>
+            <div class="sw-grid">
+                <div class="strength">+ Best design in niche, tier-1 client logos (Danone, KPMG, World Bank, Mercedes), testimonials with attribution</div>
+                <div class="weakness">- Small scale, Mexico City only, no clear pricing</div>
+            </div>
+            <div class="tag-row">
+                <span class="tag">Design Leader</span>
+                <span class="tag">Social Proof</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">50+ Teachers</span>
+            </div>
+        </div>
+
+        <!-- IH Mexico -->
+        <div class="card">
+            <h3>International House Mexico <span class="score-badge score-high">58/80</span></h3>
+            <p style="font-size:0.8rem; color:var(--muted); margin-bottom:0.75rem;">ihmexico.mx &mdash; National (CDMX HQ) &mdash; WordPress + Elementor</p>
+            <div class="swatch-row">
+                <div class="swatch"><div class="swatch-dot" style="background:#3B44B5"></div>#3B44B5</div>
+                <div class="swatch"><div class="swatch-dot" style="background:#FFFFFF; border-color:#ccc"></div>#FFFFFF</div>
+            </div>
+            <p style="font-size:0.82rem; margin:0.5rem 0;"><strong>Font:</strong> Poppins &mdash; <strong>Tone:</strong> Professional, process-oriented</p>
+            <div class="sw-grid">
+                <div class="strength">+ Cambridge certified, clear 4-step process, HR metrics focus, client logos (Abbott, Siemens, Avianca), strong SEO</div>
+                <div class="weakness">- Slightly cluttered layout, content duplication, heavy build</div>
+            </div>
+            <div class="tag-row">
+                <span class="tag">Cambridge</span>
+                <span class="tag">HR Focus</span>
+                <span class="tag">National</span>
+                <span class="tag">Strong SEO</span>
+            </div>
+        </div>
+
+        <!-- British Council -->
+        <div class="card">
+            <h3>British Council Mexico <span class="score-badge score-mid">53/80</span></h3>
+            <p style="font-size:0.8rem; color:var(--muted); margin-bottom:0.75rem;">britishcouncil.org.mx &mdash; Polanco, CDMX &mdash; Drupal</p>
+            <div class="swatch-row">
+                <div class="swatch"><div class="swatch-dot" style="background:#23085A"></div>#23085A</div>
+                <div class="swatch"><div class="swatch-dot" style="background:#EBEFF0"></div>#EBEFF0</div>
+            </div>
+            <p style="font-size:0.82rem; margin:0.5rem 0;"><strong>Font:</strong> BCSans / Arial &mdash; <strong>Tone:</strong> Institutional, understated</p>
+            <div class="sw-grid">
+                <div class="strength">+ Global brand trust, transparent pricing ($10,874 MXN/10wk), clear schedule</div>
+                <div class="weakness">- Minimal B2B customization, very limited content, English only</div>
+            </div>
+            <div class="tag-row">
+                <span class="tag">Global Brand</span>
+                <span class="tag">Transparent Pricing</span>
+                <span class="tag">English Only</span>
+            </div>
+        </div>
+
+        <!-- BBE Languages -->
+        <div class="card">
+            <h3>BBE Languages <span class="score-badge score-mid">48/80</span></h3>
+            <p style="font-size:0.8rem; color:var(--muted); margin-bottom:0.75rem;">bbelanguages.com &mdash; Colombia/LATAM &mdash; WordPress + Elementor</p>
+            <div class="swatch-row">
+                <div class="swatch"><div class="swatch-dot" style="background:#A5ED0A"></div>#A5ED0A</div>
+                <div class="swatch"><div class="swatch-dot" style="background:#04317A"></div>#04317A</div>
+                <div class="swatch"><div class="swatch-dot" style="background:#FFFFFF; border-color:#ccc"></div>#FFFFFF</div>
+            </div>
+            <p style="font-size:0.82rem; margin:0.5rem 0;"><strong>Font:</strong> Montserrat / Roboto &mdash; <strong>Tone:</strong> Professional, text-heavy</p>
+            <div class="sw-grid">
+                <div class="strength">+ Clear tiered programs (Empower/Live/Access), installment payments, multi-language</div>
+                <div class="weakness">- Very text-heavy, repetitive, no client logos or testimonials</div>
+            </div>
+            <div class="tag-row">
+                <span class="tag">Tiered Programs</span>
+                <span class="tag">Multi-Language</span>
+                <span class="tag">Payment Plans</span>
+            </div>
+        </div>
+
+        <!-- Fluency Corp -->
+        <div class="card">
+            <h3>Fluency Corp <span class="score-badge score-mid">47/80</span></h3>
+            <p style="font-size:0.8rem; color:var(--muted); margin-bottom:0.75rem;">fluencycorp.com &mdash; US-based (serves Mexico) &mdash; WordPress</p>
+            <div class="swatch-row">
+                <div class="swatch"><div class="swatch-dot" style="background:#F49333"></div>#F49333</div>
+                <div class="swatch"><div class="swatch-dot" style="background:#32ACE2"></div>#32ACE2</div>
+                <div class="swatch"><div class="swatch-dot" style="background:#FFFFFF; border-color:#ccc"></div>#FFFFFF</div>
+            </div>
+            <p style="font-size:0.82rem; margin:0.5rem 0;"><strong>Font:</strong> Adamina / Open Sans &mdash; <strong>Tone:</strong> Warm, blog-like</p>
+            <div class="sw-grid">
+                <div class="strength">+ Proprietary Bellieu Method, strong SEO content, relocation support</div>
+                <div class="weakness">- Blog-format landing page, no social proof, no client logos</div>
+            </div>
+            <div class="tag-row">
+                <span class="tag">SEO Content</span>
+                <span class="tag">Bellieu Method</span>
+                <span class="tag">Relocation</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flow-connector">
+        <svg width="2" height="24" viewBox="0 0 2 24" fill="none"><line x1="1" y1="0" x2="1" y2="24" stroke="currentColor" stroke-dasharray="3 3"/></svg>
+    </div>
+
+    <!-- SECTION 2: COMPARISON TABLE -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Side-by-Side Comparison</h2>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criterion</th>
+                        <th>be School</th>
+                        <th>IH Mexico</th>
+                        <th>British Council</th>
+                        <th>BBE</th>
+                        <th>Fluency Corp</th>
+                        <th>MLC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Search Visibility</td>
+                        <td>5</td>
+                        <td>7</td>
+                        <td><strong>8</strong></td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Review Quality</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td><strong>8</strong></td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Visual Design</td>
+                        <td><strong>9</strong></td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Responsive</td>
+                        <td><strong>9</strong></td>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Content Depth</td>
+                        <td>8</td>
+                        <td><strong>9</strong></td>
+                        <td>4</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Social Proof</td>
+                        <td><strong>9</strong></td>
+                        <td>8</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>CTA Strategy</td>
+                        <td>8</td>
+                        <td><strong>8</strong></td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Page Speed</td>
+                        <td><strong>8</strong></td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>64</strong></td>
+                        <td><strong>58</strong></td>
+                        <td><strong>53</strong></td>
+                        <td><strong>48</strong></td>
+                        <td><strong>47</strong></td>
+                        <td><strong>40</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="flow-connector">
+        <svg width="2" height="24" viewBox="0 0 2 24" fill="none"><line x1="1" y1="0" x2="1" y2="24" stroke="currentColor" stroke-dasharray="3 3"/></svg>
+    </div>
+
+    <!-- SECTION 3: SEO LANDSCAPE -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">SEO Landscape</h2>
+        </div>
+
+        <div class="card">
+            <h3>Keyword Opportunities</h3>
+            <div class="table-wrapper" style="margin-top:1rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword (ES)</th>
+                            <th>Intent</th>
+                            <th>Top Ranker</th>
+                            <th>MLC Opportunity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cursos de ingles para empresas</td>
+                            <td>Commercial</td>
+                            <td>IH Mexico</td>
+                            <td>High &mdash; no dedicated landing page</td>
+                        </tr>
+                        <tr>
+                            <td>capacitacion en ingles corporativo</td>
+                            <td>Commercial</td>
+                            <td>BBE Languages</td>
+                            <td>High &mdash; MLC has the service, no page</td>
+                        </tr>
+                        <tr>
+                            <td>ingles de negocios Mexico</td>
+                            <td>Commercial</td>
+                            <td>IH Mexico</td>
+                            <td>High &mdash; core offering</td>
+                        </tr>
+                        <tr>
+                            <td>corporate language training Mexico City</td>
+                            <td>Commercial</td>
+                            <td>Fluency Corp</td>
+                            <td>Medium &mdash; English version needed</td>
+                        </tr>
+                        <tr>
+                            <td>clases de ingles para ejecutivos</td>
+                            <td>Commercial</td>
+                            <td>British Council</td>
+                            <td>High &mdash; Premium program alignment</td>
+                        </tr>
+                        <tr>
+                            <td>examen de nivel de ingles gratis</td>
+                            <td>Lead gen</td>
+                            <td>Various</td>
+                            <td>Medium &mdash; MLC has page, needs SEO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>SEO Gaps & Recommendations</h3>
+            <ul>
+                <li><strong>Missing blog/content hub:</strong> IH Mexico and Fluency Corp rank well because they publish content. MLC has no blog.</li>
+                <li><strong>Weak meta titles:</strong> MLC's homepage title is a long description, not a keyword-targeted title.</li>
+                <li><strong>No schema markup:</strong> Missing EducationalOrganization and Course schema that competitors use.</li>
+                <li><strong>Bilingual SEO conflict:</strong> Spanish and English pages compete without proper hreflang tags.</li>
+                <li><strong>No FAQ content:</strong> IH Mexico's 12+ FAQs generate long-tail traffic. MLC has none.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="flow-connector">
+        <svg width="2" height="24" viewBox="0 0 2 24" fill="none"><line x1="1" y1="0" x2="1" y2="24" stroke="currentColor" stroke-dasharray="3 3"/></svg>
+    </div>
+
+    <!-- SECTION 4: PATTERNS -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">Patterns of the Top 10%</h2>
+        </div>
+
+        <div class="pattern-card">
+            <span class="pattern-num">1</span>
+            <div class="pattern-content">
+                <h4>Social Proof Is Non-Negotiable</h4>
+                <p>Every top-performing site displays client logos prominently above the fold. be School leads with Danone, KPMG, World Bank, Mercedes-Benz. IH Mexico shows Abbott, Siemens Energy, Avianca. <strong>MLC has zero visible client logos or testimonials</strong> &mdash; the single biggest gap to close.</p>
+            </div>
+        </div>
+
+        <div class="pattern-card">
+            <span class="pattern-num">2</span>
+            <div class="pattern-content">
+                <h4>Modern Design = Modern Company</h4>
+                <p>be School's Tailwind build with Figtree font and bold yellow/pink palette signals innovation. The weakest competitors (Corporate English) look dated. Design quality is a proxy for service quality when HR teams are comparing vendors in browser tabs.</p>
+            </div>
+        </div>
+
+        <div class="pattern-card">
+            <span class="pattern-num">3</span>
+            <div class="pattern-content">
+                <h4>Clear Process Visualization</h4>
+                <p>IH Mexico's 4-step process and BBE's tiered programs give prospects a clear mental model. When a buyer sees numbered steps with outcomes, they see professionalism and can envision the engagement before it starts.</p>
+            </div>
+        </div>
+
+        <div class="pattern-card">
+            <span class="pattern-num">4</span>
+            <div class="pattern-content">
+                <h4>Free Entry Point Lowers the Barrier</h4>
+                <p>Every top site offers a zero-risk first step: free diagnostic, free level test, free consultation. MLC's "Cotizar ya!" pushes toward a quote &mdash; it should lead with a free, no-commitment action instead.</p>
+            </div>
+        </div>
+
+        <div class="pattern-card">
+            <span class="pattern-num">5</span>
+            <div class="pattern-content">
+                <h4>HR-Focused Messaging Wins B2B</h4>
+                <p>IH Mexico dedicates an entire section to HR metrics: reporting, KPIs, and ROI measurement. B2B buyers are HR and L&D teams who must justify spend. MLC needs to speak directly to this decision-maker with data and accountability language.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flow-connector">
+        <svg width="2" height="24" viewBox="0 0 2 24" fill="none"><line x1="1" y1="0" x2="1" y2="24" stroke="currentColor" stroke-dasharray="3 3"/></svg>
+    </div>
+
+    <!-- SECTION 5: DESIGN DIRECTION -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">Recommended Design Direction</h2>
+        </div>
+
+        <div class="rec-grid">
+            <div class="rec-item">
+                <h4>Color Palette</h4>
+                <p>Keep MLC's brand blue #008AFE as primary. Refine with a deeper navy #1a2744 for text and headers, warm the background to #f8f9fb, and add a gold accent #B08C5A for premium CTAs &mdash; already present in the current site's secondary button.</p>
+                <div class="swatch-row" style="margin-top:0.75rem;">
+                    <div class="swatch"><div class="swatch-dot" style="background:#008AFE"></div>Primary</div>
+                    <div class="swatch"><div class="swatch-dot" style="background:#1a2744"></div>Text</div>
+                    <div class="swatch"><div class="swatch-dot" style="background:#B08C5A"></div>Premium</div>
+                    <div class="swatch"><div class="swatch-dot" style="background:#f8f9fb"></div>BG</div>
+                </div>
+            </div>
+            <div class="rec-item">
+                <h4>Typography</h4>
+                <p>Replace MarselisPro with a modern pairing: <strong>Instrument Serif</strong> for editorial headlines (signals sophistication) + <strong>DM Sans</strong> for body copy (clean, highly legible). Both are free Google Fonts with excellent language support.</p>
+            </div>
+            <div class="rec-item">
+                <h4>Layout & Structure</h4>
+                <p>Move from Elementor page-builder layout to a streamlined, component-driven design. Large hero with motion, trust bar of client logos, clear section rhythm with dark/light alternation. Process steps visualized, not buried in paragraphs.</p>
+            </div>
+            <div class="rec-item">
+                <h4>Animation & Motion</h4>
+                <p>GSAP + ScrollTrigger for scroll-driven section reveals, parallax depth on hero, and micro-interactions on buttons and cards. A 3D scroll-stop hero asset will immediately differentiate MLC from every competitor &mdash; none of them use motion design.</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:1.5rem;">
+            <h3>What Every Competitor Gets Wrong</h3>
+            <ul>
+                <li><strong>No animation or motion design:</strong> Zero competitors use scroll-triggered animation. This is MLC's opportunity to instantly look world-class.</li>
+                <li><strong>Template-heavy builds:</strong> Most use WordPress + Elementor. A custom HTML/GSAP build will load 3-5x faster and feel premium.</li>
+                <li><strong>Weak differentiation:</strong> Everyone says "personalized" and "experienced." None tell a compelling brand story with visual conviction.</li>
+                <li><strong>No video:</strong> Zero competitors use video content on their landing pages. A scroll-driven 3D asset would be a category-defining differentiator.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>MODERN LANGUAGE CENTER &mdash; COMPETITIVE ANALYSIS &mdash; MARCH 2026</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
