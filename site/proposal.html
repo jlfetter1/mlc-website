@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLC — Delivery Summary</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --bg: #0A0A0F;
+    --bg-2: #111118;
+    --surface: #1E1E2A;
+    --gold: #C5A46C;
+    --gold-dim: rgba(197,164,108,0.15);
+    --gold-border: rgba(197,164,108,0.25);
+    --text: #E8E8ED;
+    --text-muted: #9999A8;
+    --text-dim: #666680;
+    --border: rgba(255,255,255,0.06);
+    --radius: 12px;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --container: 800px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 60px 24px 40px;
+  }
+
+  /* Cover */
+  .cover {
+    text-align: center;
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 60px;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: 100px;
+    padding: 6px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .cover h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .cover h1 span { color: var(--gold); }
+
+  .cover p {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto 32px;
+  }
+
+  .cover-meta {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .cover-meta strong { color: var(--text-muted); }
+
+  /* Sections */
+  .section { margin-bottom: 56px; }
+
+  .section + .section { padding-top: 56px; border-top: 1px solid var(--border); }
+
+  .section-num {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 28px 0 10px;
+  }
+
+  p { color: var(--text-muted); font-size: 15px; margin-bottom: 14px; }
+  p strong { color: var(--text); font-weight: 500; }
+
+  /* Cards */
+  .cards {
+    display: grid;
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .cards-2 { grid-template-columns: 1fr 1fr; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    transition: border-color 200ms ease-out;
+  }
+
+  .card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+
+  .card p { font-size: 13.5px; margin: 0; line-height: 1.6; }
+
+  .card-accent-gold { border-left: 3px solid var(--gold); }
+  .card-accent-blue { border-left: 3px solid var(--blue, #60A5FA); }
+
+  /* Tables */
+  .table-wrap {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 20px 0;
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+
+  th {
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  td strong { color: var(--text); font-weight: 500; }
+
+  .price { color: var(--gold); font-weight: 600; white-space: nowrap; text-align: right; }
+
+  /* Total row */
+  .row-total td {
+    border-top: 2px solid var(--gold-border);
+    padding-top: 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  /* Milestone cards */
+  .milestones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .milestone {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    text-align: center;
+  }
+
+  .milestone-num {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+  }
+
+  .milestone-amount {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .milestone-due {
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+
+  /* Callout */
+  .callout {
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+
+  .callout p { color: var(--text); margin: 0; font-size: 14px; }
+  .callout strong { color: var(--gold); }
+
+  /* List */
+  ul { padding-left: 20px; margin: 10px 0 16px; }
+  li { color: var(--text-muted); font-size: 14px; margin-bottom: 6px; line-height: 1.6; }
+  li strong { color: var(--text); }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 0 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    .cards-2 { grid-template-columns: 1fr; }
+    .milestones { grid-template-columns: 1fr; }
+    .cover-meta { flex-direction: column; gap: 8px; }
+    .page { padding: 32px 16px 24px; }
+  }
+
+  @media print {
+    body { background: #fff; color: #111; }
+    .card, .callout, .milestone { border: 1px solid #ddd; }
+    .cover { padding: 40px 0 30px; }
+    .price, .milestone-amount { color: #8B7340; }
+    td strong, p strong { color: #111; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-badge">Delivery Summary</div>
+  <h1>Modern Language <span>Center</span></h1>
+  <p>Everything you're getting: a premium marketing website and a complete school management platform.</p>
+  <div class="cover-meta">
+    <span><strong>Date:</strong> April 15, 2026</span>
+    <span><strong>Version:</strong> 1.0</span>
+  </div>
+</div>
+
+<!-- 1. WHAT YOU'RE GETTING -->
+<div class="section">
+  <div class="section-num">01</div>
+  <h2>What you're getting</h2>
+  <p>Two systems that work together. The <strong>website</strong> attracts and impresses your corporate clients. The <strong>platform</strong> manages every aspect of running the school once they sign up.</p>
+
+  <div class="cards cards-2">
+    <div class="card card-accent-gold">
+      <h4>MLC Website</h4>
+      <p>A premium marketing site that positions MLC as the top-tier choice for executive language training. Animated, bilingual (English/Spanish), and designed to impress C-suite decision-makers. Live on the web, updates automatically when you push changes.</p>
+    </div>
+    <div class="card card-accent-blue">
+      <h4>MLC Platform</h4>
+      <p>A complete school management system with separate dashboards for your admin team, teachers, and corporate clients. Handles student enrollment, class scheduling, attendance (including automatic tracking through Zoom), grading, reporting, and AI-powered assistance.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 2. THE WEBSITE -->
+<div class="section">
+  <div class="section-num">02</div>
+  <h2>The Website</h2>
+  <p>A high-end B2B site that competes visually with companies like Stripe and Apple. It shows your 8 service lines, client logos (BMW, PepsiCo, TV Azteca, Grupo Salinas), testimonials, and a clear path to get in touch.</p>
+
+  <ul>
+    <li><strong>Animated &amp; interactive</strong> &mdash; smooth scroll effects, glowing backgrounds, and subtle motion that makes the site feel alive without being distracting</li>
+    <li><strong>Fully bilingual</strong> &mdash; every word on the site works in English and Spanish, toggled with one click</li>
+    <li><strong>Mobile-ready</strong> &mdash; looks great on phones, tablets, and desktops</li>
+    <li><strong>Fast</strong> &mdash; no heavy frameworks, loads instantly</li>
+    <li><strong>Auto-deploys</strong> &mdash; changes go live within minutes of being approved</li>
+  </ul>
+</div>
+
+<!-- 3. THE PLATFORM -->
+<div class="section">
+  <div class="section-num">03</div>
+  <h2>The Platform</h2>
+  <p>Three separate dashboards, each designed for the person using it:</p>
+
+  <h3>Admin Dashboard</h3>
+  <p>Your operations team sees everything: a calendar of all classes, student enrollment pipeline, teacher management, company accounts, and system-wide analytics. Includes an AI chat assistant that can answer questions about your data instantly ("How many students does BMW have?" or "Which groups have low attendance?").</p>
+
+  <h3>Teacher Dashboard</h3>
+  <p>Teachers see today's classes, click to join Zoom, mark attendance after each session, and enter grades at the end of each period. They also set their weekly availability so admin knows who's free when.</p>
+
+  <h3>Client Dashboard</h3>
+  <p>Corporate HR contacts see their employees' progress &mdash; attendance rates, grades, and teacher feedback &mdash; and can download branded PDF reports for internal stakeholders.</p>
+
+  <div class="callout">
+    <p><strong>Zoom integration:</strong> When teachers start a Zoom class, the system automatically tracks which students joined, how long they stayed, and marks attendance accordingly. No more manual timesheets.</p>
+  </div>
+</div>
+
+<!-- 4. WHAT'S INCLUDED -->
+<div class="section">
+  <div class="section-num">04</div>
+  <h2>What's included in delivery</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>What it means for you</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Full source code</strong></td>
+          <td>You own everything. Both projects, all code, no vendor lock-in</td>
+        </tr>
+        <tr>
+          <td><strong>Production deployment</strong></td>
+          <td>Both systems are live and accessible &mdash; website on GitHub Pages, platform on Vercel + Supabase</td>
+        </tr>
+        <tr>
+          <td><strong>Database with all data structures</strong></td>
+          <td>25+ organized tables for students, teachers, groups, attendance, grades, companies, and more</td>
+        </tr>
+        <tr>
+          <td><strong>Automated testing</strong></td>
+          <td>694 tests that run automatically before every update goes live, catching problems before your users see them</td>
+        </tr>
+        <tr>
+          <td><strong>3-language support</strong></td>
+          <td>English, Spanish, and French built in &mdash; every button, label, and message</td>
+        </tr>
+        <tr>
+          <td><strong>AI assistant</strong></td>
+          <td>Built-in chat that understands your school data &mdash; ask questions, generate reports, get suggestions</td>
+        </tr>
+        <tr>
+          <td><strong>Documentation</strong></td>
+          <td>Architecture guides, API reference, deployment instructions, user stories &mdash; everything a future developer needs</td>
+        </tr>
+        <tr>
+          <td><strong>Error monitoring</strong></td>
+          <td>Sentry integration catches and reports bugs in real-time so issues are fixed before users complain</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 5. INVESTMENT -->
+<div class="section">
+  <div class="section-num">05</div>
+  <h2>Investment</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Deliverable</th><th>Description</th><th style="text-align:right;">Amount</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>MLC Website</strong></td>
+          <td>Premium marketing site, bilingual, animated, deployed</td>
+          <td class="price">$3,000</td>
+        </tr>
+        <tr>
+          <td><strong>MLC Platform</strong></td>
+          <td>3-portal management system, Zoom integration, AI assistant, fully deployed</td>
+          <td class="price">$4,000</td>
+        </tr>
+        <tr class="row-total">
+          <td><strong>Total</strong></td>
+          <td></td>
+          <td class="price" style="font-size:16px;">$7,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Payment schedule</h3>
+  <div class="milestones">
+    <div class="milestone">
+      <div class="milestone-num">Milestone 1</div>
+      <div class="milestone-amount">$2,500</div>
+      <div class="milestone-due">Due upon execution</div>
+    </div>
+    <div class="milestone">
+      <div class="milestone-num">Milestone 2</div>
+      <div class="milestone-amount">$2,250</div>
+      <div class="milestone-due">Due 30 days after execution</div>
+    </div>
+    <div class="milestone">
+      <div class="milestone-num">Milestone 3</div>
+      <div class="milestone-amount">$2,250</div>
+      <div class="milestone-due">Due 60 days after execution</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p><strong>Modern Language Center</strong> &mdash; Delivery Summary</p>
+  <p>April 15, 2026</p>
+</div>
+
+</div>
+</body>
+</html>
