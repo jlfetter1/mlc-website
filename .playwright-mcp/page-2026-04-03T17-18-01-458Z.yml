@@ -1,0 +1,2792 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e7]:
+        - heading "Stripe logo" [level=1] [ref=e8]:
+          - link "Stripe logo" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - img "Stripe logo" [ref=e10]
+        - navigation [ref=e13]:
+          - list [ref=e14]:
+            - listitem [ref=e15]:
+              - button "Products" [ref=e16] [cursor=pointer]:
+                - generic [ref=e17]: Products
+                - generic [ref=e18]:
+                  - img [ref=e19]
+                  - img [ref=e21]
+            - listitem [ref=e23]:
+              - button "Solutions" [ref=e24] [cursor=pointer]:
+                - generic [ref=e25]: Solutions
+                - generic [ref=e26]:
+                  - img [ref=e27]
+                  - img [ref=e29]
+            - listitem [ref=e31]:
+              - button "Developers" [ref=e32] [cursor=pointer]:
+                - generic [ref=e33]: Developers
+                - generic [ref=e34]:
+                  - img [ref=e35]
+                  - img [ref=e37]
+            - listitem [ref=e39]:
+              - button "Resources" [ref=e40] [cursor=pointer]:
+                - generic [ref=e41]: Resources
+                - generic [ref=e42]:
+                  - img [ref=e43]
+                  - img [ref=e45]
+            - listitem [ref=e47]:
+              - link "Pricing" [ref=e48] [cursor=pointer]:
+                - /url: /pricing
+        - navigation [ref=e49]:
+          - generic [ref=e50]:
+            - link "Sign in" [ref=e53] [cursor=pointer]:
+              - /url: https://dashboard.stripe.com/login
+              - text: Sign in
+              - img [ref=e54]
+            - link "Contact sales" [ref=e57] [cursor=pointer]:
+              - /url: /contact/sales
+              - text: Contact sales
+              - img [ref=e58]
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading "Payments" [level=1]
+                        - generic:
+                          - list:
+                            - listitem:
+                              - link "Payments Online payments":
+                                - /url: /payments
+                                - generic:
+                                  - generic: Payments
+                                  - paragraph: Online payments
+                            - listitem:
+                              - link "Managed Payments Merchant of record solution":
+                                - /url: /managed-payments
+                                - generic:
+                                  - generic: Managed Payments
+                                  - paragraph: Merchant of record solution
+                            - listitem:
+                              - link "Payment Links No-code payments":
+                                - /url: /payments/payment-links
+                                - generic:
+                                  - generic: Payment Links
+                                  - paragraph: No-code payments
+                            - listitem:
+                              - link "Checkout Prebuilt payment form":
+                                - /url: /payments/checkout
+                                - generic:
+                                  - generic: Checkout
+                                  - paragraph: Prebuilt payment form
+                            - listitem:
+                              - link "Elements Flexible UI components":
+                                - /url: /payments/elements
+                                - generic:
+                                  - generic: Elements
+                                  - paragraph: Flexible UI components
+                            - listitem:
+                              - link "Payment methods Access to 100+":
+                                - /url: /payments/payment-methods
+                                - generic:
+                                  - generic: Payment methods
+                                  - paragraph: Access to 100+
+                            - listitem:
+                              - link "Terminal In-person payments":
+                                - /url: /terminal
+                                - generic:
+                                  - generic: Terminal
+                                  - paragraph: In-person payments
+                            - listitem:
+                              - link "Radar Fraud prevention":
+                                - /url: /radar
+                                - generic:
+                                  - generic: Radar
+                                  - paragraph: Fraud prevention
+                            - listitem:
+                              - link "Authorization Boost Acceptance optimizations":
+                                - /url: /authorization-boost
+                                - generic:
+                                  - generic: Authorization Boost
+                                  - paragraph: Acceptance optimizations
+                            - listitem:
+                              - link "Link Accelerated checkout":
+                                - /url: /payments/link
+                                - generic:
+                                  - generic: Link
+                                  - paragraph: Accelerated checkout
+                      - generic:
+                        - heading "Revenue" [level=1]
+                        - generic:
+                          - list:
+                            - listitem:
+                              - link "Billing Subscription management":
+                                - /url: /billing
+                                - generic:
+                                  - generic: Billing
+                                  - paragraph: Subscription management
+                            - listitem:
+                              - link "Usage-based billing Metered billing":
+                                - /url: /billing/usage-based-billing
+                                - generic:
+                                  - generic: Usage-based billing
+                                  - paragraph: Metered billing
+                            - listitem:
+                              - link "Invoicing One-time or recurring":
+                                - /url: /invoicing
+                                - generic:
+                                  - generic: Invoicing
+                                  - paragraph: One-time or recurring
+                            - listitem:
+                              - link "Tax Sales tax & VAT automation":
+                                - /url: /tax
+                                - generic:
+                                  - generic: Tax
+                                  - paragraph: Sales tax & VAT automation
+                            - listitem:
+                              - link "Revenue Recognition Accounting automation":
+                                - /url: /revenue-recognition
+                                - generic:
+                                  - generic: Revenue Recognition
+                                  - paragraph: Accounting automation
+                            - listitem:
+                              - link "Stripe Sigma Custom reports":
+                                - /url: /sigma
+                                - generic:
+                                  - generic: Stripe Sigma
+                                  - paragraph: Custom reports
+                            - listitem:
+                              - link "Data Pipeline Data sync":
+                                - /url: /data-pipeline
+                                - generic:
+                                  - generic: Data Pipeline
+                                  - paragraph: Data sync
+                      - generic:
+                        - heading "Money Management" [level=1]
+                        - generic:
+                          - list:
+                            - listitem:
+                              - link "Financial Accounts Business finances":
+                                - /url: /financial-accounts
+                                - generic:
+                                  - generic: Financial Accounts
+                                  - paragraph: Business finances
+                            - listitem:
+                              - link "Global Payouts Payouts to third parties":
+                                - /url: /payouts
+                                - generic:
+                                  - generic: Global Payouts
+                                  - paragraph: Payouts to third parties
+                            - listitem:
+                              - link "Capital Business financing":
+                                - /url: /capital
+                                - generic:
+                                  - generic: Capital
+                                  - paragraph: Business financing
+                            - listitem:
+                              - link "Crypto Wallet, stablecoin issuing and card infrastructure":
+                                - /url: /crypto
+                                - generic:
+                                  - generic: Crypto
+                                  - paragraph: Wallet, stablecoin issuing and card infrastructure
+                      - generic:
+                        - heading "Platforms and marketplaces" [level=1]
+                        - generic:
+                          - list:
+                            - listitem:
+                              - link "Connect Payments for platforms":
+                                - /url: /connect
+                                - generic:
+                                  - generic: Connect
+                                  - paragraph: Payments for platforms
+                            - listitem:
+                              - link "Capital for platforms Customer financing":
+                                - /url: /capital/platforms
+                                - generic:
+                                  - generic: Capital for platforms
+                                  - paragraph: Customer financing
+                            - listitem:
+                              - link "Financial Accounts for platforms Embedded financial services":
+                                - /url: /financial-accounts/platforms
+                                - generic:
+                                  - generic: Financial Accounts for platforms
+                                  - paragraph: Embedded financial services
+                            - listitem:
+                              - link "Issuing Physical and virtual cards":
+                                - /url: /issuing
+                                - generic:
+                                  - generic: Issuing
+                                  - paragraph: Physical and virtual cards
+                      - complementary:
+                        - heading "More" [level=1]
+                        - generic:
+                          - list:
+                            - listitem:
+                              - link "Atlas Startup incorporation":
+                                - /url: /atlas
+                                - generic:
+                                  - generic: Atlas
+                                  - paragraph: Startup incorporation
+                            - listitem:
+                              - link "Climate Carbon removal":
+                                - /url: /climate
+                                - generic:
+                                  - generic: Climate
+                                  - paragraph: Carbon removal
+                            - listitem:
+                              - link "Identity Online identity verification":
+                                - /url: /identity
+                                - generic:
+                                  - generic: Identity
+                                  - paragraph: Online identity verification
+                            - listitem:
+                              - link "Financial Connections Linked financial account data":
+                                - /url: /financial-connections
+                                - generic:
+                                  - generic: Financial Connections
+                                  - paragraph: Linked financial account data
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: Join us at Sessions Register to attend our annual conference in San Francisco April 29–30.
+                                - link "Register now":
+                                  - /url: https://stripesessions.com/
+                                  - generic: Register now
+                              - generic:
+                                - img "Sessions Background"
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: By stage
+                      - list:
+                        - listitem:
+                          - link "Enterprises":
+                            - /url: /enterprise
+                            - generic:
+                              - generic: Enterprises
+                        - listitem:
+                          - link "Startups":
+                            - /url: /startups
+                            - generic:
+                              - generic: Startups
+                    - generic:
+                      - generic: By use case
+                      - list:
+                        - listitem:
+                          - link "Agentic commerce":
+                            - /url: /use-cases/agentic-commerce
+                            - generic:
+                              - generic: Agentic commerce
+                        - listitem:
+                          - link "Crypto":
+                            - /url: /use-cases/crypto
+                            - generic:
+                              - generic: Crypto
+                        - listitem:
+                          - link "Ecommerce":
+                            - /url: /use-cases/ecommerce
+                            - generic:
+                              - generic: Ecommerce
+                        - listitem:
+                          - link "Embedded finance":
+                            - /url: /use-cases/embedded-finance
+                            - generic:
+                              - generic: Embedded finance
+                        - listitem:
+                          - link "Finance automation":
+                            - /url: /use-cases/finance-automation
+                            - generic:
+                              - generic: Finance automation
+                        - listitem:
+                          - link "Global businesses":
+                            - /url: /use-cases/global-businesses
+                            - generic:
+                              - generic: Global businesses
+                        - listitem:
+                          - link "In-app payments":
+                            - /url: /use-cases/in-app-payments
+                            - generic:
+                              - generic: In-app payments
+                        - listitem:
+                          - link "Marketplaces":
+                            - /url: /use-cases/marketplaces
+                            - generic:
+                              - generic: Marketplaces
+                        - listitem:
+                          - link "Platforms":
+                            - /url: /use-cases/platforms
+                            - generic:
+                              - generic: Platforms
+                        - listitem:
+                          - link "SaaS":
+                            - /url: /use-cases/saas
+                            - generic:
+                              - generic: SaaS
+                    - generic:
+                      - generic: By industry
+                      - list:
+                        - listitem:
+                          - link "AI companies":
+                            - /url: /use-cases/ai
+                            - generic:
+                              - generic: AI companies
+                        - listitem:
+                          - link "Creator economy":
+                            - /url: /use-cases/creator-economy
+                            - generic:
+                              - generic: Creator economy
+                        - listitem:
+                          - link "Hospitality, travel, and leisure":
+                            - /url: /industries/travel
+                            - generic:
+                              - generic: Hospitality, travel, and leisure
+                        - listitem:
+                          - link "Insurance":
+                            - /url: /industries/insurance
+                            - generic:
+                              - generic: Insurance
+                        - listitem:
+                          - link "Media and entertainment":
+                            - /url: /industries/media-entertainment
+                            - generic:
+                              - generic: Media and entertainment
+                        - listitem:
+                          - link "Nonprofits":
+                            - /url: /industries/nonprofits
+                            - generic:
+                              - generic: Nonprofits
+                        - listitem:
+                          - link "Retail":
+                            - /url: /industries/retail
+                            - generic:
+                              - generic: Retail
+                    - complementary:
+                      - generic: Ecosystem
+                      - list:
+                        - listitem:
+                          - link "Partners":
+                            - /url: /partners
+                            - generic:
+                              - generic: Partners
+                        - listitem:
+                          - link "Stripe App Marketplace":
+                            - /url: https://marketplace.stripe.com/
+                            - generic:
+                              - generic: Stripe App Marketplace
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Documentation
+                      - list:
+                        - listitem:
+                          - link "Stripe docs":
+                            - /url: https://docs.stripe.com
+                            - generic:
+                              - generic: Stripe docs
+                        - listitem:
+                          - link "API reference":
+                            - /url: https://docs.stripe.com/api
+                            - generic:
+                              - generic: API reference
+                        - listitem:
+                          - link "Libraries and SDKs":
+                            - /url: https://docs.stripe.com/development
+                            - generic:
+                              - generic: Libraries and SDKs
+                        - listitem:
+                          - link "Stripe Apps":
+                            - /url: /apps
+                            - generic:
+                              - generic: Stripe Apps
+                    - generic:
+                      - generic: Guides
+                      - list:
+                        - listitem:
+                          - link "Accept online payments":
+                            - /url: https://docs.stripe.com/payments
+                            - generic:
+                              - generic: Accept online payments
+                        - listitem:
+                          - link "Implement a prebuilt checkout":
+                            - /url: https://docs.stripe.com/payments/checkout
+                            - generic:
+                              - generic: Implement a prebuilt checkout
+                        - listitem:
+                          - link "Build a platform or marketplace":
+                            - /url: https://docs.stripe.com/connect
+                            - generic:
+                              - generic: Build a platform or marketplace
+                        - listitem:
+                          - link "Manage subscriptions":
+                            - /url: https://docs.stripe.com/billing
+                            - generic:
+                              - generic: Manage subscriptions
+                        - listitem:
+                          - link "Offer usage-based billing":
+                            - /url: https://docs.stripe.com/billing/subscriptions/usage-based
+                            - generic:
+                              - generic: Offer usage-based billing
+                        - listitem:
+                          - link "Issue stablecoin-backed cards":
+                            - /url: https://docs.stripe.com/financial-accounts/cards
+                            - generic:
+                              - generic: Issue stablecoin-backed cards
+                    - generic:
+                      - generic: Resources
+                      - list:
+                        - listitem:
+                          - link "App integrations":
+                            - /url: https://marketplace.stripe.com/
+                            - generic:
+                              - generic: App integrations
+                        - listitem:
+                          - link "Code samples":
+                            - /url: https://github.com/stripe-samples
+                            - generic:
+                              - generic: Code samples
+                        - listitem:
+                          - link "Developers blog":
+                            - /url: https://stripe.dev/
+                            - generic:
+                              - generic: Developers blog
+                        - listitem:
+                          - link "API status":
+                            - /url: https://status.stripe.com/
+                            - generic:
+                              - generic: API status
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Learn
+                      - list:
+                        - listitem:
+                          - link "Blog":
+                            - /url: /blog
+                            - generic:
+                              - generic: Blog
+                        - listitem:
+                          - link "Customer stories":
+                            - /url: /customers
+                            - generic:
+                              - generic: Customer stories
+                        - listitem:
+                          - link "Guides":
+                            - /url: https://stripe.com/guides
+                            - generic:
+                              - generic: Guides
+                    - generic:
+                      - generic: Support
+                      - list:
+                        - listitem:
+                          - link "Get support":
+                            - /url: https://support.stripe.com/?referrerLocale=en-us
+                            - generic:
+                              - generic: Get support
+                        - listitem:
+                          - link "Managed support plans":
+                            - /url: /support-plans
+                            - generic:
+                              - generic: Managed support plans
+                        - listitem:
+                          - link "Professional services":
+                            - /url: /professional-services
+                            - generic:
+                              - generic: Professional services
+                    - generic:
+                      - generic: Company
+                      - list:
+                        - listitem:
+                          - link "Sessions annual conference":
+                            - /url: /sessions
+                            - generic:
+                              - generic: Sessions annual conference
+                        - listitem:
+                          - link "Jobs":
+                            - /url: /jobs
+                            - generic:
+                              - generic: Jobs
+                        - listitem:
+                          - link "Newsroom":
+                            - /url: /newsroom
+                            - generic:
+                              - generic: Newsroom
+                        - listitem:
+                          - link "Stripe Press":
+                            - /url: https://press.stripe.com/
+                            - generic:
+                              - generic: Stripe Press
+                    - complementary:
+                      - generic: Contact
+                      - list:
+                        - listitem:
+                          - link "Contact sales":
+                            - /url: /contact/sales
+                            - generic:
+                              - generic: Contact sales
+                        - listitem:
+                          - link "Become a partner":
+                            - /url: /partners/become-a-partner
+                            - generic:
+                              - generic: Become a partner
+  - generic [ref=e70]:
+    - navigation [ref=e71]:
+      - heading "Payments" [level=1] [ref=e73]:
+        - link "Payments" [ref=e74] [cursor=pointer]:
+          - /url: /payments
+      - list [ref=e78]:
+        - listitem [ref=e79]:
+          - link "Overview" [ref=e80] [cursor=pointer]:
+            - /url: /payments
+        - listitem [ref=e81]:
+          - link "Features" [ref=e82] [cursor=pointer]:
+            - /url: /payments/features
+        - listitem [ref=e83]:
+          - link "Payment methods" [ref=e84] [cursor=pointer]:
+            - /url: /payments/payment-methods
+        - listitem [ref=e85]:
+          - link "Authentication" [ref=e86] [cursor=pointer]:
+            - /url: /payments/authentication
+        - listitem [ref=e87]:
+          - link "AI" [ref=e88] [cursor=pointer]:
+            - /url: /payments/ai
+        - listitem [ref=e89]:
+          - link "Docs" [ref=e90] [cursor=pointer]:
+            - /url: https://stripe.com/docs/payments
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - generic [ref=e97]:
+          - text: Sessions 2026 - April 29–30 ·
+          - link "Register now" [ref=e98] [cursor=pointer]:
+            - /url: https://Stripesessions.com/?utm_medium=owned-surfaces&utm_source=d068&utm_campaign=GLOBAL_420f&utm_content=bec0&utm_term=2062aa9fd069
+            - text: Register now
+            - img [ref=e99]
+        - generic [ref=e102]:
+          - heading "Unified, global payments to grow your revenue" [level=1] [ref=e104]
+          - paragraph [ref=e106]: Accept payments online, in person, and around the world with a payments solution built for any business—from scaling startups to global enterprises.
+          - generic [ref=e108]:
+            - link "Start accepting payments" [ref=e109] [cursor=pointer]:
+              - /url: https://dashboard.stripe.com/register/payments
+              - text: Start accepting payments
+              - img [ref=e110]
+            - link "Contact sales" [ref=e113] [cursor=pointer]:
+              - /url: /contact/sales
+              - text: Contact sales
+              - img [ref=e114]
+      - generic [ref=e117]:
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - img [ref=e122]
+            - generic [ref=e128]: Questions? Chat here
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - generic [ref=e131]: Choose your plan
+              - generic [ref=e132]:
+                - generic [ref=e133]: Monthly subscription
+                - generic [ref=e137]:
+                  - text: Annual subscription
+                  - generic [ref=e141]: Save 22%
+              - generic [ref=e142]: Pay with
+              - generic [ref=e145]:
+                - generic [ref=e148]:
+                  - generic [ref=e149]:
+                    - img [ref=e150]
+                    - generic [ref=e154]: Card
+                  - generic [ref=e155]:
+                    - img [ref=e156]
+                    - generic [ref=e158]: US bank account
+                  - img [ref=e160]
+                - generic [ref=e162]:
+                  - generic [ref=e163]:
+                    - generic [ref=e165]:
+                      - generic [ref=e166]: Card number
+                      - generic [ref=e167]:
+                        - generic [ref=e170]: 1234 1234 1234 1234
+                        - generic [ref=e171]:
+                          - img [ref=e172]
+                          - img [ref=e176]
+                          - img [ref=e186]
+                          - img [ref=e192]
+                    - generic [ref=e198]:
+                      - generic [ref=e200]:
+                        - generic [ref=e201]: Expiration date
+                        - generic [ref=e205]: MM/YY
+                      - generic [ref=e207]:
+                        - generic [ref=e208]: CVC
+                        - generic [ref=e209]:
+                          - generic [ref=e212]: "123"
+                          - img [ref=e213]
+                  - generic [ref=e218]:
+                    - generic [ref=e221]:
+                      - img [ref=e223]
+                      - generic [ref=e227]: Search for your bank
+                    - generic [ref=e230]:
+                      - img [ref=e232]
+                      - img [ref=e236]
+                      - img [ref=e242]
+                      - img [ref=e245]
+                      - img [ref=e250]
+                      - img [ref=e255]
+            - generic [ref=e259]:
+              - generic [ref=e260]: Plan details
+              - generic [ref=e261]:
+                - generic [ref=e262]: Professional
+                - generic [ref=e263]: Up to 25 users
+                - generic [ref=e264]:
+                  - generic [ref=e265]: $149
+                  - text: /month
+                - generic [ref=e266]:
+                  - generic [ref=e267]: $1,400
+                  - text: /year
+                - generic [ref=e268]:
+                  - generic [ref=e269]: "This includes:"
+                  - generic [ref=e270]:
+                    - img [ref=e271]
+                    - text: 24 months historical data
+                  - generic [ref=e275]:
+                    - img [ref=e276]
+                    - text: 1 hr data refresh
+                  - generic [ref=e280]:
+                    - img [ref=e281]
+                    - text: 1000+ third party integrations
+                  - generic [ref=e285]:
+                    - img [ref=e286]
+                    - text: Simple reporting
+                - generic [ref=e290]:
+                  - generic [ref=e291]: Total due today (USD)
+                  - generic [ref=e292]: $149.00
+                - generic [ref=e293]:
+                  - generic [ref=e294]: Total due today (USD)
+                  - generic [ref=e295]: $1,400.00
+              - generic [ref=e296]: Confirm and subscribe
+        - generic [ref=e299]:
+          - generic [ref=e300]:
+            - img [ref=e301]
+            - generic [ref=e309]:
+              - text: ️Cart
+              - img [ref=e310]
+              - text: Billing details
+              - img [ref=e312]
+              - generic [ref=e314]: Confirmation
+          - generic [ref=e315]:
+            - generic [ref=e316]:
+              - generic [ref=e317]: Shipping Address
+              - generic [ref=e318]:
+                - text: Enter address
+                - generic [ref=e321]:
+                  - generic [ref=e322]: Micaela Patel
+                  - generic [ref=e323]:
+                    - generic [ref=e324]: The Warehouse, 7th Floor 211 Old Street
+                    - generic [ref=e325]: London EC1V 9NR
+              - generic [ref=e326]:
+                - generic [ref=e327]: Pay with
+                - generic [ref=e329]:
+                  - generic [ref=e330]:
+                    - generic [ref=e333]:
+                      - generic [ref=e334]:
+                        - img [ref=e335]
+                        - generic [ref=e339]: Card
+                      - generic [ref=e340]:
+                        - img [ref=e341]
+                        - generic [ref=e344]: Klarna
+                      - generic [ref=e345]:
+                        - img [ref=e346]
+                        - generic [ref=e350]: Revolut Pay
+                      - img [ref=e352]
+                    - generic [ref=e354]:
+                      - generic [ref=e356]:
+                        - generic [ref=e357]: Card information
+                        - generic [ref=e358]:
+                          - generic [ref=e361]: 1234 1234 1234 1234
+                          - generic [ref=e362]:
+                            - img [ref=e363]
+                            - img [ref=e367]
+                            - img [ref=e377]
+                            - img [ref=e383]
+                      - generic [ref=e389]:
+                        - generic [ref=e395]: Expiry date
+                        - generic [ref=e398]:
+                          - generic [ref=e401]: Security code
+                          - img [ref=e402]
+                      - generic [ref=e407]:
+                        - img [ref=e409]
+                        - text: Billing address address is the same as shipping
+                      - generic [ref=e411]:
+                        - generic [ref=e412]:
+                          - img [ref=e414]
+                          - generic [ref=e416]:
+                            - generic [ref=e417]: Save my info for secure 1-click checkout
+                            - generic [ref=e418]: Pay faster on [merchant] and thousands of sites.
+                        - generic [ref=e419]:
+                          - img [ref=e420]
+                          - text: +44 (234) 567-8901
+                  - generic [ref=e426]:
+                    - generic [ref=e427]: 4 interest-free payments of £72.00 with Klarna.
+                    - generic [ref=e428]:
+                      - img [ref=e429]
+                      - generic [ref=e431]: After submission, you will be redirected to securely complete next steps.
+            - generic [ref=e432]:
+              - generic [ref=e435]:
+                - generic [ref=e436]: Betala Wooden Chair
+                - generic [ref=e437]: £120.00 x 2
+              - generic [ref=e438]:
+                - generic [ref=e439]:
+                  - generic [ref=e440]:
+                    - generic [ref=e441]: Subtotal
+                    - generic [ref=e442]: £240.00
+                  - generic [ref=e443]:
+                    - generic [ref=e444]: VAT (20%)
+                    - generic [ref=e445]: £48.00
+                  - generic [ref=e446]:
+                    - generic [ref=e447]: Shipping Estimate
+                    - generic [ref=e448]: FREE
+                - generic [ref=e450]:
+                  - generic [ref=e451]: Total
+                  - generic [ref=e452]: £288.00
+                - generic [ref=e453]:
+                  - generic [ref=e455]: Place order
+                  - generic [ref=e456]: Continue
+        - generic [ref=e460]:
+          - generic [ref=e461]:
+            - generic [ref=e462]:
+              - img [ref=e463]
+              - img [ref=e465]
+            - generic [ref=e467]:
+              - generic [ref=e468]: Pay Powdur
+              - generic [ref=e470]: ¥7,788
+            - generic [ref=e472]:
+              - generic [ref=e473]:
+                - text: Powered by
+                - img [ref=e474]
+              - generic [ref=e476]:
+                - generic [ref=e477]: Terms
+                - generic [ref=e478]: Privacy
+          - generic [ref=e479]:
+            - generic [ref=e480]:
+              - generic [ref=e481]: Shipping information
+              - generic [ref=e486]:
+                - generic [ref=e487]: Email
+                - generic [ref=e488]:
+                  - generic [ref=e491]: whitney@example.com
+                  - generic [ref=e493]:
+                    - img [ref=e494]
+                    - img [ref=e497]
+                  - generic [ref=e500]:
+                    - generic [ref=e501]: Use your saved information
+                    - generic [ref=e502]: Enter the code sent to (•••) ••• ••35 to securely use your saved information.
+                    - generic [ref=e503]:
+                      - img [ref=e504]
+                      - generic [ref=e516]:
+                        - img [ref=e517]
+                        - img [ref=e520]
+                    - generic [ref=e522]: Resend code
+                    - generic [ref=e523]: You won’t need to authenticate again on this device unless you log out.
+              - generic [ref=e524]:
+                - generic [ref=e525]: Review order
+                - generic [ref=e526]:
+                  - generic [ref=e527]:
+                    - generic [ref=e528]: Email
+                    - generic [ref=e529]: whitney@example.com
+                  - generic [ref=e530]:
+                    - generic [ref=e531]: Ship to
+                    - generic [ref=e532]:
+                      - generic [ref=e533]: Whitney Fujikawa
+                      - generic [ref=e534]:
+                        - generic [ref=e535]: Jingumae Tower Building 22F
+                        - generic [ref=e536]: 1-5-8 Jingumae, Shibuya-ku
+                        - generic [ref=e537]: Tokyo, 150-0001
+                      - img [ref=e538]
+                  - generic [ref=e540]:
+                    - generic [ref=e541]: Pay with
+                    - generic [ref=e542]:
+                      - generic [ref=e543]:
+                        - img [ref=e544]
+                        - generic [ref=e552]: •••• 0608
+                      - img [ref=e553]
+                - generic [ref=e555]:
+                  - generic [ref=e556]:
+                    - img [ref=e557]
+                    - text: Encrypted
+                  - img [ref=e559]
+                - generic [ref=e562]:
+                  - text: Pay ¥7,788
+                  - img [ref=e563]
+                - generic [ref=e565]: Check out as guest
+            - generic [ref=e568]:
+              - generic [ref=e570]:
+                - generic [ref=e571]: Shipping Address
+                - generic [ref=e572]:
+                  - generic [ref=e574]: Japan
+                  - img [ref=e575]
+                - generic [ref=e580]: Name
+                - generic [ref=e584]: Address
+                - generic [ref=e585]: Show all address fields
+              - generic [ref=e587]:
+                - generic [ref=e588]: Payment method
+                - generic [ref=e591]:
+                  - generic [ref=e592]:
+                    - img [ref=e593]
+                    - generic [ref=e597]: Card
+                  - generic [ref=e598]:
+                    - img [ref=e599]
+                    - generic [ref=e601]: Pay by Konbini
+              - generic [ref=e604]: Name
+              - generic [ref=e609]:
+                - generic [ref=e610]: Phone number (optional)
+                - generic [ref=e611]: You'll enter this number in store to confirm your payment
+              - generic [ref=e615]:
+                - generic [ref=e616]: Payable at
+                - img [ref=e617]
+                - img [ref=e621]
+                - img [ref=e625]
+                - img [ref=e630]
+  - generic [ref=e643]:
+    - generic [ref=e644]:
+      - generic [ref=e645]:
+        - img [ref=e647]
+        - heading "Convert more customers" [level=1] [ref=e652]
+      - paragraph [ref=e654]: Increase conversion with built-in optimizations, access to 100+ payment methods, and one-click checkout. Unify online and in-person payments to provide a seamless customer experience.
+    - generic [ref=e655]:
+      - generic [ref=e656]:
+        - img [ref=e658]
+        - heading "Global reach, local experience" [level=1] [ref=e663]
+      - paragraph [ref=e665]: Expand to new markets faster by launching payment methods and presenting in local currencies. Sell cross-border to 195+ countries and lower the costs of multicurrency management.
+    - generic [ref=e666]:
+      - generic [ref=e667]:
+        - img [ref=e669]
+        - heading "Less fraud, more revenue" [level=1] [ref=e674]
+      - paragraph [ref=e676]: Automatically decrease fraud and improve authorization rates using Stripe Radar and Authorization Boost, powered by AI trained on billions of data points.
+    - generic [ref=e677]:
+      - generic [ref=e678]:
+        - generic [ref=e680]:
+          - generic:
+            - img
+        - heading "Move faster and lower costs" [level=1] [ref=e681]
+      - paragraph [ref=e683]: Save time and engineering resources through increased developer productivity. Avoid downtime with leading reliability and reduce costs through alternative payment methods and rails.
+  - generic [ref=e691]:
+    - img "Amazon logo" [ref=e692]
+    - img "Shopify logo" [ref=e697]
+    - img "Airbnb logo" [ref=e702]
+    - img "URBN logo" [ref=e704]
+    - img "Figma logo" [ref=e706]
+    - img "HAndM logo" [ref=e708]
+    - img "Uber logo" [ref=e710]
+    - img "Zoom logo" [ref=e712]
+  - navigation [ref=e714]:
+    - generic [ref=e715]:
+      - list [ref=e717]:
+        - listitem [ref=e718]:
+          - link "Online payments" [ref=e719] [cursor=pointer]:
+            - /url: "#online-payments"
+        - listitem [ref=e720]:
+          - link "Global payments" [ref=e721] [cursor=pointer]:
+            - /url: "#global-payments"
+        - listitem [ref=e722]:
+          - link "In-person payments" [ref=e723] [cursor=pointer]:
+            - /url: "#in-person-payments"
+        - listitem [ref=e724]:
+          - link "Payments Intelligence Suite" [ref=e725] [cursor=pointer]:
+            - /url: "#payment-intelligence-suite"
+        - listitem [ref=e726]:
+          - link "Unified platform" [ref=e727] [cursor=pointer]:
+            - /url: "#unified-platform"
+      - link "Start now" [ref=e728] [cursor=pointer]:
+        - /url: https://dashboard.stripe.com/register/payments
+        - text: Start now
+        - img [ref=e729]
+  - generic [ref=e740]:
+    - generic [ref=e741]:
+      - generic [ref=e743]:
+        - generic [ref=e744]:
+          - heading "Online payments" [level=2] [ref=e745]
+          - heading "Optimize your checkout experience" [level=1] [ref=e746]
+        - paragraph [ref=e748]: Stripe’s Optimized Checkout Suite delivers a frictionless customer experience. Increase revenue and save thousands of engineering hours with prebuilt payment UIs, easy access to more than 100 payment methods, and Link, Stripe’s one-click checkout.
+        - link "Try the demo" [ref=e750] [cursor=pointer]:
+          - /url: https://checkout.stripe.dev/
+          - text: Try the demo
+          - img [ref=e751]
+      - generic [ref=e755]:
+        - heading "11.9%" [level=1] [ref=e757]
+        - paragraph [ref=e759]:
+          - text: average
+          - link "revenue uplift" [ref=e760] [cursor=pointer]:
+            - /url: https://stripe.com/newsroom/news/sessions-2024
+          - text: for businesses using Stripe’s latest checkout optimizations
+    - generic [ref=e762]:
+      - generic [ref=e763]:
+        - heading "Multiple ways to accept payments online" [level=1] [ref=e766]
+        - navigation [ref=e767]:
+          - button:
+            - img
+          - button [ref=e768] [cursor=pointer]:
+            - img [ref=e769]
+      - generic [ref=e773]:
+        - generic [ref=e776]:
+          - img [ref=e779]
+          - generic [ref=e789]:
+            - generic [ref=e790]:
+              - img "Elements" [ref=e791]
+              - generic [ref=e796]: Elements
+            - generic [ref=e797]:
+              - heading "Flexible UI components" [level=1] [ref=e799]
+              - paragraph [ref=e801]:
+                - text: Build your own pixel-perfect payment experience—even if you
+                - link "process card payments outside of Stripe" [ref=e802] [cursor=pointer]:
+                  - /url: https://docs.stripe.com/payments/vault-and-forward
+                - text: .
+              - list [ref=e805]:
+                - listitem [ref=e806]:
+                  - img [ref=e807]
+                  - text: Meet business specific needs with modular UI components on web or in-app
+                - listitem [ref=e811]:
+                  - img [ref=e812]
+                  - text: Design a fully branded checkout with customizable CSS-level styling
+                - listitem [ref=e816]:
+                  - img [ref=e817]
+                  - text: Reduce friction and simplify compliance with built-in logic
+          - link "Explore Elements" [ref=e822] [cursor=pointer]:
+            - /url: /payments/elements
+            - text: Explore Elements
+            - img [ref=e823]
+        - generic [ref=e827]:
+          - generic [ref=e828]:
+            - img [ref=e830]
+            - generic [ref=e836]:
+              - generic [ref=e837]:
+                - img [ref=e838]
+                - img [ref=e840]
+                - generic [ref=e843]:
+                  - generic [ref=e844]: 👋 anything I can help with today?
+                  - generic [ref=e845]: Hey, can I buy a license just for myself?
+                  - generic [ref=e846]: Sure, in that case I'd recommend our starter plan.
+                  - generic [ref=e847]: buy.stripe.com/Ae93Jis
+              - generic [ref=e848]:
+                - generic [ref=e849]:
+                  - generic [ref=e850]: $19.99
+                  - generic [ref=e851]: per item
+                - generic [ref=e852]:
+                  - img [ref=e854]
+                  - generic [ref=e926]: Scan to pay
+          - generic [ref=e928]:
+            - generic [ref=e929]:
+              - img [ref=e930]
+              - generic [ref=e935]: Payment Links
+            - generic [ref=e936]:
+              - heading "Shareable payment links" [level=1] [ref=e938]
+              - paragraph [ref=e940]: Accept your first payment in minutes—no code required
+              - list [ref=e943]:
+                - listitem [ref=e944]:
+                  - img [ref=e945]
+                  - text: Share links over email, SMS, or any other channel
+                - listitem [ref=e949]:
+                  - img [ref=e950]
+                  - text: Accept one-time, recurring, or pay-what-you-want payments
+                - listitem [ref=e954]:
+                  - img [ref=e955]
+                  - text: Turn your link into a QR code or an embeddable buy button
+          - link "Explore Payment Links" [ref=e960] [cursor=pointer]:
+            - /url: /payments/payment-links
+            - text: Explore Payment Links
+            - img [ref=e961]
+        - generic [ref=e965]:
+          - generic [ref=e966]:
+            - img [ref=e968]
+            - generic [ref=e976]:
+              - generic [ref=e979]:
+                - generic [ref=e980]: Email
+                - generic [ref=e983]: timotheero@stripe.com
+              - generic [ref=e984]:
+                - generic [ref=e985]: Payment method
+                - generic [ref=e988]:
+                  - generic [ref=e989]:
+                    - img [ref=e990]
+                    - generic [ref=e994]: Card
+                  - generic [ref=e995]:
+                    - img [ref=e996]
+                    - generic [ref=e1000]: PayPal
+                  - generic [ref=e1001]:
+                    - img [ref=e1002]
+                    - generic [ref=e1005]: Klarna
+                  - img [ref=e1007]
+                - generic [ref=e1010]:
+                  - generic [ref=e1011]: Card information
+                  - generic [ref=e1012]:
+                    - generic [ref=e1013]:
+                      - generic [ref=e1015]: 1234 1234 1234 1234
+                      - generic [ref=e1016]:
+                        - img [ref=e1017]
+                        - img [ref=e1021]
+                        - img [ref=e1027]
+                        - img [ref=e1037]
+                    - generic [ref=e1045]: MM/YY
+                    - generic [ref=e1046]:
+                      - generic [ref=e1048]: CVC
+                      - img [ref=e1049]
+          - generic [ref=e1055]:
+            - generic [ref=e1056]:
+              - img "Checkout" [ref=e1057]
+              - generic [ref=e1062]: Checkout
+            - generic [ref=e1063]:
+              - heading "Prebuilt payment form" [level=1] [ref=e1065]
+              - paragraph [ref=e1067]: Launch faster with a conversion-optimized checkout
+              - list [ref=e1070]:
+                - listitem [ref=e1071]:
+                  - img [ref=e1072]
+                  - text: Embed on your site or redirect to a Stripe-hosted page
+                - listitem [ref=e1076]:
+                  - img [ref=e1077]
+                  - text: Customize the colors and fonts to match your brand
+                - listitem [ref=e1081]:
+                  - img [ref=e1082]
+                  - text: Add support for recurring payments and Stripe Tax with no additional integration work
+          - link "Explore Checkout" [ref=e1087] [cursor=pointer]:
+            - /url: /payments/checkout
+            - text: Explore Checkout
+            - img [ref=e1088]
+    - generic [ref=e1092]:
+      - generic [ref=e1093]:
+        - generic [ref=e1094]:
+          - heading "Surface the most relevant payment methods" [level=1] [ref=e1096]
+          - paragraph [ref=e1098]:
+            - text: Turn on the most popular payment methods from the Stripe Dashboard, and then use Stripe’s AI models to dynamically show customers the most relevant ones you’ve enabled. Experiment with new payment methods,
+            - link "A/B test" [ref=e1099] [cursor=pointer]:
+              - /url: https://docs.stripe.com/payments/a-b-testing
+            - text: to understand impact, and set
+            - link "custom rules" [ref=e1100] [cursor=pointer]:
+              - /url: https://docs.stripe.com/payments/payment-method-rules
+            - text: with no code—while offloading maintenance and eligibility requirements to Stripe.
+          - link "Learn more about payment methods" [ref=e1102] [cursor=pointer]:
+            - /url: /payments/payment-methods
+            - text: Learn more about payment methods
+            - img [ref=e1103]
+        - paragraph [ref=e1109]:
+          - strong [ref=e1110]: Access 100+ payment methods
+          - text: —from buy now, pay later options that can boost eligible revenue by up to 14% to bank debits, stablecoins, and real-time payments that can lower transaction costs.
+      - img "A/B testing visual" [ref=e1114]
+    - generic [ref=e1115]:
+      - generic [ref=e1117]:
+        - heading "One-click checkout with Link" [level=1] [ref=e1119]
+        - paragraph [ref=e1121]: Enable your customers to check out in as little as six seconds with Link—a network that’s adding millions of new customers every month. Returning customers can use Link to pay with a previously saved US bank account or credit card, helping you improve your conversion rates and customer experience.
+        - link "Explore Link" [ref=e1123] [cursor=pointer]:
+          - /url: /payments/link
+          - text: Explore Link
+          - img [ref=e1124]
+      - generic [ref=e1130]:
+        - generic [ref=e1131]:
+          - generic [ref=e1132]: Shipping information
+          - generic [ref=e1137]:
+            - generic [ref=e1138]: Email
+            - generic [ref=e1139]:
+              - generic [ref=e1142]: jane.diaz@example.com
+              - generic [ref=e1144]:
+                - img [ref=e1145]
+                - img [ref=e1148]
+              - generic [ref=e1151]:
+                - generic [ref=e1152]: Use your saved information
+                - generic [ref=e1153]: Enter the code sent to (•••) ••• ••35 to securely use your saved information.
+                - generic [ref=e1154]:
+                  - img [ref=e1155]
+                  - generic [ref=e1167]:
+                    - img [ref=e1168]
+                    - img [ref=e1171]
+                - generic [ref=e1173]: Resend code
+                - generic [ref=e1174]: You won’t need to authenticate again on this device unless you log out.
+          - generic [ref=e1175]:
+            - generic [ref=e1176]: Review order
+            - generic [ref=e1177]:
+              - generic [ref=e1178]:
+                - generic [ref=e1179]: Email
+                - generic [ref=e1180]: jane.diaz@example.com
+              - generic [ref=e1181]:
+                - generic [ref=e1182]: Ship to
+                - generic [ref=e1183]:
+                  - generic [ref=e1184]: Jane Diaz
+                  - generic [ref=e1185]:
+                    - generic [ref=e1186]: 27 Fredrick Ave
+                    - generic [ref=e1187]: Brothers, OR 97712
+                  - img [ref=e1188]
+              - generic [ref=e1190]:
+                - generic [ref=e1191]: Pay with
+                - generic [ref=e1192]:
+                  - generic [ref=e1193]:
+                    - img [ref=e1194]
+                    - generic [ref=e1200]: •••• 7878
+                  - img [ref=e1201]
+            - generic [ref=e1203]:
+              - generic [ref=e1204]:
+                - img [ref=e1205]
+                - text: Encrypted
+              - img [ref=e1207]
+            - generic [ref=e1210]:
+              - text: Pay $71.21
+              - img [ref=e1211]
+            - generic [ref=e1213]: Check out as guest
+        - generic [ref=e1218]:
+          - generic [ref=e1219]: Shipping Address
+          - generic [ref=e1220]:
+            - generic [ref=e1222]: United States
+            - img [ref=e1223]
+          - generic [ref=e1228]: Name
+          - generic [ref=e1232]: Address
+          - generic [ref=e1233]: Show all address fields
+    - generic [ref=e1234]:
+      - generic [ref=e1235]:
+        - generic [ref=e1236]:
+          - generic [ref=e1239]:
+            - generic [ref=e1240]:
+              - blockquote [ref=e1241]:
+                - paragraph [ref=e1242]: Link is one of the most critical pieces of making sure we have a really, really well-operating storefront.
+                - generic [ref=e1243]: Michelle Lin, Chief Financial Officer, Italic
+              - link "Read the full story" [ref=e1244] [cursor=pointer]:
+                - /url: /customers/italic
+                - text: Read the full story
+                - img [ref=e1245]
+            - img "Italic logo" [ref=e1249]
+          - generic [ref=e1253]:
+            - generic [ref=e1254]:
+              - blockquote [ref=e1255]:
+                - paragraph [ref=e1256]: Being able to just switch on local payments has helped us with global expansion. Stripe does all the hard work in the background. Local payment methods are no longer blocking us from investing more in certain regions.
+                - generic [ref=e1257]: Jonny White, Founder and CEO, Ticket Tailor
+              - link "Read the full story" [ref=e1258] [cursor=pointer]:
+                - /url: /customers/ticket-tailor
+                - text: Read the full story
+                - img [ref=e1259]
+            - img "TicketTailor logo" [ref=e1263]
+          - generic [ref=e1271]:
+            - generic [ref=e1272]:
+              - blockquote [ref=e1273]:
+                - paragraph [ref=e1274]: Working with Stripe and implementing its Optimized Checkout Suite has helped BigCommerce increase revenue and we couldn't be more thrilled. That growth is not common and by adding Payment Element, Link, and local payment methods we have seen some great results not only for our business, but our customers as well.
+                - generic [ref=e1275]: Alex Hoffman, SVP Payments, BigCommerce
+              - link "Read the full story" [ref=e1276] [cursor=pointer]:
+                - /url: /customers/bigcommerce
+                - text: Read the full story
+                - img [ref=e1277]
+            - img "BigCommerce logo" [ref=e1281]
+          - generic [ref=e1285]:
+            - generic [ref=e1286]:
+              - blockquote [ref=e1287]:
+                - paragraph [ref=e1288]: The Payment Element has been crucial in helping us reach markets and surface payment methods in countries that Zoom cannot natively support.
+                - generic [ref=e1289]: Deepti Padiyar, Product Manager, Digital Payments, Zoom
+              - link "Read the full story" [ref=e1290] [cursor=pointer]:
+                - /url: /customers/zoom
+                - text: Read the full story
+                - img [ref=e1291]
+            - img "Zoom logo" [ref=e1295]
+        - navigation [ref=e1297]:
+          - list [ref=e1298]:
+            - listitem [ref=e1299]:
+              - button "Go to testimonial" [ref=e1300] [cursor=pointer]
+            - listitem [ref=e1301]:
+              - button "Go to testimonial" [ref=e1302] [cursor=pointer]
+            - listitem [ref=e1303]:
+              - button "Go to testimonial" [ref=e1304] [cursor=pointer]
+            - listitem [ref=e1305]:
+              - button "Go to testimonial" [ref=e1306] [cursor=pointer]
+      - navigation [ref=e1307]:
+        - list [ref=e1308]:
+          - listitem [ref=e1309]:
+            - button "Go to testimonial" [ref=e1310] [cursor=pointer]:
+              - img "Italic logo" [ref=e1311]
+          - listitem [ref=e1313]:
+            - button "Go to testimonial" [ref=e1314] [cursor=pointer]:
+              - img "TicketTailor logo" [ref=e1315]
+          - listitem [ref=e1321]:
+            - button "Go to testimonial" [ref=e1322] [cursor=pointer]:
+              - img "BigCommerce logo" [ref=e1323]
+          - listitem [ref=e1325]:
+            - button "Go to testimonial" [ref=e1326] [cursor=pointer]:
+              - img "Zoom logo" [ref=e1327]
+  - generic [ref=e1336]:
+    - generic [ref=e1337]:
+      - generic [ref=e1338]:
+        - heading "Global payments" [level=2] [ref=e1339]
+        - heading "Expand to new markets faster" [level=1] [ref=e1340]
+      - paragraph [ref=e1342]: Reduce the complexity and cost of multicurrency management with flexible cross-border payment options available in 195 countries across 135+ currencies. Stripe has extensive local acquiring coverage in 46 markets, with direct bank setups and local knowledge.
+      - link "Learn more about global payments" [ref=e1344] [cursor=pointer]:
+        - /url: /use-cases/global-businesses
+        - text: Learn more about global payments
+        - img [ref=e1345]
+    - generic [ref=e1348]:
+      - generic [ref=e1349]:
+        - generic [ref=e1350]:
+          - generic [ref=e1351]:
+            - img [ref=e1353]
+            - heading "Access 100+ payment methods" [level=1] [ref=e1358]
+          - paragraph [ref=e1360]: Adapt to customer preferences and expand into new markets by surfacing global payment methods used by buyers around the world.
+        - generic [ref=e1361]:
+          - generic [ref=e1362]:
+            - img [ref=e1364]
+            - heading "Present in local currencies" [level=1] [ref=e1369]
+          - paragraph [ref=e1371]:
+            - text: Improve conversion by presenting in local currencies using the latest exchange rate with
+            - link "Adaptive Pricing" [ref=e1372] [cursor=pointer]:
+              - /url: https://docs.stripe.com/payments/checkout/adaptive-pricing
+            - text: .
+        - generic [ref=e1373]:
+          - generic [ref=e1374]:
+            - generic [ref=e1376]:
+              - generic:
+                - img
+            - heading "Manage funds in multiple currencies" [level=1] [ref=e1377]
+          - paragraph [ref=e1379]:
+            - text: Reduce costs when managing multiple currencies by settling and paying out funds with
+            - link "multi-currency settlement." [ref=e1380] [cursor=pointer]:
+              - /url: https://docs.stripe.com/payouts/multicurrency-settlement
+      - generic [ref=e1382]:
+        - navigation [ref=e1383]:
+          - generic [ref=e1388]:
+            - button "United States" [ref=e1389] [cursor=pointer]
+            - button "Germany" [ref=e1390] [cursor=pointer]
+            - button "United Kingdom" [ref=e1391] [cursor=pointer]
+            - button "China" [ref=e1392] [cursor=pointer]
+            - button "Mexico" [ref=e1393] [cursor=pointer]
+        - generic [ref=e1396]:
+          - generic [ref=e1397]:
+            - figure [ref=e1398]:
+              - generic [ref=e1400]:
+                - img [ref=e1401]
+                - generic [ref=e1404]: Card
+              - generic [ref=e1406]:
+                - img [ref=e1407]
+                - generic [ref=e1410]:
+                  - generic [ref=e1411]: Afterpay
+                  - generic [ref=e1412]: Buy now pay later
+              - generic [ref=e1413]:
+                - generic [ref=e1414]:
+                  - img [ref=e1415]
+                  - generic [ref=e1418]:
+                    - generic [ref=e1419]: Affirm
+                    - generic [ref=e1420]: Buy now pay later
+                - generic [ref=e1422]:
+                  - generic [ref=e1425]:
+                    - text: 4 interest-free payments of $56
+                    - img [ref=e1426]
+                    - text: . Learn more.
+                  - generic [ref=e1431]:
+                    - img [ref=e1432]
+                    - generic [ref=e1434]: After submission, you will be redirected to securely complete next steps.
+            - generic [ref=e1436]: Pay $168.00
+          - figure [ref=e1438]:
+            - generic [ref=e1439]:
+              - generic [ref=e1440]:
+                - img [ref=e1441]
+                - generic [ref=e1444]:
+                  - generic [ref=e1445]: Klarna
+                  - generic [ref=e1446]: Jetzt kaufen, später bezahlen
+              - generic [ref=e1447]:
+                - generic [ref=e1448]:
+                  - generic [ref=e1450]: E-Mail
+                  - generic [ref=e1451]:
+                    - generic [ref=e1453]: Vor- und Nachname
+                    - generic [ref=e1454]:
+                      - generic [ref=e1455]:
+                        - generic [ref=e1456]: Land
+                        - generic [ref=e1457]: Deutschland
+                      - img [ref=e1459]
+                - generic [ref=e1461]:
+                  - img [ref=e1462]
+                  - generic [ref=e1464]: Nach dem Absenden werden Sie weitergeleitet, um die nächsten Schritte sicher abzuschließen.
+            - generic [ref=e1466]:
+              - img [ref=e1467]
+              - generic [ref=e1473]: SEPA-Lastschrift
+            - generic [ref=e1475]:
+              - img [ref=e1476]
+              - generic [ref=e1481]: Paypal
+          - generic [ref=e1482]:
+            - figure [ref=e1483]:
+              - generic [ref=e1484]:
+                - generic [ref=e1485]:
+                  - img [ref=e1486]
+                  - generic [ref=e1489]: Card
+                - generic [ref=e1491]:
+                  - generic [ref=e1492]:
+                    - generic [ref=e1493]: Card Number
+                    - generic [ref=e1494]:
+                      - img [ref=e1495]
+                      - img [ref=e1498]
+                      - img [ref=e1501]
+                      - img [ref=e1506]
+                  - generic [ref=e1511]:
+                    - generic [ref=e1513]: Expiry Date
+                    - generic [ref=e1514]:
+                      - generic [ref=e1515]: CVC
+                      - img [ref=e1517]
+              - generic [ref=e1522]:
+                - img [ref=e1523]
+                - generic [ref=e1526]:
+                  - generic [ref=e1527]: Klarna
+                  - generic [ref=e1528]: Buy now pay later
+              - generic [ref=e1530]:
+                - img [ref=e1531]
+                - generic [ref=e1534]:
+                  - generic [ref=e1535]: Clearpay
+                  - generic [ref=e1536]: Buy now pay later
+            - generic [ref=e1538]: Pay £235.00
+          - generic [ref=e1539]:
+            - figure [ref=e1540]:
+              - generic [ref=e1541]:
+                - generic [ref=e1542]:
+                  - img [ref=e1543]
+                  - generic [ref=e1546]: 银行卡
+                - generic [ref=e1548]:
+                  - generic [ref=e1549]:
+                    - generic [ref=e1550]: 卡号
+                    - img [ref=e1552]
+                  - generic [ref=e1557]:
+                    - generic [ref=e1559]: 有效期
+                    - generic [ref=e1560]:
+                      - generic [ref=e1561]: CVC
+                      - img [ref=e1563]
+              - generic [ref=e1568]:
+                - img [ref=e1569]
+                - generic [ref=e1573]: 支付宝
+              - generic [ref=e1575]:
+                - img [ref=e1576]
+                - generic [ref=e1580]: 微信支付
+            - generic [ref=e1582]: 支付 ¥450.00
+          - generic [ref=e1583]:
+            - figure [ref=e1584]:
+              - generic [ref=e1585]:
+                - generic [ref=e1586]:
+                  - img [ref=e1587]
+                  - generic [ref=e1590]: Tarjeta
+                - generic [ref=e1592]:
+                  - generic [ref=e1593]:
+                    - generic [ref=e1594]: Número de tarjeta
+                    - generic [ref=e1595]:
+                      - img [ref=e1596]
+                      - img [ref=e1599]
+                      - img [ref=e1602]
+                      - img [ref=e1607]
+                  - generic [ref=e1612]:
+                    - generic [ref=e1614]: Caducidad
+                    - generic [ref=e1615]:
+                      - generic [ref=e1616]: CVC
+                      - img [ref=e1618]
+              - generic [ref=e1623]:
+                - img [ref=e1624]
+                - generic [ref=e1627]: Transferencias bancarias
+              - generic [ref=e1629]:
+                - img [ref=e1630]
+                - generic [ref=e1636]: OXXO
+            - generic [ref=e1638]: Pagar MXN 3,500.00
+  - generic [ref=e1651]:
+    - generic [ref=e1652]:
+      - generic [ref=e1654]:
+        - generic [ref=e1655]:
+          - heading "In-person payments" [level=2] [ref=e1656]
+          - heading "Unified payments in-person and online" [level=1] [ref=e1657]
+        - paragraph [ref=e1659]: Build a unified commerce experience across online and in-person channels to personalize customer interactions, reward loyalty, and grow revenue. Stripe Terminal’s pre-certified devices serve a wide range of use cases, from countertop to curbside. With select readers, you can customize splash screens, collect customer input, or run your own POS app directly.
+        - link "Learn more about Terminal" [ref=e1661] [cursor=pointer]:
+          - /url: /terminal
+          - text: Learn more about Terminal
+          - img [ref=e1662]
+      - generic [ref=e1668]:
+        - generic [ref=e1669]:
+          - generic [ref=e1670]:
+            - generic [ref=e1671]:
+              - img [ref=e1672]
+              - generic [ref=e1675]:
+                - img [ref=e1676]
+                - img [ref=e1680]
+            - generic [ref=e1682]:
+              - generic [ref=e1683]:
+                - generic [ref=e1684]: Total
+                - generic [ref=e1685]: $173.88
+                - generic [ref=e1686]: Tap, insert, or swipe to pay
+              - generic [ref=e1687]: Processing
+              - generic [ref=e1688]: Approved
+              - generic [ref=e1689]: $173.88
+          - img [ref=e1694]
+        - generic [ref=e1701]:
+          - img [ref=e1702]
+          - img [ref=e1707]
+        - generic [ref=e1714]:
+          - img [ref=e1715]
+          - img [ref=e1719]
+    - generic [ref=e1726]:
+      - generic [ref=e1727]:
+        - heading "A complete commerce solution" [level=1] [ref=e1729]
+        - paragraph [ref=e1731]: Learn how Stripe customers use Terminal to accept in-person payments and improve the customer experience.
+      - generic [ref=e1732]:
+        - generic [ref=e1749]:
+          - link "Dripos logo Watch video Dripos unifies commerce with Stripe Terminal and Stripe Reader S700" [ref=e1750] [cursor=pointer]:
+            - /url: /us/customers/dripos
+            - generic [ref=e1751]:
+              - img "Dripos logo" [ref=e1752]
+              - generic [ref=e1754]:
+                - text: Watch video
+                - img [ref=e1755]
+              - heading "Dripos unifies commerce with Stripe Terminal and Stripe Reader S700" [level=1] [ref=e1759]
+          - link "Squire logo Watch video Squire uses Tap to Pay so barbers can start accepting in-person payments in minutes" [ref=e1760] [cursor=pointer]:
+            - /url: /us/customers/squire
+            - generic [ref=e1761]:
+              - img "Squire logo" [ref=e1762]
+              - generic [ref=e1764]:
+                - text: Watch video
+                - img [ref=e1765]
+              - heading "Squire uses Tap to Pay so barbers can start accepting in-person payments in minutes" [level=1] [ref=e1769]
+          - link "Dines logo Watch video Dines unlocks 150% jump in revenue per venue with Stripe Terminal" [ref=e1770] [cursor=pointer]:
+            - /url: /us/customers/dines
+            - generic [ref=e1771]:
+              - img "Dines logo" [ref=e1772]
+              - generic [ref=e1775]:
+                - text: Watch video
+                - img [ref=e1776]
+              - heading "Dines unlocks 150% jump in revenue per venue with Stripe Terminal" [level=1] [ref=e1780]
+          - link "AtVenue logo Watch video atVenu streamlines merchandise sales at live events with Stripe" [ref=e1781] [cursor=pointer]:
+            - /url: /us/customers/atvenu
+            - generic [ref=e1782]:
+              - img "AtVenue logo" [ref=e1783]
+              - generic [ref=e1791]:
+                - text: Watch video
+                - img [ref=e1792]
+              - heading "atVenu streamlines merchandise sales at live events with Stripe" [level=1] [ref=e1796]
+        - list [ref=e1803]:
+          - listitem [ref=e1804]:
+            - button "Dripos logo" [ref=e1806] [cursor=pointer]:
+              - img "Dripos logo" [ref=e1807]
+          - listitem [ref=e1809]:
+            - button "Squire logo" [ref=e1811] [cursor=pointer]:
+              - img "Squire logo" [ref=e1812]
+          - listitem [ref=e1814]:
+            - button "Dines logo" [ref=e1816] [cursor=pointer]:
+              - img "Dines logo" [ref=e1817]
+          - listitem [ref=e1820]:
+            - button "AtVenue logo" [ref=e1822] [cursor=pointer]:
+              - img "AtVenue logo" [ref=e1823]
+  - generic [ref=e1838]:
+    - generic [ref=e1839]:
+      - generic [ref=e1840]:
+        - heading "Payments Intelligence Suite" [level=2] [ref=e1841]
+        - heading "Powerful AI-powered optimizations to increase revenue and reduce costs" [level=1] [ref=e1842]
+      - paragraph [ref=e1844]: Turn payments into profits with Stripe’s AI-powered set of payment optimizations, fraud prevention, and business intelligence products that seamlessly balance across auth, fraud, and cost. Users see a 2.2% revenue increase and 38% lower fraud on average.
+    - generic [ref=e1845]:
+      - generic [ref=e1847]:
+        - generic [ref=e1848]:
+          - heading "Optimize your payments performance" [level=1] [ref=e1851]
+          - navigation [ref=e1852]:
+            - button:
+              - img
+            - button [ref=e1853] [cursor=pointer]:
+              - img [ref=e1854]
+        - generic [ref=e1858]:
+          - generic [ref=e1861]:
+            - generic [ref=e1862]:
+              - img [ref=e1864]
+              - generic [ref=e1871]:
+                - generic [ref=e1873]: Optimization uplift
+                - img [ref=e1875]
+                - generic [ref=e1900]:
+                  - generic [ref=e1903]: Adaptive Acceptance
+                  - generic [ref=e1906]: Network tokens
+                  - generic [ref=e1909]: Card account updater
+            - generic [ref=e1911]:
+              - generic [ref=e1912]:
+                - img "Authorization Boost" [ref=e1913]
+                - generic [ref=e1918]: Authorization Boost
+              - generic [ref=e1919]:
+                - heading "Boost revenue and reduce costs" [level=1] [ref=e1921]
+                - paragraph [ref=e1923]: Maximize acceptance rates with Authorization Boost
+                - list [ref=e1926]:
+                  - listitem [ref=e1927]:
+                    - img [ref=e1928]
+                    - text: Access real-time retries and optimized messaging and formatting
+                  - listitem [ref=e1932]:
+                    - img [ref=e1933]
+                    - text: Mitigate involuntary churn with card lifecycle management, including tokenization
+                  - listitem [ref=e1937]:
+                    - img [ref=e1938]
+                    - text: Reduce card processing costs with decline prevention and excessive retry prevention
+            - link "Learn more" [ref=e1943] [cursor=pointer]:
+              - /url: /authorization-boost
+              - text: Learn more
+              - img [ref=e1944]
+          - generic [ref=e1948]:
+            - generic [ref=e1949]:
+              - img [ref=e1951]
+              - generic [ref=e1958]:
+                - generic [ref=e1959]:
+                  - img [ref=e1960]
+                  - generic [ref=e1965]: Purchase Authentication
+                  - generic [ref=e1966]: We've sent you a text message to your registered mobile number ending in 6080
+                - generic [ref=e1967]:
+                  - generic [ref=e1968]: Confirmation code
+                  - generic [ref=e1969]:
+                    - generic [ref=e1970]: "9"
+                    - generic [ref=e1971]: "9"
+                    - generic [ref=e1972]: "2"
+                    - generic [ref=e1973]: "7"
+                    - generic [ref=e1974]: "3"
+                    - generic [ref=e1975]: "6"
+                  - generic [ref=e1976]: Confirm payment
+                  - generic [ref=e1977]: Resend code
+            - generic [ref=e1979]:
+              - generic [ref=e1980]:
+                - img "Authentication" [ref=e1981]
+                - generic [ref=e1986]: Authentication
+              - generic [ref=e1987]:
+                - heading "Maximize conversion and adapt to changing requirements" [level=1] [ref=e1989]
+                - list [ref=e1992]:
+                  - listitem [ref=e1993]:
+                    - img [ref=e1994]
+                    - text: Automatically request available SCA exemptions and authenticate your customers only when necessary
+                  - listitem [ref=e1998]:
+                    - img [ref=e1999]
+                    - text: Adapt to changing global authentication requirements
+                  - listitem [ref=e2003]:
+                    - img [ref=e2004]
+                    - text: Import 3D Secure authentication results from external providers for authorization, or authenticate via Stripe and authorize later
+            - link "Learn more" [ref=e2009] [cursor=pointer]:
+              - /url: /payments/authentication
+              - text: Learn more
+              - img [ref=e2010]
+          - generic [ref=e2014]:
+            - generic [ref=e2015]:
+              - img [ref=e2017]
+              - generic [ref=e2024]:
+                - generic [ref=e2025]: Rule performance
+                - img [ref=e2032]
+                - generic [ref=e2043]:
+                  - generic [ref=e2044]:
+                    - generic [ref=e2046]: Rule Matches
+                    - generic [ref=e2047]: Changes
+                  - generic [ref=e2048]:
+                    - generic [ref=e2049]:
+                      - img [ref=e2050]
+                      - generic [ref=e2052]: Requested 3D Secure authentication
+                    - generic [ref=e2053]: "679"
+                    - generic [ref=e2054]:
+                      - generic [ref=e2055]: "0"
+                      - img [ref=e2056]
+                  - generic [ref=e2058]:
+                    - generic [ref=e2059]:
+                      - img [ref=e2060]
+                      - generic [ref=e2062]: Allow rule match
+                    - generic [ref=e2063]: 1,015
+                    - generic [ref=e2064]:
+                      - generic [ref=e2065]: "0"
+                      - img [ref=e2066]
+                  - generic [ref=e2068]:
+                    - generic [ref=e2069]:
+                      - img [ref=e2070]
+                      - generic [ref=e2072]: Block rule match
+                    - generic [ref=e2073]: "416"
+                    - generic [ref=e2074]:
+                      - generic [ref=e2075]: "2"
+                      - img [ref=e2076]
+                  - generic [ref=e2078]:
+                    - generic [ref=e2079]:
+                      - img [ref=e2080]
+                      - generic [ref=e2082]: Review rule match
+                    - generic [ref=e2083]: 1,449
+                    - generic [ref=e2084]:
+                      - generic [ref=e2085]: "1"
+                      - img [ref=e2086]
+            - generic [ref=e2089]:
+              - generic [ref=e2090]:
+                - img "Radar" [ref=e2091]
+                - generic [ref=e2096]: Radar
+              - generic [ref=e2097]:
+                - heading "Fight fraud with the strength of the Stripe network" [level=1] [ref=e2099]
+                - list [ref=e2102]:
+                  - listitem [ref=e2103]:
+                    - img [ref=e2104]
+                    - text: Automatically detect and help block fraud with Radar’s AI that trains on data across millions of global companies
+                  - listitem [ref=e2108]:
+                    - img [ref=e2109]
+                    - text: Get insights to identify fraud patterns and tailor fraud protection to your business
+                  - listitem [ref=e2113]:
+                    - img [ref=e2114]
+                    - text: No integration required
+            - link "Learn more" [ref=e2119] [cursor=pointer]:
+              - /url: /radar
+              - text: Learn more
+              - img [ref=e2120]
+          - generic [ref=e2124]:
+            - generic [ref=e2125]:
+              - img [ref=e2127]
+              - generic [ref=e2133]:
+                - generic [ref=e2134]: Total funds won
+                - generic [ref=e2135]:
+                  - generic [ref=e2136]:
+                    - generic [ref=e2137]: Won with Smart Disputes
+                    - generic [ref=e2139]: $20,901 89%
+                  - generic [ref=e2140]:
+                    - generic [ref=e2141]: Won manually
+                    - generic [ref=e2143]: $2,623 11%
+                - generic [ref=e2152]:
+                  - generic [ref=e2153]: $6,000
+                  - generic [ref=e2154]: $4,000
+                  - generic [ref=e2155]: $2,000
+                  - generic [ref=e2156]: $0
+            - generic [ref=e2158]:
+              - generic [ref=e2159]:
+                - img "DisputeManagement" [ref=e2160]
+                - generic [ref=e2165]: Dispute management
+              - generic [ref=e2166]:
+                - heading "Save time and money on disputes" [level=1] [ref=e2168]
+                - list [ref=e2171]:
+                  - listitem [ref=e2172]:
+                    - img [ref=e2173]
+                    - text: Automate evidence submission with AI-powered Smart Disputes
+                  - listitem [ref=e2177]:
+                    - img [ref=e2178]
+                    - text: Proactively resolve and prevent disputes to reduce your dispute rate
+                  - listitem [ref=e2182]:
+                    - img [ref=e2183]
+                    - text: Unify dispute management with automated end-to-end solutions
+            - link "Learn more" [ref=e2188] [cursor=pointer]:
+              - /url: /radar/dispute-management
+              - text: Learn more
+              - img [ref=e2189]
+      - generic [ref=e2193]:
+        - generic [ref=e2195]:
+          - heading "Unlock actionable insights to increase revenue" [level=1] [ref=e2197]
+          - paragraph [ref=e2199]: Get the information you need to make data-driven decisions that can improve your payments performance. Access in-depth analytics across the payments lifecycle and measurable recommendations to increase revenue.
+          - link "Learn more about Payments analytics" [ref=e2201] [cursor=pointer]:
+            - /url: https://docs.stripe.com/payments/analytics
+            - text: Learn more about Payments analytics
+            - img [ref=e2202]
+        - img "Stripe Dashboard report showing how to optimize cost" [ref=e2208]
+      - generic [ref=e2209]:
+        - generic [ref=e2211]:
+          - heading "Advanced payments capabilities" [level=1] [ref=e2213]
+          - generic [ref=e2214]:
+            - text: Use Stripe to easily customize your payments setup with more accessible, enterprise-grade capabilities that can accelerate time to market, increase revenue, and reduce costs.
+            - button "For qualified users and where available via Stripe" [ref=e2215] [cursor=pointer]:
+              - img [ref=e2216]
+              - generic: For qualified users and where available via Stripe
+          - generic [ref=e2220]:
+            - list [ref=e2222]:
+              - listitem [ref=e2223]:
+                - img [ref=e2224]
+                - text: Advanced card acquiring, including incremental auth, multicapture, and more
+              - listitem [ref=e2228]:
+                - img [ref=e2229]
+                - text: Local acquiring in global markets
+              - listitem [ref=e2233]:
+                - img [ref=e2234]
+                - text: Access to regional debit networks
+              - listitem [ref=e2238]:
+                - img [ref=e2239]
+                - text: Ability to pass product line-item data
+              - listitem [ref=e2243]:
+                - img [ref=e2244]
+                - text: Support for multiprocessor setups
+              - listitem [ref=e2248]:
+                - img [ref=e2249]
+                - text: Manage all lines of business or subsidiaries across multiple Stripe accounts with
+                - link "Organizations" [ref=e2253] [cursor=pointer]:
+                  - /url: https://docs.stripe.com/get-started/account/orgs
+            - link "Contact sales" [ref=e2254] [cursor=pointer]:
+              - /url: /contact/sales
+              - text: Contact sales
+              - img [ref=e2255]
+        - generic [ref=e2258]:
+          - figure
+      - generic [ref=e2259]:
+        - generic [ref=e2260]:
+          - generic [ref=e2261]:
+            - generic [ref=e2264]:
+              - blockquote [ref=e2266]:
+                - paragraph [ref=e2267]: Slack increased conversion by approximately 3.5% and reduced fraud by an estimated 53% with Stripe’s Payments Intelligence Suite, including Adaptive Acceptance, network tokens, card account updater, and Radar.
+              - img "Slack logo" [ref=e2269]
+            - generic [ref=e2278]:
+              - generic [ref=e2279]:
+                - blockquote [ref=e2280]:
+                  - paragraph [ref=e2281]: With Stripe managing both one-time payments and recurring subscriptions, CLEAR has achieved higher conversion rates. Stripe’s card account updater and network tokenization help CLEAR protect revenue, increase authorization rates, and reduce churn caused by changes in customers’ credit cards.
+                - link "Read the full story" [ref=e2282] [cursor=pointer]:
+                  - /url: /newsroom/news/clear-and-stripe
+                  - text: Read the full story
+                  - img [ref=e2283]
+              - img "CLEAR logo" [ref=e2287]
+            - generic [ref=e2292]:
+              - blockquote [ref=e2294]:
+                - paragraph [ref=e2295]: Twilio SendGrid increased conversion by 2% and reduced fraud by 90% with Stripe’s Payments Intelligence Suite, including Adaptive Acceptance, network tokens, card account updater, and Radar.
+              - img "TwilioSendGrid logo" [ref=e2297]
+            - generic [ref=e2303]:
+              - blockquote [ref=e2305]:
+                - paragraph [ref=e2306]: GitHub Sponsors Program saw an increase in total contributions to developers by 52% with Stripe’s Payments Intelligence Suite—seamlessly optimizing for authorization, cost, and fraud to increase customer trust and growth.
+                - generic [ref=e2307]: Kevin Crosby, Senior Director, Open Source Funding
+              - img "Github logo" [ref=e2309]
+          - navigation [ref=e2311]:
+            - list [ref=e2312]:
+              - listitem [ref=e2313]:
+                - button "Go to testimonial" [ref=e2314] [cursor=pointer]
+              - listitem [ref=e2315]:
+                - button "Go to testimonial" [ref=e2316] [cursor=pointer]
+              - listitem [ref=e2317]:
+                - button "Go to testimonial" [ref=e2318] [cursor=pointer]
+              - listitem [ref=e2319]:
+                - button "Go to testimonial" [ref=e2320] [cursor=pointer]
+        - navigation [ref=e2321]:
+          - list [ref=e2322]:
+            - listitem [ref=e2323]:
+              - button "Go to testimonial" [ref=e2324] [cursor=pointer]:
+                - img "Slack logo" [ref=e2325]
+            - listitem [ref=e2332]:
+              - button "Go to testimonial" [ref=e2333] [cursor=pointer]:
+                - img "CLEAR logo" [ref=e2334]
+            - listitem [ref=e2337]:
+              - button "Go to testimonial" [ref=e2338] [cursor=pointer]:
+                - img "TwilioSendGrid logo" [ref=e2339]
+            - listitem [ref=e2343]:
+              - button "Go to testimonial" [ref=e2344] [cursor=pointer]:
+                - img "Github logo" [ref=e2345]
+  - generic [ref=e2359]:
+    - generic [ref=e2360]:
+      - generic [ref=e2361]:
+        - heading "Unified platform" [level=2] [ref=e2362]
+        - heading "Move faster with a flexible, reliable platform engineered for growth" [level=1] [ref=e2363]
+      - paragraph [ref=e2365]: From startups looking to launch quickly to large, global businesses eager to improve payment economics, Stripe’s secure, unified platform is built to help your business grow efficiently.
+    - generic [ref=e2366]:
+      - generic [ref=e2367]:
+        - generic [ref=e2368]:
+          - heading "Reliability is revenue" [level=1] [ref=e2370]
+          - paragraph [ref=e2372]:
+            - text: Avoid downtime losses even during peak periods like Black Friday. With more than 500M API requests per day and daily capacity tests, Stripe is the only major payment processor to publish its
+            - link "uptime" [ref=e2373] [cursor=pointer]:
+              - /url: https://www.stripestatus.com/
+            - text: . Our overprovisioned API servers mean easy scale-up and minimal latency.
+        - generic [ref=e2375]:
+          - generic [ref=e2376]:
+            - generic [ref=e2377]: "99.999"
+            - generic [ref=e2378]: "%"
+          - generic [ref=e2379]:
+            - text: historical uptime for
+            - link [ref=e2380] [cursor=pointer]:
+              - /url: https://status.stripe.com/
+              - text: Stripe services
+      - generic [ref=e2381]:
+        - generic [ref=e2382]:
+          - heading "Compliance at the core" [level=1] [ref=e2384]
+          - paragraph [ref=e2386]: Simplify compliance with an industry-leading partner certified to the highest compliance standards and operational excellence. Stripe is a member of the PCI Board of Advisors and has a 100% PCI audit success rate as a PCI Level 1 Service Provider.
+        - generic [ref=e2388]:
+          - generic [ref=e2389]:
+            - generic [ref=e2390]:
+              - img [ref=e2392]
+              - generic [ref=e2394]: SSAE18/SOC 1 type 1 and type 2 and SSAE18/SOC 2 type 1 and type 2 reports
+            - generic [ref=e2395]:
+              - img [ref=e2397]
+              - generic [ref=e2401]: Money Transmitter Licenses across US
+            - generic [ref=e2402]:
+              - img [ref=e2404]
+              - generic [ref=e2408]: Know Your Customer and AML checks
+          - generic [ref=e2409]:
+            - generic [ref=e2410]:
+              - img [ref=e2412]
+              - generic [ref=e2414]: PSD2 and Strong Customer Authentication (SCA) compliant
+            - generic [ref=e2415]:
+              - img [ref=e2417]
+              - generic [ref=e2419]: PCI DSS Level 1 certification
+            - generic [ref=e2420]:
+              - img [ref=e2422]
+              - generic [ref=e2428]: E-Money Licenses in the EU and the UK
+    - generic [ref=e2429]:
+      - heading "Keep payments secure" [level=1] [ref=e2431]
+      - paragraph [ref=e2433]: Build on a platform designed to protect your data with AES encryption and isolated infrastructure that doesn’t share any credentials with Stripe’s primary services.
+      - generic [ref=e2435]:
+        - generic [ref=e2437]:
+          - generic [ref=e2438]:
+            - generic [ref=e2440]:
+              - generic:
+                - img
+            - heading "Isolated infrastructure" [level=1] [ref=e2441]
+          - paragraph [ref=e2443]: Stripe’s infrastructure for storing, decrypting, and transmitting card numbers runs in separate hosting infrastructure.
+        - generic [ref=e2445]:
+          - generic [ref=e2446]:
+            - img [ref=e2448]
+            - heading "AES encryption" [level=1] [ref=e2453]
+          - paragraph [ref=e2455]: All card numbers are encrypted on disk with AES-256. Decryption keys are stored on separate machines.
+  - generic [ref=e2463]:
+    - generic [ref=e2464]:
+      - heading "Stripe named a Leader in the Forrester Wave for Merchant Payment Providers" [level=1] [ref=e2466]
+      - paragraph [ref=e2468]:
+        - text: Stripe has been named a Leader in
+        - emphasis [ref=e2469]: "The Forrester Wave™: Merchant Payment Providers, Q1 2026"
+        - text: ", recognized for its vision, innovation, ease of use, and speed to value for businesses of all sizes."
+      - link "Read the report" [ref=e2471] [cursor=pointer]:
+        - /url: https://go.stripe.global/forrester-payment-providers
+        - text: Read the report
+        - img [ref=e2472]
+    - generic [ref=e2475]:
+      - generic [ref=e2476]:
+        - generic [ref=e2477]:
+          - generic [ref=e2480]:
+            - generic [ref=e2481]:
+              - blockquote [ref=e2482]:
+                - paragraph [ref=e2483]: "Shopify has been doing this with Stripe for almost a decade, and we trust Stripe’s DNA to always do the right thing for its customers. If you’re good at building software, you think of APIs, architecture, speed, and resilience. This is what Stripe is so good at: making the complexity of money go away, being resilient, uptime, and beautiful APIs."
+                - generic [ref=e2484]: Kaz Nejatian, Vice President, Merchant Services, Shopify
+              - link "Read the full story" [ref=e2485] [cursor=pointer]:
+                - /url: /customers/shopify
+                - text: Read the full story
+                - img [ref=e2486]
+            - img "Shopify logo" [ref=e2490]
+          - generic [ref=e2497]:
+            - generic [ref=e2498]:
+              - blockquote [ref=e2499]:
+                - paragraph [ref=e2500]: Creating payments experiences that combine payments innovation, reduced friction, and cost savings is at the core of what we do. Using Link to give customers the option to easily pay with their bank accounts puts us in a position to tick all those boxes while providing access to an increasingly popular mode of payment. Stripe shares our commitment to reliability, customer centricity, and continued innovation—which is why they are a key partner.
+                - generic [ref=e2501]: Karl Hébert, Vice President of Payments, Risk, and Identity, Uber
+              - link "Read the full story" [ref=e2502] [cursor=pointer]:
+                - /url: /newsroom/news/stripe-and-uber
+                - text: Read the full story
+                - img [ref=e2503]
+            - img "Uber logo" [ref=e2507]
+          - generic [ref=e2511]:
+            - generic [ref=e2512]:
+              - blockquote [ref=e2513]:
+                - paragraph [ref=e2514]: Through one integration, we were able to increase our acceptance rates by creating a bespoke approach for each market, offering relevant local payment methods, optimizing payments, and navigating 3D Secure in a user-friendly way for our customers.
+                - generic [ref=e2515]: Lauren Mirynowski, Product Manager, Matches Fashion
+              - link "Read the full story" [ref=e2516] [cursor=pointer]:
+                - /url: /customers/matchesfashion
+                - text: Read the full story
+                - img [ref=e2517]
+            - img "MatchesFashion logo" [ref=e2521]
+          - generic [ref=e2525]:
+            - generic [ref=e2526]:
+              - blockquote [ref=e2527]:
+                - paragraph [ref=e2528]: If you look at every company larger than us, they all use multiple payment processors —but Stripe didn’t exist when these companies were growing up. Our feeling is that we can’t just look to what our larger peers have before us—because now Stripe is here. We’re buying into Stripe’s platform and long-term vision.
+                - generic [ref=e2529]: Britt Jamison, Product Manager, Slack
+              - link "Read the full story" [ref=e2530] [cursor=pointer]:
+                - /url: /customers/slack
+                - text: Read the full story
+                - img [ref=e2531]
+            - img "Slack logo" [ref=e2535]
+        - navigation [ref=e2542]:
+          - list [ref=e2543]:
+            - listitem [ref=e2544]:
+              - button "Go to testimonial" [ref=e2545] [cursor=pointer]
+            - listitem [ref=e2546]:
+              - button "Go to testimonial" [ref=e2547] [cursor=pointer]
+            - listitem [ref=e2548]:
+              - button "Go to testimonial" [ref=e2549] [cursor=pointer]
+            - listitem [ref=e2550]:
+              - button "Go to testimonial" [ref=e2551] [cursor=pointer]
+      - navigation [ref=e2552]:
+        - list [ref=e2553]:
+          - listitem [ref=e2554]:
+            - button "Go to testimonial" [ref=e2555] [cursor=pointer]:
+              - img "Shopify logo" [ref=e2556]
+          - listitem [ref=e2561]:
+            - button "Go to testimonial" [ref=e2562] [cursor=pointer]:
+              - img "Uber logo" [ref=e2563]
+          - listitem [ref=e2565]:
+            - button "Go to testimonial" [ref=e2566] [cursor=pointer]:
+              - img "MatchesFashion logo" [ref=e2567]
+          - listitem [ref=e2569]:
+            - button "Go to testimonial" [ref=e2570] [cursor=pointer]:
+              - img "Slack logo" [ref=e2571]
+  - generic [ref=e2591]:
+    - generic [ref=e2593]:
+      - generic [ref=e2594]:
+        - heading "Best in-class documentation" [level=2] [ref=e2595]
+        - heading "Developer-centric to get started fast" [level=1] [ref=e2596]
+      - paragraph [ref=e2598]: A single integration and extensive documentation mean faster time to market, less maintenance of legacy systems, and more focus on customer and product experiences.
+      - generic [ref=e2599]:
+        - list [ref=e2601]:
+          - listitem [ref=e2602]:
+            - img [ref=e2603]
+            - link "Sample code and examples" [ref=e2606] [cursor=pointer]:
+              - /url: https://github.com/stripe-samples
+          - listitem [ref=e2607]:
+            - img [ref=e2608]
+            - link "CLI for development and testing" [ref=e2611] [cursor=pointer]:
+              - /url: https://stripe.com/docs/stripe-cli
+          - listitem [ref=e2612]:
+            - img [ref=e2613]
+            - link "Versioned API changes" [ref=e2616] [cursor=pointer]:
+              - /url: https://stripe.com/docs/upgrades
+          - listitem [ref=e2617]:
+            - img [ref=e2618]
+            - link "Webhooks" [ref=e2621] [cursor=pointer]:
+              - /url: https://stripe.com/docs/webhooks
+          - listitem [ref=e2622]:
+            - img [ref=e2623]
+            - link "Test environment" [ref=e2626] [cursor=pointer]:
+              - /url: https://stripe.com/docs/testing
+          - listitem [ref=e2627]:
+            - img [ref=e2628]
+            - link "Metadata support" [ref=e2631] [cursor=pointer]:
+              - /url: https://stripe.com/docs/payments/charges-api#storing-information-in-metadata
+        - link "Explore the docs" [ref=e2632] [cursor=pointer]:
+          - /url: https://stripe.com/docs/payments
+          - text: Explore the docs
+          - img [ref=e2633]
+    - figure [ref=e2637]:
+      - generic [ref=e2638]:
+        - navigation [ref=e2640]:
+          - generic [ref=e2645]:
+            - button "Node.js" [ref=e2646] [cursor=pointer]
+            - button "Ruby" [ref=e2647] [cursor=pointer]
+            - button "Python" [ref=e2648] [cursor=pointer]
+            - button "Go" [ref=e2649] [cursor=pointer]
+            - button "PHP" [ref=e2650] [cursor=pointer]
+            - button "Java" [ref=e2651] [cursor=pointer]
+            - button ".NET" [ref=e2652] [cursor=pointer]
+        - code [ref=e2654]:
+          - generic [ref=e2655]:
+            - generic [ref=e2658]: ~
+            - generic [ref=e2659]: ⣾
+        - generic [ref=e2662]:
+          - heading "Comprehensive libraries" [level=1] [ref=e2664]
+          - generic [ref=e2665]: Stripe libraries are available for all of the most commonly used languages and frameworks.
+          - link "Learn more" [ref=e2668] [cursor=pointer]:
+            - /url: https://docs.stripe.com/libraries
+            - text: Learn more
+            - img [ref=e2669]
+  - generic [ref=e2680]:
+    - generic [ref=e2681]:
+      - heading "How it works" [level=2] [ref=e2682]
+      - heading "Deep dive into Stripe’s unified payments stack" [level=1] [ref=e2683]
+    - paragraph [ref=e2685]: Explore specific products and features and how they can benefit your business. Or, if you’re new to payments, read our guides to learn more about the fundamentals.
+    - generic [ref=e2687]:
+      - link "See all features" [ref=e2688] [cursor=pointer]:
+        - /url: /payments/features
+        - text: See all features
+        - img [ref=e2689]
+      - link "See guides" [ref=e2692] [cursor=pointer]:
+        - /url: /guides
+        - text: See guides
+        - img [ref=e2693]
+  - generic [ref=e2703]:
+    - generic [ref=e2705]:
+      - heading "Pricing" [level=2] [ref=e2706]
+      - heading "Pricing built for businesses of all sizes" [level=1] [ref=e2707]
+    - generic [ref=e2708]:
+      - generic [ref=e2709]:
+        - generic [ref=e2711]:
+          - heading "Standard pricing" [level=1] [ref=e2713]
+          - link "Pricing details" [ref=e2715] [cursor=pointer]:
+            - /url: /pricing
+            - text: Pricing details
+            - img [ref=e2716]
+        - generic [ref=e2720]:
+          - paragraph [ref=e2723]: Access a complete payments solution with simple, pay-as-you-go pricing that lets you get started in minutes with no setup fees.
+          - generic [ref=e2724]:
+            - generic [ref=e2726]:
+              - strong [ref=e2727]: Starts at 2.9% + 30¢
+              - paragraph [ref=e2729]: per successful charge
+            - link "Payment method pricing" [ref=e2731] [cursor=pointer]:
+              - /url: https://stripe.com/pricing/local-payment-methods
+              - text: Payment method pricing
+              - img [ref=e2732]
+      - generic [ref=e2735]:
+        - generic [ref=e2737]:
+          - heading "Custom pricing" [level=1] [ref=e2739]
+          - link "Contact sales" [ref=e2741] [cursor=pointer]:
+            - /url: /contact/sales
+            - text: Contact sales
+            - img [ref=e2742]
+        - generic [ref=e2747]:
+          - paragraph [ref=e2749]: Designed for businesses with large payments volume or unique use cases.
+          - list [ref=e2751]:
+            - listitem [ref=e2752]:
+              - img [ref=e2753]
+              - generic [ref=e2757]: Volume discounts
+            - listitem [ref=e2758]:
+              - img [ref=e2759]
+              - generic [ref=e2763]: Country-specific rates
+            - listitem [ref=e2764]:
+              - img [ref=e2765]
+              - generic [ref=e2769]: Multi-product discounts
+            - listitem [ref=e2770]:
+              - img [ref=e2771]
+              - generic [ref=e2775]: Interchange plus pricing
+  - generic [ref=e2783]:
+    - heading "More resources" [level=1] [ref=e2786]
+    - generic [ref=e2787]:
+      - link "Blog Using ML to detect and respond to performance degradations in slices of Stripe payments" [ref=e2788] [cursor=pointer]:
+        - /url: /blog/using-ml-to-detect-and-respond-to-performance-degradations-in-slices-of-stripe-payments
+        - generic [ref=e2789]:
+          - generic [ref=e2790]: Blog
+          - heading "Using ML to detect and respond to performance degradations in slices of Stripe payments" [level=3] [ref=e2792]
+      - link "Customer story URBN consolidates $5 billion in online and in-store revenue onto Stripe" [ref=e2793] [cursor=pointer]:
+        - /url: /customers/urbn
+        - generic [ref=e2794]:
+          - generic [ref=e2795]: Customer story
+          - heading "URBN consolidates $5 billion in online and in-store revenue onto Stripe" [level=3] [ref=e2797]
+      - link "Blog Testing the conversion impact of 50+ global payment methods" [ref=e2798] [cursor=pointer]:
+        - /url: /blog/testing-the-conversion-impact-of-50-plus-global-payment-methods
+        - generic [ref=e2799]:
+          - generic [ref=e2800]: Blog
+          - heading "Testing the conversion impact of 50+ global payment methods" [level=3] [ref=e2802]
+  - generic [ref=e2811]:
+    - generic [ref=e2812]:
+      - heading "Ready to get started?" [level=1] [ref=e2814]
+      - paragraph [ref=e2816]: Create an account and start accepting payments—no contracts or banking details required. Or, contact us to design a custom package for your business.
+      - generic [ref=e2818]:
+        - link "Start now" [ref=e2819] [cursor=pointer]:
+          - /url: https://dashboard.stripe.com/register
+          - text: Start now
+          - img [ref=e2820]
+        - link "Contact sales" [ref=e2823] [cursor=pointer]:
+          - /url: /contact/sales
+          - text: Contact sales
+          - img [ref=e2824]
+    - generic [ref=e2827]:
+      - generic [ref=e2828]:
+        - img [ref=e2830]
+        - heading "Recurring payments" [level=1] [ref=e2835]
+      - paragraph [ref=e2837]: Bill one-off or manage subscriptions and reduce churn.
+      - link "Explore Billing" [ref=e2839] [cursor=pointer]:
+        - /url: /billing
+        - text: Explore Billing
+        - img [ref=e2840]
+    - generic [ref=e2843]:
+      - generic [ref=e2844]:
+        - img [ref=e2846]
+        - heading "Platform payments" [level=1] [ref=e2851]
+      - paragraph [ref=e2853]: Easily support multiparty payments and global payouts.
+      - link "Explore Connect" [ref=e2855] [cursor=pointer]:
+        - /url: /connect
+        - text: Explore Connect
+        - img [ref=e2856]
+  - contentinfo [ref=e2859]:
+    - navigation [ref=e2866]:
+      - generic [ref=e2868]:
+        - link "Go to the Stripe homepage" [ref=e2870] [cursor=pointer]:
+          - /url: /
+          - img "Stripe logo" [ref=e2871]
+        - generic [ref=e2874]:
+          - button "United States. Choose your country" [ref=e2875] [cursor=pointer]:
+            - img [ref=e2876]
+            - generic [ref=e2878]: United States (English)
+          - generic:
+            - generic:
+              - generic:
+                - list:
+                  - listitem:
+                    - img
+                    - generic: Australia
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/au/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Austria
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/at/payments
+                          - text: Deutsch
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-at/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Belgium
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/nl-be/payments
+                          - text: Nederlands
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/fr-be/payments
+                          - text: Français
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/de-be/payments
+                          - text: Deutsch
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-be/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Brazil
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/br/payments
+                          - text: Português
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-br/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Bulgaria
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-bg/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Canada
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-ca/payments
+                          - text: English
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/fr-ca/payments
+                          - text: Français
+                  - listitem:
+                    - img
+                    - generic: Croatia
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-hr/payments
+                          - text: English
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/it-hr/payments
+                          - text: Italiano
+                  - listitem:
+                    - img
+                    - generic: Cyprus
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-cy/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Czech Republic
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-cz/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Denmark
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-dk/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Estonia
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-ee/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Finland
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-fi/payments
+                          - text: English
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/sv-fi/payments
+                          - text: Svenska
+                - list:
+                  - listitem:
+                    - img
+                    - generic: France
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/fr/payments
+                          - text: Français
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-fr/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Germany
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/de/payments
+                          - text: Deutsch
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-de/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Gibraltar
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-gi/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Greece
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-gr/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Hong Kong
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-hk/payments
+                          - text: English
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/zh-hk/payments
+                          - text: 简体中文
+                  - listitem:
+                    - img
+                    - generic: Hungary
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-hu/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: India
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/in/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Ireland
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/ie/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Italy
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/it/payments
+                          - text: Italiano
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-it/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Japan
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/jp/payments
+                          - text: 日本語
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-jp/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Latvia
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-lv/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Liechtenstein
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/de-li/payments
+                          - text: Deutsch
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-li/payments
+                          - text: English
+                - list:
+                  - listitem:
+                    - img
+                    - generic: Lithuania
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-lt/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Luxembourg
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/fr-lu/payments
+                          - text: Français
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/de-lu/payments
+                          - text: Deutsch
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-lu/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Malaysia
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-my/payments
+                          - text: English
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/zh-my/payments
+                          - text: 简体中文
+                  - listitem:
+                    - img
+                    - generic: Malta
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-mt/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Mexico
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/mx/payments
+                          - text: Español
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-mx/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Netherlands
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/nl/payments
+                          - text: Nederlands
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-nl/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: New Zealand
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/nz/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Norway
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-no/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Poland
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-pl/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Portugal
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/pt-pt/payments
+                          - text: Português
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-pt/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Romania
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-ro/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Singapore
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-sg/payments
+                          - text: English
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/zh-sg/payments
+                          - text: 简体中文
+                - list:
+                  - listitem:
+                    - img
+                    - generic: Slovakia
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-sk/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Slovenia
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-si/payments
+                          - text: English
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/it-si/payments
+                          - text: Italiano
+                  - listitem:
+                    - img
+                    - generic: Spain
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/es/payments
+                          - text: Español
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-es/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Sweden
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/se/payments
+                          - text: Svenska
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-se/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Switzerland
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/de-ch/payments
+                          - text: Deutsch
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/fr-ch/payments
+                          - text: Français
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/it-ch/payments
+                          - text: Italiano
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-ch/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: Thailand
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/th/payments
+                          - text: ไทย
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/en-th/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: United Arab Emirates
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/ae/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: United Kingdom
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/gb/payments
+                          - text: English
+                  - listitem:
+                    - img
+                    - generic: United States
+                    - list:
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/us/payments
+                          - text: English
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/es-us/payments
+                          - text: Español
+                      - listitem:
+                        - link:
+                          - /url: https://stripe.com/zh-us/payments
+                          - text: 简体中文
+      - generic [ref=e2880]:
+        - heading "Products & pricing" [level=1] [ref=e2881]
+        - list [ref=e2882]:
+          - listitem [ref=e2883]:
+            - link "Pricing" [ref=e2884] [cursor=pointer]:
+              - /url: https://stripe.com/pricing
+          - listitem [ref=e2885]:
+            - link "Atlas" [ref=e2886] [cursor=pointer]:
+              - /url: /atlas
+          - listitem [ref=e2887]:
+            - link "Authorization Boost" [ref=e2888] [cursor=pointer]:
+              - /url: /authorization-boost
+          - listitem [ref=e2889]:
+            - link "Billing" [ref=e2890] [cursor=pointer]:
+              - /url: /billing
+          - listitem [ref=e2891]:
+            - link "Capital" [ref=e2892] [cursor=pointer]:
+              - /url: /capital/platforms
+          - listitem [ref=e2893]:
+            - link "Checkout" [ref=e2894] [cursor=pointer]:
+              - /url: /payments/checkout
+          - listitem [ref=e2895]:
+            - link "Crypto" [ref=e2896] [cursor=pointer]:
+              - /url: /use-cases/crypto
+          - listitem [ref=e2897]:
+            - link "Climate" [ref=e2898] [cursor=pointer]:
+              - /url: /climate
+          - listitem [ref=e2899]:
+            - link "Connect" [ref=e2900] [cursor=pointer]:
+              - /url: /connect
+          - listitem [ref=e2901]:
+            - link "Data Pipeline" [ref=e2902] [cursor=pointer]:
+              - /url: /data-pipeline
+          - listitem [ref=e2903]:
+            - link "Elements" [ref=e2904] [cursor=pointer]:
+              - /url: /payments/elements
+          - listitem [ref=e2905]:
+            - link "Financial Accounts" [ref=e2906] [cursor=pointer]:
+              - /url: /financial-accounts
+          - listitem [ref=e2907]:
+            - link "Financial Connections" [ref=e2908] [cursor=pointer]:
+              - /url: /financial-connections
+          - listitem [ref=e2909]:
+            - link "Identity" [ref=e2910] [cursor=pointer]:
+              - /url: /identity
+          - listitem [ref=e2911]:
+            - link "Invoicing" [ref=e2912] [cursor=pointer]:
+              - /url: /invoicing
+          - listitem [ref=e2913]:
+            - link "Issuing" [ref=e2914] [cursor=pointer]:
+              - /url: https://stripe.com/issuing
+          - listitem [ref=e2915]:
+            - link "Link" [ref=e2916] [cursor=pointer]:
+              - /url: /payments/link
+          - listitem [ref=e2917]:
+            - link "Managed Payments" [ref=e2918] [cursor=pointer]:
+              - /url: /managed-payments
+          - listitem [ref=e2919]:
+            - link "Payments" [ref=e2920] [cursor=pointer]:
+              - /url: /payments
+          - listitem [ref=e2921]:
+            - link "Payment Links" [ref=e2922] [cursor=pointer]:
+              - /url: /payments/payment-links
+          - listitem [ref=e2923]:
+            - link "Payouts" [ref=e2924] [cursor=pointer]:
+              - /url: /connect/payouts
+          - listitem [ref=e2925]:
+            - link "Radar" [ref=e2926] [cursor=pointer]:
+              - /url: https://stripe.com/radar
+          - listitem [ref=e2927]:
+            - link "Revenue Recognition" [ref=e2928] [cursor=pointer]:
+              - /url: /revenue-recognition
+          - listitem [ref=e2929]:
+            - link "Stripe Sigma" [ref=e2930] [cursor=pointer]:
+              - /url: https://stripe.com/sigma
+          - listitem [ref=e2931]:
+            - link "Tax" [ref=e2932] [cursor=pointer]:
+              - /url: /tax
+          - listitem [ref=e2933]:
+            - link "Terminal" [ref=e2934] [cursor=pointer]:
+              - /url: /terminal
+      - generic [ref=e2935]:
+        - generic [ref=e2936]:
+          - heading "Solutions" [level=1] [ref=e2937]
+          - list [ref=e2938]:
+            - listitem [ref=e2939]:
+              - link "Enterprises" [ref=e2940] [cursor=pointer]:
+                - /url: /enterprise
+            - listitem [ref=e2941]:
+              - link "Startups" [ref=e2942] [cursor=pointer]:
+                - /url: /startups
+            - listitem [ref=e2943]:
+              - link "Agentic commerce" [ref=e2944] [cursor=pointer]:
+                - /url: /use-cases/agentic-commerce
+            - listitem [ref=e2945]:
+              - link "Crypto" [ref=e2946] [cursor=pointer]:
+                - /url: /use-cases/crypto
+            - listitem [ref=e2947]:
+              - link "Ecommerce" [ref=e2948] [cursor=pointer]:
+                - /url: /use-cases/ecommerce
+            - listitem [ref=e2949]:
+              - link "Embedded finance" [ref=e2950] [cursor=pointer]:
+                - /url: /use-cases/embedded-finance
+            - listitem [ref=e2951]:
+              - link "Finance automation" [ref=e2952] [cursor=pointer]:
+                - /url: /use-cases/finance-automation
+            - listitem [ref=e2953]:
+              - link "Global businesses" [ref=e2954] [cursor=pointer]:
+                - /url: /use-cases/global-businesses
+            - listitem [ref=e2955]:
+              - link "In-app payments" [ref=e2956] [cursor=pointer]:
+                - /url: /use-cases/in-app-payments
+            - listitem [ref=e2957]:
+              - link "Marketplaces" [ref=e2958] [cursor=pointer]:
+                - /url: /use-cases/marketplaces
+            - listitem [ref=e2959]:
+              - link "Platforms" [ref=e2960] [cursor=pointer]:
+                - /url: /use-cases/platforms
+            - listitem [ref=e2961]:
+              - link "SaaS" [ref=e2962] [cursor=pointer]:
+                - /url: /use-cases/saas
+            - listitem [ref=e2963]:
+              - link "AI companies" [ref=e2964] [cursor=pointer]:
+                - /url: /use-cases/ai
+            - listitem [ref=e2965]:
+              - link "Creator economy" [ref=e2966] [cursor=pointer]:
+                - /url: /use-cases/creator-economy
+            - listitem [ref=e2967]:
+              - link "Hospitality, travel, and leisure" [ref=e2968] [cursor=pointer]:
+                - /url: /industries/travel
+            - listitem [ref=e2969]:
+              - link "Insurance" [ref=e2970] [cursor=pointer]:
+                - /url: /industries/insurance
+            - listitem [ref=e2971]:
+              - link "Media and entertainment" [ref=e2972] [cursor=pointer]:
+                - /url: /industries/media-entertainment
+            - listitem [ref=e2973]:
+              - link "Nonprofits" [ref=e2974] [cursor=pointer]:
+                - /url: /industries/nonprofits
+            - listitem [ref=e2975]:
+              - link "Retail" [ref=e2976] [cursor=pointer]:
+                - /url: /industries/retail
+        - generic [ref=e2977]:
+          - heading "Integrations & custom solutions" [level=1] [ref=e2978]
+          - list [ref=e2979]:
+            - listitem [ref=e2980]:
+              - link "Stripe App Marketplace" [ref=e2981] [cursor=pointer]:
+                - /url: https://marketplace.stripe.com/
+            - listitem [ref=e2982]:
+              - link "Stripe Partner ecosystem" [ref=e2983] [cursor=pointer]:
+                - /url: /partners
+            - listitem [ref=e2984]:
+              - link "Professional services" [ref=e2985] [cursor=pointer]:
+                - /url: /professional-services
+        - generic [ref=e2986]:
+          - heading "Developers" [level=1] [ref=e2987]
+          - list [ref=e2988]:
+            - listitem [ref=e2989]:
+              - link "Documentation" [ref=e2990] [cursor=pointer]:
+                - /url: https://docs.stripe.com/
+            - listitem [ref=e2991]:
+              - link "API reference" [ref=e2992] [cursor=pointer]:
+                - /url: https://docs.stripe.com/api
+            - listitem [ref=e2993]:
+              - link "API status" [ref=e2994] [cursor=pointer]:
+                - /url: https://status.stripe.com/
+            - listitem [ref=e2995]:
+              - link "API changelog" [ref=e2996] [cursor=pointer]:
+                - /url: https://docs.stripe.com/changelog
+            - listitem [ref=e2997]:
+              - link "Libraries and SDKs" [ref=e2998] [cursor=pointer]:
+                - /url: https://docs.stripe.com/development
+            - listitem [ref=e2999]:
+              - link "Developer blog" [ref=e3000] [cursor=pointer]:
+                - /url: https://stripe.dev/
+      - generic [ref=e3001]:
+        - generic [ref=e3002]:
+          - heading "Resources" [level=1] [ref=e3003]
+          - list [ref=e3004]:
+            - listitem [ref=e3005]:
+              - link "Guides" [ref=e3006] [cursor=pointer]:
+                - /url: https://stripe.com/guides
+            - listitem [ref=e3007]:
+              - link "Customer stories" [ref=e3008] [cursor=pointer]:
+                - /url: /customers
+            - listitem [ref=e3009]:
+              - link "Blog" [ref=e3010] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e3011]:
+              - link "Sessions annual conference" [ref=e3012] [cursor=pointer]:
+                - /url: /sessions
+            - listitem [ref=e3013]:
+              - link "Privacy & terms" [ref=e3014] [cursor=pointer]:
+                - /url: https://stripe.com/privacy
+            - listitem [ref=e3015]:
+              - link "Prohibited & restricted businesses" [ref=e3016] [cursor=pointer]:
+                - /url: /legal/restricted-businesses
+            - listitem [ref=e3017]:
+              - link "Licenses" [ref=e3018] [cursor=pointer]:
+                - /url: https://stripe.com/spc/licenses
+            - listitem [ref=e3019]:
+              - link "Sitemap" [ref=e3020] [cursor=pointer]:
+                - /url: /sitemap
+            - listitem [ref=e3021]:
+              - link "Cookie settings" [ref=e3022] [cursor=pointer]:
+                - /url: /cookie-settings
+            - listitem [ref=e3023]:
+              - link "Your privacy choices" [ref=e3024] [cursor=pointer]:
+                - /url: https://privacy.stripe.com/
+            - listitem [ref=e3025]:
+              - link "More resources" [ref=e3026] [cursor=pointer]:
+                - /url: https://stripe.com/resources/more
+        - generic [ref=e3027]:
+          - heading "Company" [level=1] [ref=e3028]
+          - list [ref=e3029]:
+            - listitem [ref=e3030]:
+              - link "Jobs" [ref=e3031] [cursor=pointer]:
+                - /url: /jobs
+            - listitem [ref=e3032]:
+              - link "Newsroom" [ref=e3033] [cursor=pointer]:
+                - /url: /newsroom
+            - listitem [ref=e3034]:
+              - link "Stripe Press" [ref=e3035] [cursor=pointer]:
+                - /url: https://press.stripe.com/
+            - listitem [ref=e3036]:
+              - link "Contact sales" [ref=e3037] [cursor=pointer]:
+                - /url: /contact/sales
+        - generic [ref=e3038]:
+          - heading "Support" [level=1] [ref=e3039]
+          - list [ref=e3040]:
+            - listitem [ref=e3041]:
+              - link "Get support" [ref=e3042] [cursor=pointer]:
+                - /url: https://support.stripe.com/?referrerLocale=en-us
+            - listitem [ref=e3043]:
+              - link "Managed support plans" [ref=e3044] [cursor=pointer]:
+                - /url: /support-plans
+            - listitem [ref=e3045]: "CA residents: +1 888 926 2289"
+        - list [ref=e3047]:
+          - link "Sign in" [ref=e3048] [cursor=pointer]:
+            - /url: https://dashboard.stripe.com/login
+            - text: Sign in
+            - img [ref=e3049]
+      - list [ref=e3053]:
+        - listitem [ref=e3054]: © 2026 Stripe, LLC

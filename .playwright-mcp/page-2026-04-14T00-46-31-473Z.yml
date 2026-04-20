@@ -1,0 +1,835 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]: Technical Delivery Proposal
+    - heading "MLC Platform" [level=1] [ref=e4]
+    - paragraph [ref=e5]: AI-native language school management system. Three-portal architecture serving admins, teachers, and corporate clients with intelligent automation, Zoom-integrated attendance, and multi-provider AI assistance.
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - strong [ref=e8]: "Prepared for:"
+        - text: Modern Language Center
+      - generic [ref=e9]:
+        - strong [ref=e10]: "Date:"
+        - text: April 13, 2026
+      - generic [ref=e11]:
+        - strong [ref=e12]: "Version:"
+        - text: "1.0"
+  - navigation [ref=e13]:
+    - link "Overview" [ref=e14] [cursor=pointer]:
+      - /url: "#overview"
+    - link "Current State" [ref=e15] [cursor=pointer]:
+      - /url: "#current-state"
+    - link "Architecture" [ref=e16] [cursor=pointer]:
+      - /url: "#architecture"
+    - link "Deliverables" [ref=e17] [cursor=pointer]:
+      - /url: "#deliverables"
+    - link "Roadmap" [ref=e18] [cursor=pointer]:
+      - /url: "#roadmap"
+    - link "Infrastructure" [ref=e19] [cursor=pointer]:
+      - /url: "#infrastructure"
+    - link "Quality" [ref=e20] [cursor=pointer]:
+      - /url: "#quality"
+    - link "Risks" [ref=e21] [cursor=pointer]:
+      - /url: "#risks"
+    - link "Next Steps" [ref=e22] [cursor=pointer]:
+      - /url: "#next-steps"
+  - generic [ref=e23]:
+    - generic [ref=e24]: 01 — Executive Overview
+    - heading "One platform to run an entire language school" [level=2] [ref=e25]
+    - paragraph [ref=e26]: "MLC Platform replaces fragmented spreadsheets, WhatsApp threads, and manual coordination with a single, AI-powered system. It manages the full lifecycle: student enrollment pipelines, teacher scheduling, Zoom-integrated class delivery, automated attendance, grading, and corporate client reporting."
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]: "3"
+        - generic [ref=e30]: User Portals
+      - generic [ref=e31]:
+        - generic [ref=e32]: "47"
+        - generic [ref=e33]: API Endpoints
+      - generic [ref=e34]:
+        - generic [ref=e35]: 25+
+        - generic [ref=e36]: Database Tables
+      - generic [ref=e37]:
+        - generic [ref=e38]: "538"
+        - generic [ref=e39]: Automated Tests
+      - generic [ref=e40]:
+        - generic [ref=e41]: "26"
+        - generic [ref=e42]: AI Tools
+      - generic [ref=e43]:
+        - generic [ref=e44]: "3"
+        - generic [ref=e45]: Languages (i18n)
+    - heading "Mission" [level=3] [ref=e46]
+    - paragraph [ref=e47]:
+      - text: Enable language schools to be
+      - strong [ref=e48]: managed by a single person
+      - text: through AI-native workflows — replacing manual coordination with intelligent automation while maintaining the human quality of language education.
+    - heading "Target Users" [level=3] [ref=e49]
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]: A
+        - heading "Admin — Operations Manager" [level=4] [ref=e53]
+        - paragraph [ref=e54]: Manages students, teachers, companies, groups, and scheduling. 23+ pages, dashboard with calendar, pipeline management, AI chat assistant with 26+ operational tools.
+      - generic [ref=e55]:
+        - generic [ref=e56]: T
+        - heading "Teacher — Language Instructor" [level=4] [ref=e57]
+        - paragraph [ref=e58]: Delivers classes via Zoom, marks attendance, enters grades, manages weekly availability. 5 pages with session history and level preference configuration.
+      - generic [ref=e59]:
+        - generic [ref=e60]: C
+        - heading "Client — Corporate HR" [level=4] [ref=e61]
+        - paragraph [ref=e62]: Monitors employee progress, reviews attendance and grades, exports PDF reports with billable hours and cost calculations. Currently 2 pages, highest-priority expansion area.
+  - generic [ref=e63]:
+    - generic [ref=e64]: 02 — Current State
+    - heading "What's already built" [level=2] [ref=e65]
+    - paragraph [ref=e66]: Phases 1–5 of platform development are complete. The system is production-deployed on Vercel + Supabase with CI/CD, error tracking, and ~85% test coverage. Below is a feature-by-feature audit.
+    - heading "Portal Completion" [level=3] [ref=e67]
+    - table [ref=e69]:
+      - rowgroup [ref=e70]:
+        - row "Capability Admin Teacher Client Status" [ref=e71]:
+          - columnheader "Capability" [ref=e72]
+          - columnheader "Admin" [ref=e73]
+          - columnheader "Teacher" [ref=e74]
+          - columnheader "Client" [ref=e75]
+          - columnheader "Status" [ref=e76]
+      - rowgroup [ref=e77]:
+        - row "Authentication & RBAC Complete Complete Complete JWT + RLS policies" [ref=e78]:
+          - cell "Authentication & RBAC" [ref=e79]:
+            - strong [ref=e80]: Authentication & RBAC
+          - cell "Complete" [ref=e81]:
+            - generic [ref=e82]: Complete
+          - cell "Complete" [ref=e83]:
+            - generic [ref=e84]: Complete
+          - cell "Complete" [ref=e85]:
+            - generic [ref=e86]: Complete
+          - cell "JWT + RLS policies" [ref=e87]
+        - row "Student Management Complete — View only Pipeline + CRUD + detail pages" [ref=e88]:
+          - cell "Student Management" [ref=e89]:
+            - strong [ref=e90]: Student Management
+          - cell "Complete" [ref=e91]:
+            - generic [ref=e92]: Complete
+          - cell "—" [ref=e93]
+          - cell "View only" [ref=e94]
+          - cell "Pipeline + CRUD + detail pages" [ref=e95]
+        - row "Teacher Management Complete Self-manage — Availability, preferences, assignment" [ref=e96]:
+          - cell "Teacher Management" [ref=e97]:
+            - strong [ref=e98]: Teacher Management
+          - cell "Complete" [ref=e99]:
+            - generic [ref=e100]: Complete
+          - cell "Self-manage" [ref=e101]
+          - cell "—" [ref=e102]
+          - cell "Availability, preferences, assignment" [ref=e103]
+        - row "Group Management Complete View View 9-step activation workflow" [ref=e104]:
+          - cell "Group Management" [ref=e105]:
+            - strong [ref=e106]: Group Management
+          - cell "Complete" [ref=e107]:
+            - generic [ref=e108]: Complete
+          - cell "View" [ref=e109]
+          - cell "View" [ref=e110]
+          - cell "9-step activation workflow" [ref=e111]
+        - row "Attendance (Manual) View Complete View P / A / NS / LC statuses" [ref=e112]:
+          - cell "Attendance (Manual)" [ref=e113]:
+            - strong [ref=e114]: Attendance (Manual)
+          - cell "View" [ref=e115]
+          - cell "Complete" [ref=e116]:
+            - generic [ref=e117]: Complete
+          - cell "View" [ref=e118]
+          - cell "P / A / NS / LC statuses" [ref=e119]
+        - row "Attendance (Zoom) Webhook Hybrid — Automated via webhook events" [ref=e120]:
+          - cell "Attendance (Zoom)" [ref=e121]:
+            - strong [ref=e122]: Attendance (Zoom)
+          - cell "Webhook" [ref=e123]:
+            - generic [ref=e124]: Webhook
+          - cell "Hybrid" [ref=e125]:
+            - generic [ref=e126]: Hybrid
+          - cell "—" [ref=e127]
+          - cell "Automated via webhook events" [ref=e128]
+        - row "Grading View Complete View Oral / Structure / Participation" [ref=e129]:
+          - cell "Grading" [ref=e130]:
+            - strong [ref=e131]: Grading
+          - cell "View" [ref=e132]
+          - cell "Complete" [ref=e133]:
+            - generic [ref=e134]: Complete
+          - cell "View" [ref=e135]
+          - cell "Oral / Structure / Participation" [ref=e136]
+        - row "PDF Reporting Complete — Complete jsPDF with company branding" [ref=e137]:
+          - cell "PDF Reporting" [ref=e138]:
+            - strong [ref=e139]: PDF Reporting
+          - cell "Complete" [ref=e140]:
+            - generic [ref=e141]: Complete
+          - cell "—" [ref=e142]
+          - cell "Complete" [ref=e143]:
+            - generic [ref=e144]: Complete
+          - cell "jsPDF with company branding" [ref=e145]
+        - row "Notifications Send Receive None Email reminders + alert hub" [ref=e146]:
+          - cell "Notifications" [ref=e147]:
+            - strong [ref=e148]: Notifications
+          - cell "Send" [ref=e149]:
+            - generic [ref=e150]: Send
+          - cell "Receive" [ref=e151]:
+            - generic [ref=e152]: Receive
+          - cell "None" [ref=e153]:
+            - generic [ref=e154]: None
+          - cell "Email reminders + alert hub" [ref=e155]
+        - row "AI Chat Assistant Complete Complete None 26+ tools, multi-provider" [ref=e156]:
+          - cell "AI Chat Assistant" [ref=e157]:
+            - strong [ref=e158]: AI Chat Assistant
+          - cell "Complete" [ref=e159]:
+            - generic [ref=e160]: Complete
+          - cell "Complete" [ref=e161]:
+            - generic [ref=e162]: Complete
+          - cell "None" [ref=e163]:
+            - generic [ref=e164]: None
+          - cell "26+ tools, multi-provider" [ref=e165]
+        - row "Dark Mode Complete Complete Complete System preference + toggle" [ref=e166]:
+          - cell "Dark Mode" [ref=e167]:
+            - strong [ref=e168]: Dark Mode
+          - cell "Complete" [ref=e169]:
+            - generic [ref=e170]: Complete
+          - cell "Complete" [ref=e171]:
+            - generic [ref=e172]: Complete
+          - cell "Complete" [ref=e173]:
+            - generic [ref=e174]: Complete
+          - cell "System preference + toggle" [ref=e175]
+        - row "Internationalization EN/ES/FR EN/ES/FR EN/ES/FR Full 3-locale support" [ref=e176]:
+          - cell "Internationalization" [ref=e177]:
+            - strong [ref=e178]: Internationalization
+          - cell "EN/ES/FR" [ref=e179]:
+            - generic [ref=e180]: EN/ES/FR
+          - cell "EN/ES/FR" [ref=e181]:
+            - generic [ref=e182]: EN/ES/FR
+          - cell "EN/ES/FR" [ref=e183]:
+            - generic [ref=e184]: EN/ES/FR
+          - cell "Full 3-locale support" [ref=e185]
+        - row "Real-time Subscriptions None None None Planned — no WebSocket yet" [ref=e186]:
+          - cell "Real-time Subscriptions" [ref=e187]:
+            - strong [ref=e188]: Real-time Subscriptions
+          - cell "None" [ref=e189]:
+            - generic [ref=e190]: None
+          - cell "None" [ref=e191]:
+            - generic [ref=e192]: None
+          - cell "None" [ref=e193]:
+            - generic [ref=e194]: None
+          - cell "Planned — no WebSocket yet" [ref=e195]
+        - row "Mobile Optimization Partial Partial Partial Responsive but not mobile-first" [ref=e196]:
+          - cell "Mobile Optimization" [ref=e197]:
+            - strong [ref=e198]: Mobile Optimization
+          - cell "Partial" [ref=e199]:
+            - generic [ref=e200]: Partial
+          - cell "Partial" [ref=e201]:
+            - generic [ref=e202]: Partial
+          - cell "Partial" [ref=e203]:
+            - generic [ref=e204]: Partial
+          - cell "Responsive but not mobile-first" [ref=e205]
+    - heading "Completion Summary" [level=3] [ref=e206]
+    - generic [ref=e207]:
+      - generic [ref=e208]:
+        - generic [ref=e209]: 80%
+        - heading "Admin Portal" [level=4] [ref=e210]
+        - paragraph [ref=e211]: "23+ pages. Full CRUD, pipeline, Zoom integration, AI chat, settings, logs, alerts. Missing: auto-scheduling, predictive alerts, real-time updates."
+      - generic [ref=e212]:
+        - generic [ref=e213]: 60%
+        - heading "Teacher Portal" [level=4] [ref=e214]
+        - paragraph [ref=e215]: "5 pages. Core attendance, grading, availability. Missing: mobile optimization, push notifications, student progress trends, offline support."
+      - generic [ref=e216]:
+        - generic [ref=e217]: 20%
+        - heading "Client Portal" [level=4] [ref=e218]
+        - paragraph [ref=e219]: "2 pages. Basic viewing + PDF export. Missing: self-service enrollment, trend analytics, communication, billing, automated reports."
+  - generic [ref=e220]:
+    - generic [ref=e221]: 03 — Architecture
+    - heading "System architecture and technology stack" [level=2] [ref=e222]
+    - paragraph [ref=e223]: "Modern JAMstack architecture: Next.js App Router on Vercel (frontend + API), Supabase (database + auth + edge functions), with multi-provider AI and Zoom integration."
+    - heading "Technology Stack" [level=3] [ref=e224]
+    - table [ref=e226]:
+      - rowgroup [ref=e227]:
+        - row "Layer Technology Details" [ref=e228]:
+          - columnheader "Layer" [ref=e229]
+          - columnheader "Technology" [ref=e230]
+          - columnheader "Details" [ref=e231]
+      - rowgroup [ref=e232]:
+        - row "Frontend Next.js 16 + React 19 + TypeScript App Router, Server Components, Tailwind CSS, Shadcn/UI, Headless UI" [ref=e233]:
+          - cell "Frontend" [ref=e234]:
+            - strong [ref=e235]: Frontend
+          - cell "Next.js 16 + React 19 + TypeScript" [ref=e236]
+          - cell "App Router, Server Components, Tailwind CSS, Shadcn/UI, Headless UI" [ref=e237]
+        - row "Backend Next.js API Routes + Supabase Edge Functions 47 route handlers, Zod validation, standardized response contract" [ref=e238]:
+          - cell "Backend" [ref=e239]:
+            - strong [ref=e240]: Backend
+          - cell "Next.js API Routes + Supabase Edge Functions" [ref=e241]
+          - cell "47 route handlers, Zod validation, standardized response contract" [ref=e242]
+        - row "Database PostgreSQL (Supabase) 25+ tables, Row Level Security, 19 migration files, typed repositories" [ref=e243]:
+          - cell "Database" [ref=e244]:
+            - strong [ref=e245]: Database
+          - cell "PostgreSQL (Supabase)" [ref=e246]
+          - cell "25+ tables, Row Level Security, 19 migration files, typed repositories" [ref=e247]
+        - row "Auth Supabase Auth (GoTrue) JWT in HTTP-only cookies, role-based access (admin / teacher / client)" [ref=e248]:
+          - cell "Auth" [ref=e249]:
+            - strong [ref=e250]: Auth
+          - cell "Supabase Auth (GoTrue)" [ref=e251]
+          - cell "JWT in HTTP-only cookies, role-based access (admin / teacher / client)" [ref=e252]
+        - row "AI Gemini + OpenAI + Anthropic Multi-provider abstraction, 26+ tools, AES-256-GCM key encryption" [ref=e253]:
+          - cell "AI" [ref=e254]:
+            - strong [ref=e255]: AI
+          - cell "Gemini + OpenAI + Anthropic" [ref=e256]
+          - cell "Multi-provider abstraction, 26+ tools, AES-256-GCM key encryption" [ref=e257]
+        - row "Video Zoom API + Webhooks Meeting creation, student registration, webhook-driven attendance" [ref=e258]:
+          - cell "Video" [ref=e259]:
+            - strong [ref=e260]: Video
+          - cell "Zoom API + Webhooks" [ref=e261]
+          - cell "Meeting creation, student registration, webhook-driven attendance" [ref=e262]
+        - row "Hosting Vercel + Supabase Cloud CDN edge delivery, preview deploys on PR, auto-deploy on main" [ref=e263]:
+          - cell "Hosting" [ref=e264]:
+            - strong [ref=e265]: Hosting
+          - cell "Vercel + Supabase Cloud" [ref=e266]
+          - cell "CDN edge delivery, preview deploys on PR, auto-deploy on main" [ref=e267]
+        - row "Monitoring Sentry Error tracking (server + client), source maps, session replay" [ref=e268]:
+          - cell "Monitoring" [ref=e269]:
+            - strong [ref=e270]: Monitoring
+          - cell "Sentry" [ref=e271]
+          - cell "Error tracking (server + client), source maps, session replay" [ref=e272]
+        - row "CI/CD GitHub Actions Lint, typecheck, Vitest, coverage, Playwright E2E on every PR" [ref=e273]:
+          - cell "CI/CD" [ref=e274]:
+            - strong [ref=e275]: CI/CD
+          - cell "GitHub Actions" [ref=e276]
+          - cell "Lint, typecheck, Vitest, coverage, Playwright E2E on every PR" [ref=e277]
+    - heading "Database Schema" [level=3] [ref=e278]
+    - paragraph [ref=e279]: "PostgreSQL with 25+ tables organized into three domains:"
+    - generic [ref=e280]:
+      - generic [ref=e281]:
+        - generic [ref=e282]: D
+        - heading "Core Domain (9 tables)" [level=4] [ref=e283]
+        - paragraph [ref=e284]: users, companies, students, groups, group_students, periods, class_sessions, attendance, grades
+      - generic [ref=e285]:
+        - generic [ref=e286]: Z
+        - heading "Zoom Integration (4 tables)" [level=4] [ref=e287]
+        - paragraph [ref=e288]: zoom_meetings, zoom_registrants, zoom_webhook_events, attendance_logs
+      - generic [ref=e289]:
+        - generic [ref=e290]: O
+        - heading "AI & Operations (12 tables)" [level=4] [ref=e291]
+        - paragraph [ref=e292]: ai_providers, ai_conversations, ai_messages, ai_feedback, system_logs, alerts, user_alerts, pipeline_students, teacher_availability, and more
+    - heading "Security Architecture" [level=3] [ref=e293]
+    - list [ref=e294]:
+      - listitem [ref=e295]:
+        - strong [ref=e296]: Row Level Security (RLS)
+        - text: on all database tables — admins see everything, teachers see assigned groups, clients see own company
+      - listitem [ref=e297]:
+        - strong [ref=e298]: JWT authentication
+        - text: via Supabase Auth with secure HTTP-only cookies
+      - listitem [ref=e299]:
+        - strong [ref=e300]: requireAdmin() guards
+        - text: on all admin API routes (server-side verification)
+      - listitem [ref=e301]:
+        - strong [ref=e302]: AES-256-GCM encryption
+        - text: for AI provider API keys at rest
+      - listitem [ref=e303]:
+        - strong [ref=e304]: Rate limiting middleware
+        - text: on all API routes (sliding window)
+      - listitem [ref=e305]:
+        - strong [ref=e306]: Zod schema validation
+        - text: on all API inputs
+  - generic [ref=e307]:
+    - generic [ref=e308]: 04 — Deliverables
+    - heading "What you receive" [level=2] [ref=e309]
+    - paragraph [ref=e310]: A complete, production-deployed platform with source code, infrastructure, documentation, and CI/CD pipeline. Everything needed to operate and evolve the system independently.
+    - heading "Platform Deliverables" [level=3] [ref=e311]
+    - generic [ref=e312]:
+      - generic [ref=e313]:
+        - generic [ref=e314]: "1"
+        - heading "Admin Portal (23+ pages)" [level=4] [ref=e315]
+        - paragraph [ref=e316]: Dashboard with calendar, company/student/teacher/group management, enrollment pipeline, notifications, system settings, AI chat assistant, logs, alerts, and changelog.
+      - generic [ref=e317]:
+        - generic [ref=e318]: "2"
+        - heading "Teacher Portal (5 pages)" [level=4] [ref=e319]
+        - paragraph [ref=e320]: Today's classes dashboard, per-group attendance marking (manual + Zoom hybrid), grading interface with scoring dimensions, availability management, session history.
+      - generic [ref=e321]:
+        - generic [ref=e322]: "3"
+        - heading "Client Portal (2 pages)" [level=4] [ref=e323]
+        - paragraph [ref=e324]: Company progress overview with period filtering, group details, attendance rates, grade breakdowns, PDF report export with billable hours and cost calculations.
+      - generic [ref=e325]:
+        - generic [ref=e326]: "4"
+        - heading "Zoom Integration" [level=4] [ref=e327]
+        - paragraph [ref=e328]: Automated meeting creation, student registration with join URLs, webhook-driven attendance tracking, join/leave time logging, reconciliation diagnostics.
+      - generic [ref=e329]:
+        - generic [ref=e330]: "5"
+        - heading "AI Assistant" [level=4] [ref=e331]
+        - paragraph [ref=e332]: Floating chat widget with 26+ operational tools. Multi-provider support (Gemini, OpenAI, Anthropic). Read, write, analytics, and diagnostic tool categories. Conversation history with feedback.
+      - generic [ref=e333]:
+        - generic [ref=e334]: "6"
+        - heading "Reporting Engine" [level=4] [ref=e335]
+        - paragraph [ref=e336]: PDF generation with jsPDF. Company-branded reports including student attendance, grade breakdowns, and billable hours. AI-powered report wizard for complex analyses.
+    - heading "Infrastructure Deliverables" [level=3] [ref=e337]
+    - generic [ref=e338]:
+      - generic [ref=e339]:
+        - generic [ref=e340]: "7"
+        - heading "CI/CD Pipeline" [level=4] [ref=e341]
+        - paragraph [ref=e342]: "GitHub Actions: lint, typecheck, unit tests, coverage reporting, E2E tests on PR, auto-deploy to Vercel on main. Preview deploys for every pull request."
+      - generic [ref=e343]:
+        - generic [ref=e344]: "8"
+        - heading "Database + Migrations" [level=4] [ref=e345]
+        - paragraph [ref=e346]: 19 SQL migration files. Full schema with RLS policies. Supabase Edge Functions for Zoom webhook processing. Typed Data Access Layer with repository pattern.
+    - heading "Documentation Deliverables" [level=3] [ref=e347]
+    - table [ref=e349]:
+      - rowgroup [ref=e350]:
+        - row "Document Purpose Size" [ref=e351]:
+          - columnheader "Document" [ref=e352]
+          - columnheader "Purpose" [ref=e353]
+          - columnheader "Size" [ref=e354]
+      - rowgroup [ref=e355]:
+        - row "README.md Project overview, features, getting started guide 381 lines" [ref=e356]:
+          - cell "README.md" [ref=e357]:
+            - strong [ref=e358]: README.md
+          - cell "Project overview, features, getting started guide" [ref=e359]
+          - cell "381 lines" [ref=e360]
+        - row "ARCHITECTURE.md Deep technical architecture, data flows, component hierarchy 620 lines" [ref=e361]:
+          - cell "ARCHITECTURE.md" [ref=e362]:
+            - strong [ref=e363]: ARCHITECTURE.md
+          - cell "Deep technical architecture, data flows, component hierarchy" [ref=e364]
+          - cell "620 lines" [ref=e365]
+        - row "CONTRIBUTING.md Development workflow, branching strategy, code style, PR process 150+ lines" [ref=e366]:
+          - cell "CONTRIBUTING.md" [ref=e367]:
+            - strong [ref=e368]: CONTRIBUTING.md
+          - cell "Development workflow, branching strategy, code style, PR process" [ref=e369]
+          - cell "150+ lines" [ref=e370]
+        - row "VERCEL_DEPLOYMENT.md Step-by-step deployment instructions 100 lines" [ref=e371]:
+          - cell "VERCEL_DEPLOYMENT.md" [ref=e372]:
+            - strong [ref=e373]: VERCEL_DEPLOYMENT.md
+          - cell "Step-by-step deployment instructions" [ref=e374]
+          - cell "100 lines" [ref=e375]
+        - row "docs/user-stories.md Comprehensive user stories for all personas 54 KB" [ref=e376]:
+          - cell "docs/user-stories.md" [ref=e377]:
+            - strong [ref=e378]: docs/user-stories.md
+          - cell "Comprehensive user stories for all personas" [ref=e379]
+          - cell "54 KB" [ref=e380]
+        - row "docs/business/ Product vision, customer profiles, KPI metrics framework 3 files" [ref=e381]:
+          - cell "docs/business/" [ref=e382]:
+            - strong [ref=e383]: docs/business/
+          - cell "Product vision, customer profiles, KPI metrics framework" [ref=e384]
+          - cell "3 files" [ref=e385]
+        - row "docs/features/ Feature documentation per portal (admin, teacher, client) 4 files" [ref=e386]:
+          - cell "docs/features/" [ref=e387]:
+            - strong [ref=e388]: docs/features/
+          - cell "Feature documentation per portal (admin, teacher, client)" [ref=e389]
+          - cell "4 files" [ref=e390]
+        - row "docs/API.md API endpoint reference 400+ lines" [ref=e391]:
+          - cell "docs/API.md" [ref=e392]:
+            - strong [ref=e393]: docs/API.md
+          - cell "API endpoint reference" [ref=e394]
+          - cell "400+ lines" [ref=e395]
+    - heading "Quality Deliverables" [level=3] [ref=e396]
+    - generic [ref=e397]:
+      - generic [ref=e398]:
+        - generic [ref=e399]: "538"
+        - generic [ref=e400]: Tests Written
+      - generic [ref=e401]:
+        - generic [ref=e402]: ~85%
+        - generic [ref=e403]: Code Coverage
+      - generic [ref=e404]:
+        - generic [ref=e405]: "48"
+        - generic [ref=e406]: Unit Test Files
+      - generic [ref=e407]:
+        - generic [ref=e408]: "16"
+        - generic [ref=e409]: E2E Test Specs
+  - generic [ref=e410]:
+    - generic [ref=e411]: 05 — Roadmap
+    - heading "12-month evolution plan" [level=2] [ref=e412]
+    - paragraph [ref=e413]: Four quarterly phases move the platform from operational tool to intelligent automation engine. Each phase builds on the previous, with clear milestones and measurable outcomes.
+    - generic [ref=e414]:
+      - generic [ref=e415]:
+        - generic [ref=e416]:
+          - heading "Q2 2026 — Foundation & Client Expansion" [level=4] [ref=e417]
+          - generic [ref=e418]: Current
+        - generic [ref=e419]:
+          - paragraph [ref=e420]:
+            - strong [ref=e421]: "Theme:"
+            - text: Close the client portal gap and eliminate critical tech debt.
+          - list [ref=e422]:
+            - listitem [ref=e423]: Expand client portal from 2 to 8+ pages (progress dashboards, enrollment requests, communication, billing visibility)
+            - listitem [ref=e424]: Decompose god components (students page at 2,500+ lines, edit-group drawer at 934 lines)
+            - listitem [ref=e425]:
+              - text: Remove
+              - code [ref=e426]: "@ts-nocheck"
+              - text: from all 50 flagged files (data integrity risk)
+            - listitem [ref=e427]: Implement distributed rate limiting (Upstash/Redis) for serverless scaling
+            - listitem [ref=e428]: Add real-time subscriptions for attendance and notifications via Supabase Realtime
+      - generic [ref=e429]:
+        - generic [ref=e430]:
+          - heading "Q3 2026 — Intelligent Automation" [level=4] [ref=e431]
+          - generic [ref=e432]: Planned
+        - generic [ref=e433]:
+          - paragraph [ref=e434]:
+            - strong [ref=e435]: "Theme:"
+            - text: Make the platform proactively helpful instead of reactive.
+          - list [ref=e436]:
+            - listitem [ref=e437]: Automated teacher-group scheduling based on availability, level match, and workload balance
+            - listitem [ref=e438]: Predictive attendance alerts (notify admin/client when patterns suggest dropout risk)
+            - listitem [ref=e439]: Scheduled report generation and delivery (PDF/email on configurable cadence)
+            - listitem [ref=e440]: Smart substitution suggestions when teachers are unavailable
+      - generic [ref=e441]:
+        - generic [ref=e442]:
+          - heading "Q4 2026 — Multi-Agent Management" [level=4] [ref=e443]
+          - generic [ref=e444]: Planned
+        - generic [ref=e445]:
+          - paragraph [ref=e446]:
+            - strong [ref=e447]: "Theme:"
+            - text: AI agents handle routine operations; humans handle exceptions.
+          - list [ref=e448]:
+            - listitem [ref=e449]: Agent-driven student pipeline (auto-assess, auto-place, auto-enroll with human approval gates)
+            - listitem [ref=e450]: Natural language operational commands ("Move Maria from Group A to Group B next period")
+            - listitem [ref=e451]: AI-generated period summaries with actionable recommendations
+            - listitem [ref=e452]: Automated Zoom meeting lifecycle management
+      - generic [ref=e453]:
+        - generic [ref=e454]:
+          - heading "Q1 2027 — Predictive Analytics & Scale" [level=4] [ref=e455]
+          - generic [ref=e456]: Planned
+        - generic [ref=e457]:
+          - paragraph [ref=e458]:
+            - strong [ref=e459]: "Theme:"
+            - text: Data-driven school management at scale.
+          - list [ref=e460]:
+            - listitem [ref=e461]: Student outcome prediction (at-risk identification based on attendance + grade patterns)
+            - listitem [ref=e462]: Teacher effectiveness analytics (attendance correlation, grade distributions, feedback)
+            - listitem [ref=e463]: Revenue forecasting from pipeline trends, enrollment velocity, and churn signals
+            - listitem [ref=e464]: Multi-school support (single instance managing multiple locations)
+  - generic [ref=e465]:
+    - generic [ref=e466]: 06 — Infrastructure
+    - heading "Deployment and operations" [level=2] [ref=e467]
+    - paragraph [ref=e468]: Production infrastructure is fully provisioned. The platform runs on Vercel (frontend/API) + Supabase Cloud (database/auth/functions) with CI/CD, error tracking, and automated deployments.
+    - heading "Deployment Architecture" [level=3] [ref=e469]
+    - generic [ref=e470]:
+      - generic [ref=e471]:
+        - generic [ref=e472]: V
+        - heading "Vercel (Frontend + API)" [level=4] [ref=e473]
+        - paragraph [ref=e474]: Next.js on Vercel Edge with global CDN. Preview deploys on every PR. Production deploys on push to main. Automatic HTTPS. Serverless API routes.
+      - generic [ref=e475]:
+        - generic [ref=e476]: S
+        - heading "Supabase Cloud (Backend)" [level=4] [ref=e477]
+        - paragraph [ref=e478]: PostgreSQL database with RLS. GoTrue authentication. Edge Functions (Deno) for Zoom webhooks. Real-time subscriptions. Automatic backups.
+    - heading "Environment Configuration" [level=3] [ref=e479]
+    - table [ref=e481]:
+      - rowgroup [ref=e482]:
+        - row "Variable Purpose Required" [ref=e483]:
+          - columnheader "Variable" [ref=e484]
+          - columnheader "Purpose" [ref=e485]
+          - columnheader "Required" [ref=e486]
+      - rowgroup [ref=e487]:
+        - row "NEXT_PUBLIC_SUPABASE_URL Supabase project URL Required" [ref=e488]:
+          - cell "NEXT_PUBLIC_SUPABASE_URL" [ref=e489]:
+            - code [ref=e490]: NEXT_PUBLIC_SUPABASE_URL
+          - cell "Supabase project URL" [ref=e491]
+          - cell "Required" [ref=e492]:
+            - generic [ref=e493]: Required
+        - row "NEXT_PUBLIC_SUPABASE_ANON_KEY Supabase publishable key Required" [ref=e494]:
+          - cell "NEXT_PUBLIC_SUPABASE_ANON_KEY" [ref=e495]:
+            - code [ref=e496]: NEXT_PUBLIC_SUPABASE_ANON_KEY
+          - cell "Supabase publishable key" [ref=e497]
+          - cell "Required" [ref=e498]:
+            - generic [ref=e499]: Required
+        - row "SUPABASE_SERVICE_ROLE_KEY Server-side Supabase access Required" [ref=e500]:
+          - cell "SUPABASE_SERVICE_ROLE_KEY" [ref=e501]:
+            - code [ref=e502]: SUPABASE_SERVICE_ROLE_KEY
+          - cell "Server-side Supabase access" [ref=e503]
+          - cell "Required" [ref=e504]:
+            - generic [ref=e505]: Required
+        - row "ENCRYPTION_KEY AES-256-GCM for AI API keys Required" [ref=e506]:
+          - cell "ENCRYPTION_KEY" [ref=e507]:
+            - code [ref=e508]: ENCRYPTION_KEY
+          - cell "AES-256-GCM for AI API keys" [ref=e509]
+          - cell "Required" [ref=e510]:
+            - generic [ref=e511]: Required
+        - row "NEXT_PUBLIC_SENTRY_DSN Error tracking endpoint Optional" [ref=e512]:
+          - cell "NEXT_PUBLIC_SENTRY_DSN" [ref=e513]:
+            - code [ref=e514]: NEXT_PUBLIC_SENTRY_DSN
+          - cell "Error tracking endpoint" [ref=e515]
+          - cell "Optional" [ref=e516]:
+            - generic [ref=e517]: Optional
+        - row "SENTRY_AUTH_TOKEN Source map upload token Optional" [ref=e518]:
+          - cell "SENTRY_AUTH_TOKEN" [ref=e519]:
+            - code [ref=e520]: SENTRY_AUTH_TOKEN
+          - cell "Source map upload token" [ref=e521]
+          - cell "Optional" [ref=e522]:
+            - generic [ref=e523]: Optional
+    - heading "CI/CD Pipeline" [level=3] [ref=e524]
+    - paragraph [ref=e525]: "Every push and pull request triggers the full quality gate:"
+    - list [ref=e526]:
+      - listitem [ref=e527]:
+        - strong [ref=e528]: Lint
+        - text: — ESLint 9.x with Next.js rules
+      - listitem [ref=e529]:
+        - strong [ref=e530]: Type Check
+        - text: — TypeScript strict mode (
+        - code [ref=e531]: tsc --noEmit
+        - text: )
+      - listitem [ref=e532]:
+        - strong [ref=e533]: Unit Tests
+        - text: — Vitest with React Testing Library (538 tests)
+      - listitem [ref=e534]:
+        - strong [ref=e535]: Coverage Report
+        - text: — V8 coverage uploaded as artifact (14-day retention)
+      - listitem [ref=e536]:
+        - strong [ref=e537]: E2E Tests
+        - text: — Playwright with Chromium (16 spec files, on PRs only)
+    - heading "Operational KPIs" [level=3] [ref=e538]
+    - paragraph [ref=e539]:
+      - text: The metrics framework (delivered in
+      - code [ref=e540]: docs/business/metrics.md
+      - text: ") defines SQL queries for every KPI, ready to plug into dashboards:"
+    - generic [ref=e541]:
+      - generic [ref=e542]:
+        - heading "> 85%" [level=4] [ref=e543]
+        - paragraph [ref=e544]: Attendance Rate
+      - generic [ref=e545]:
+        - heading "> 95%" [level=4] [ref=e546]
+        - paragraph [ref=e547]: Grade Completion
+      - generic [ref=e548]:
+        - heading "> 80%" [level=4] [ref=e549]
+        - paragraph [ref=e550]: Zoom Adoption
+      - generic [ref=e551]:
+        - heading "< 1%" [level=4] [ref=e552]
+        - paragraph [ref=e553]: Error Rate
+  - generic [ref=e554]:
+    - generic [ref=e555]: 07 — Quality Assurance
+    - heading "Testing, type safety, and quality metrics" [level=2] [ref=e556]
+    - paragraph [ref=e557]: Quality is enforced through automated testing, type checking, and continuous integration. The platform has undergone five hardening phases addressing security, performance, and reliability.
+    - heading "Quality Scorecard" [level=3] [ref=e558]
+    - table [ref=e560]:
+      - rowgroup [ref=e561]:
+        - row "Dimension Rating Details" [ref=e562]:
+          - columnheader "Dimension" [ref=e563]
+          - columnheader "Rating" [ref=e564]
+          - columnheader "Details" [ref=e565]
+      - rowgroup [ref=e566]:
+        - row "Code Architecture A- Clean App Router, separation of concerns, Data Access Layer, standardized API responses" [ref=e567]:
+          - cell "Code Architecture" [ref=e568]:
+            - strong [ref=e569]: Code Architecture
+          - cell "A-" [ref=e570]:
+            - generic [ref=e571]: A-
+          - cell "Clean App Router, separation of concerns, Data Access Layer, standardized API responses" [ref=e572]
+        - row "Test Coverage A- 538 tests, ~85% coverage, Vitest + Playwright, CI-enforced on every PR" [ref=e573]:
+          - cell "Test Coverage" [ref=e574]:
+            - strong [ref=e575]: Test Coverage
+          - cell "A-" [ref=e576]:
+            - generic [ref=e577]: A-
+          - cell "538 tests, ~85% coverage, Vitest + Playwright, CI-enforced on every PR" [ref=e578]
+        - row "Security A RLS on all tables, encrypted API keys, auth guards, rate limiting, Zod validation" [ref=e579]:
+          - cell "Security" [ref=e580]:
+            - strong [ref=e581]: Security
+          - cell "A" [ref=e582]:
+            - generic [ref=e583]: A
+          - cell "RLS on all tables, encrypted API keys, auth guards, rate limiting, Zod validation" [ref=e584]
+        - row "Documentation A- Architecture guide (620 lines), API reference, user stories (54 KB), business docs" [ref=e585]:
+          - cell "Documentation" [ref=e586]:
+            - strong [ref=e587]: Documentation
+          - cell "A-" [ref=e588]:
+            - generic [ref=e589]: A-
+          - cell "Architecture guide (620 lines), API reference, user stories (54 KB), business docs" [ref=e590]
+        - row "Type Safety B TypeScript strict mode, but 50 files with @ts-nocheck and 397 :any types remain" [ref=e591]:
+          - cell "Type Safety" [ref=e592]:
+            - strong [ref=e593]: Type Safety
+          - cell "B" [ref=e594]:
+            - generic [ref=e595]: B
+          - cell "TypeScript strict mode, but 50 files with @ts-nocheck and 397 :any types remain" [ref=e596]:
+            - text: TypeScript strict mode, but 50 files with
+            - code [ref=e597]: "@ts-nocheck"
+            - text: and 397
+            - code [ref=e598]: :any
+            - text: types remain
+        - row "Performance A- LCP 2.1s, CLS <0.1, lazy loading, memoization, optimized icon imports" [ref=e599]:
+          - cell "Performance" [ref=e600]:
+            - strong [ref=e601]: Performance
+          - cell "A-" [ref=e602]:
+            - generic [ref=e603]: A-
+          - cell "LCP 2.1s, CLS <0.1, lazy loading, memoization, optimized icon imports" [ref=e604]
+        - row "Scalability B+ Serverless on Vercel (scales to 10k+ users), needs distributed rate limiting" [ref=e605]:
+          - cell "Scalability" [ref=e606]:
+            - strong [ref=e607]: Scalability
+          - cell "B+" [ref=e608]:
+            - generic [ref=e609]: B+
+          - cell "Serverless on Vercel (scales to 10k+ users), needs distributed rate limiting" [ref=e610]
+    - heading "Hardening Completed (Phases 1–5)" [level=3] [ref=e611]
+    - list [ref=e612]:
+      - listitem [ref=e613]:
+        - text: Fixed
+        - code [ref=e614]: /api/logs
+        - text: authentication vulnerability
+      - listitem [ref=e615]: Implemented AES-256-GCM encryption for AI provider API keys
+      - listitem [ref=e616]: Added Zod validation on all API routes
+      - listitem [ref=e617]:
+        - text: Built standardized API response contract (
+        - code [ref=e618]: apiSuccess
+        - text: /
+        - code [ref=e619]: apiError
+        - text: )
+      - listitem [ref=e620]: Created typed Data Access Layer (repository pattern)
+      - listitem [ref=e621]: Added rate limiting middleware
+      - listitem [ref=e622]:
+        - text: Replaced browser
+        - code [ref=e623]: confirm()
+        - text: /
+        - code [ref=e624]: alert()
+        - text: with accessible ConfirmDialog + Toast
+      - listitem [ref=e625]:
+        - text: Lazy-loaded 10 components via
+        - code [ref=e626]: next/dynamic
+      - listitem [ref=e627]:
+        - text: Memoized 5 components with
+        - code [ref=e628]: React.memo
+      - listitem [ref=e629]: Added loading skeletons + empty states + error boundaries across routes
+  - generic [ref=e630]:
+    - generic [ref=e631]: 08 — Known Risks & Technical Debt
+    - heading "Transparency on what needs attention" [level=2] [ref=e632]
+    - paragraph [ref=e633]: Every codebase carries technical debt. Below is an honest accounting of what's outstanding, its impact, and the remediation path already planned.
+    - table [ref=e635]:
+      - rowgroup [ref=e636]:
+        - row "Issue Impact Severity Remediation" [ref=e637]:
+          - columnheader "Issue" [ref=e638]
+          - columnheader "Impact" [ref=e639]
+          - columnheader "Severity" [ref=e640]
+          - columnheader "Remediation" [ref=e641]
+      - rowgroup [ref=e642]:
+        - row "50 files with @ts-nocheck Type errors hidden in API routes and large components Medium Planned removal in Q2 2026 (HARDENING_PLAN.md)" [ref=e643]:
+          - cell "50 files with @ts-nocheck" [ref=e644]:
+            - strong [ref=e645]:
+              - text: 50 files with
+              - code [ref=e646]: "@ts-nocheck"
+          - cell "Type errors hidden in API routes and large components" [ref=e647]
+          - cell "Medium" [ref=e648]:
+            - generic [ref=e649]: Medium
+          - cell "Planned removal in Q2 2026 (HARDENING_PLAN.md)" [ref=e650]
+        - row "397 :any types Reduced type safety at runtime boundaries Medium Progressive typing using generated Supabase types" [ref=e651]:
+          - cell "397 :any types" [ref=e652]:
+            - strong [ref=e653]:
+              - text: "397"
+              - code [ref=e654]: :any
+              - text: types
+          - cell "Reduced type safety at runtime boundaries" [ref=e655]
+          - cell "Medium" [ref=e656]:
+            - generic [ref=e657]: Medium
+          - cell "Progressive typing using generated Supabase types" [ref=e658]
+        - row "God components Students page (2,563 lines), edit-group drawer (934 lines) Medium Component decomposition planned for Q2 2026" [ref=e659]:
+          - cell "God components" [ref=e660]:
+            - strong [ref=e661]: God components
+          - cell "Students page (2,563 lines), edit-group drawer (934 lines)" [ref=e662]
+          - cell "Medium" [ref=e663]:
+            - generic [ref=e664]: Medium
+          - cell "Component decomposition planned for Q2 2026" [ref=e665]
+        - row "In-memory rate limiting Won't persist across Vercel serverless invocations Medium Migrate to Upstash Redis (distributed)" [ref=e666]:
+          - cell "In-memory rate limiting" [ref=e667]:
+            - strong [ref=e668]: In-memory rate limiting
+          - cell "Won't persist across Vercel serverless invocations" [ref=e669]
+          - cell "Medium" [ref=e670]:
+            - generic [ref=e671]: Medium
+          - cell "Migrate to Upstash Redis (distributed)" [ref=e672]
+        - row "N+1 query patterns Dashboard pages make 20+ sequential Supabase calls Medium Consolidate into batch queries via Data Access Layer" [ref=e673]:
+          - cell "N+1 query patterns" [ref=e674]:
+            - strong [ref=e675]: N+1 query patterns
+          - cell "Dashboard pages make 20+ sequential Supabase calls" [ref=e676]
+          - cell "Medium" [ref=e677]:
+            - generic [ref=e678]: Medium
+          - cell "Consolidate into batch queries via Data Access Layer" [ref=e679]
+        - row "Client portal gap Only 2 pages vs 23+ for admin — underserved revenue persona High Priority expansion to 8+ pages in Q2 2026" [ref=e680]:
+          - cell "Client portal gap" [ref=e681]:
+            - strong [ref=e682]: Client portal gap
+          - cell "Only 2 pages vs 23+ for admin — underserved revenue persona" [ref=e683]
+          - cell "High" [ref=e684]:
+            - generic [ref=e685]: High
+          - cell "Priority expansion to 8+ pages in Q2 2026" [ref=e686]
+        - row "No real-time subscriptions Users must refresh to see updated data Medium Supabase Realtime integration planned for Q2 2026" [ref=e687]:
+          - cell "No real-time subscriptions" [ref=e688]:
+            - strong [ref=e689]: No real-time subscriptions
+          - cell "Users must refresh to see updated data" [ref=e690]
+          - cell "Medium" [ref=e691]:
+            - generic [ref=e692]: Medium
+          - cell "Supabase Realtime integration planned for Q2 2026" [ref=e693]
+        - row "translations.ts size 86 KB single file, hard to maintain Low Split into per-feature translation modules" [ref=e694]:
+          - cell "translations.ts size" [ref=e695]:
+            - strong [ref=e696]: translations.ts size
+          - cell "86 KB single file, hard to maintain" [ref=e697]
+          - cell "Low" [ref=e698]:
+            - generic [ref=e699]: Low
+          - cell "Split into per-feature translation modules" [ref=e700]
+    - paragraph [ref=e702]:
+      - strong [ref=e703]: "Risk mitigation approach:"
+      - text: All items above are already documented in the codebase (HARDENING_PLAN.md, 35 KB) with phased remediation plans. The CI/CD pipeline catches regressions, and Sentry tracks production errors in real-time.
+  - generic [ref=e704]:
+    - generic [ref=e705]: 09 — Competitive Differentiation
+    - heading "What sets MLC Platform apart" [level=2] [ref=e706]
+    - table [ref=e708]:
+      - rowgroup [ref=e709]:
+        - row "Dimension Traditional School Software MLC Platform" [ref=e710]:
+          - columnheader "Dimension" [ref=e711]
+          - columnheader "Traditional School Software" [ref=e712]
+          - columnheader "MLC Platform" [ref=e713]
+      - rowgroup [ref=e714]:
+        - row "Scheduling Rule-based, rigid AI-assisted, availability-aware (Q3 2026)" [ref=e715]:
+          - cell "Scheduling" [ref=e716]:
+            - strong [ref=e717]: Scheduling
+          - cell "Rule-based, rigid" [ref=e718]
+          - cell "AI-assisted, availability-aware (Q3 2026)" [ref=e719]
+        - row "Reporting Template-based, manual trigger AI-generated, branded PDFs, scheduled delivery" [ref=e720]:
+          - cell "Reporting" [ref=e721]:
+            - strong [ref=e722]: Reporting
+          - cell "Template-based, manual trigger" [ref=e723]
+          - cell "AI-generated, branded PDFs, scheduled delivery" [ref=e724]
+        - row "Client Experience View-only portal (if any) Self-service with analytics + communication" [ref=e725]:
+          - cell "Client Experience" [ref=e726]:
+            - strong [ref=e727]: Client Experience
+          - cell "View-only portal (if any)" [ref=e728]
+          - cell "Self-service with analytics + communication" [ref=e729]
+        - row "Attendance Manual entry only Zoom webhook automation + manual hybrid" [ref=e730]:
+          - cell "Attendance" [ref=e731]:
+            - strong [ref=e732]: Attendance
+          - cell "Manual entry only" [ref=e733]
+          - cell "Zoom webhook automation + manual hybrid" [ref=e734]
+        - row "Localization Single language UI Tri-lingual native (English / Spanish / French)" [ref=e735]:
+          - cell "Localization" [ref=e736]:
+            - strong [ref=e737]: Localization
+          - cell "Single language UI" [ref=e738]
+          - cell "Tri-lingual native (English / Spanish / French)" [ref=e739]
+        - row "AI Integration Bolt-on chatbot Native multi-provider with 26+ operational tools" [ref=e740]:
+          - cell "AI Integration" [ref=e741]:
+            - strong [ref=e742]: AI Integration
+          - cell "Bolt-on chatbot" [ref=e743]
+          - cell "Native multi-provider with 26+ operational tools" [ref=e744]
+        - row "Operations Model Dedicated staff per function Single-person management via intelligent automation" [ref=e745]:
+          - cell "Operations Model" [ref=e746]:
+            - strong [ref=e747]: Operations Model
+          - cell "Dedicated staff per function" [ref=e748]
+          - cell "Single-person management via intelligent automation" [ref=e749]
+  - generic [ref=e750]:
+    - generic [ref=e751]: 10 — Next Steps
+    - heading "Getting started" [level=2] [ref=e752]
+    - paragraph [ref=e753]: The platform is production-ready for immediate deployment and pilot usage. Here's the recommended onboarding sequence.
+    - heading "Immediate (Week 1)" [level=3] [ref=e754]
+    - generic [ref=e755]:
+      - generic [ref=e756]:
+        - generic [ref=e757]: "1"
+        - heading "Deploy to Production" [level=4] [ref=e758]
+        - paragraph [ref=e759]: Follow VERCEL_DEPLOYMENT.md. Configure environment variables in Vercel dashboard. Run database migrations against Supabase PostgreSQL. Verify all RLS policies.
+      - generic [ref=e760]:
+        - generic [ref=e761]: "2"
+        - heading "Staff Onboarding" [level=4] [ref=e762]
+        - paragraph [ref=e763]: Create admin accounts via Supabase Auth. Walk through the admin portal. Configure Zoom integration in Settings. Set up AI provider API keys (encrypted storage).
+    - heading "Pilot Phase (Weeks 2–4)" [level=3] [ref=e764]
+    - generic [ref=e765]:
+      - generic [ref=e766]:
+        - generic [ref=e767]: "3"
+        - heading "Internal Testing" [level=4] [ref=e768]
+        - paragraph [ref=e769]: Run with 1–2 real teacher accounts. Test attendance workflow end-to-end (manual + Zoom). Validate grading and report generation. Collect feedback on teacher portal UX.
+      - generic [ref=e770]:
+        - generic [ref=e771]: "4"
+        - heading "Client Pilot" [level=4] [ref=e772]
+        - paragraph [ref=e773]: Onboard 1–2 corporate clients to the client portal. Test PDF export for their reporting needs. Identify gaps in the 2-page client experience for Q2 expansion.
+    - heading "Evolution (Month 2+)" [level=3] [ref=e774]
+    - generic [ref=e775]:
+      - generic [ref=e776]:
+        - generic [ref=e777]: "5"
+        - heading "Client Portal Expansion" [level=4] [ref=e778]
+        - paragraph [ref=e779]: Highest ROI work. Build self-service enrollment, trend dashboards, automated report delivery, and communication tools based on pilot feedback.
+      - generic [ref=e780]:
+        - generic [ref=e781]: "6"
+        - heading "Tech Debt Resolution" [level=4] [ref=e782]
+        - paragraph [ref=e783]: Remove @ts-nocheck flags, decompose god components, migrate to distributed rate limiting. All documented in HARDENING_PLAN.md with prioritized phasing.
+    - separator [ref=e784]
+    - paragraph [ref=e786]:
+      - strong [ref=e787]: "Included in delivery:"
+      - text: Full source code repository, database schema with migrations, CI/CD pipeline, comprehensive documentation (architecture, API reference, user stories, business vision, metrics framework), 538 automated tests, and production infrastructure on Vercel + Supabase Cloud.
+  - generic [ref=e788]:
+    - paragraph [ref=e789]:
+      - strong [ref=e790]: MLC Platform
+      - text: — Technical Delivery Proposal
+    - paragraph [ref=e791]: Prepared April 13, 2026

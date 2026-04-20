@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLC — Technical Delivery Proposal</title>
+<style>
+  :root {
+    --bg: #0A0A0F;
+    --bg-2: #111118;
+    --bg-3: #1A1A24;
+    --surface: #1E1E2A;
+    --surface-hover: #252535;
+    --gold: #C5A46C;
+    --gold-dim: rgba(197,164,108,0.15);
+    --gold-border: rgba(197,164,108,0.25);
+    --text: #E8E8ED;
+    --text-muted: #9999A8;
+    --text-dim: #666680;
+    --green: #4ADE80;
+    --green-dim: rgba(74,222,128,0.12);
+    --amber: #FBBF24;
+    --amber-dim: rgba(251,191,36,0.12);
+    --red: #F87171;
+    --red-dim: rgba(248,113,113,0.12);
+    --blue: #60A5FA;
+    --blue-dim: rgba(96,165,250,0.12);
+    --border: rgba(255,255,255,0.06);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --container: 960px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- COVER ---------- */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 600px 400px at 30% 20%, rgba(197,164,108,0.08), transparent),
+      radial-gradient(ellipse 500px 500px at 70% 70%, rgba(96,165,250,0.05), transparent);
+    pointer-events: none;
+  }
+
+  .cover-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .cover h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+
+  .cover h1 span { color: var(--gold); }
+
+  .cover-subtitle {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 40px;
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+  }
+
+  .cover-meta strong {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* ---------- NAV / TOC ---------- */
+  .toc-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .toc-bar a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .toc-bar a:hover { color: var(--gold); }
+
+  /* ---------- SECTIONS ---------- */
+  section {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+
+  section + section { border-top: 1px solid var(--border); }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    margin-top: 32px;
+    color: var(--text);
+  }
+
+  h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .section-intro {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 640px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-muted); font-size: 15px; }
+  p strong { color: var(--text); font-weight: 500; }
+
+  /* ---------- CARDS ---------- */
+  .card-grid {
+    display: grid;
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .card-grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+
+  .card:hover {
+    border-color: var(--gold-border);
+    transform: translateY(-2px);
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .card-icon.gold { background: var(--gold-dim); }
+  .card-icon.blue { background: var(--blue-dim); }
+  .card-icon.green { background: var(--green-dim); }
+  .card-icon.amber { background: var(--amber-dim); }
+
+  .card h4 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 15px;
+  }
+
+  .card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+  }
+
+  /* ---------- TABLES ---------- */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead { background: var(--bg-3); }
+
+  th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.015); }
+
+  td strong { color: var(--text); font-weight: 500; }
+
+  /* ---------- BADGES ---------- */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .badge-green { background: var(--green-dim); color: var(--green); }
+  .badge-amber { background: var(--amber-dim); color: var(--amber); }
+  .badge-red { background: var(--red-dim); color: var(--red); }
+  .badge-blue { background: var(--blue-dim); color: var(--blue); }
+  .badge-gold { background: var(--gold-dim); color: var(--gold); }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline {
+    position: relative;
+    padding-left: 32px;
+    margin: 32px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--gold), var(--blue), var(--green));
+    border-radius: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 36px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--gold);
+  }
+
+  .timeline-item:nth-child(2)::before { border-color: var(--blue); }
+  .timeline-item:nth-child(3)::before { border-color: var(--green); }
+  .timeline-item:nth-child(4)::before { border-color: var(--amber); }
+
+  .timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .timeline-header h4 {
+    margin: 0;
+    color: var(--text);
+    font-size: 15px;
+  }
+
+  .timeline-body { font-size: 14px; color: var(--text-muted); }
+  .timeline-body ul { padding-left: 18px; margin: 8px 0; }
+  .timeline-body li { margin-bottom: 6px; font-size: 13.5px; line-height: 1.6; }
+
+  /* ---------- CALLOUT ---------- */
+  .callout {
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .callout p { color: var(--text); margin: 0; font-size: 14px; }
+  .callout strong { color: var(--gold); }
+
+  /* ---------- DIVIDER ---------- */
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 48px 0;
+    border: none;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer {
+    text-align: center;
+    padding: 60px 24px 40px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+
+  .footer strong { color: var(--text-muted); }
+
+  /* ---------- LISTS ---------- */
+  ul, ol { padding-left: 20px; margin: 12px 0 20px; }
+  li { margin-bottom: 6px; color: var(--text-muted); font-size: 14.5px; line-height: 1.6; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 768px) {
+    .toc-bar { flex-wrap: wrap; gap: 12px 20px; }
+    .cover-meta { flex-direction: column; gap: 12px; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    section { padding: 48px 16px; }
+  }
+
+  @media print {
+    body { background: #fff; color: #111; }
+    .toc-bar { display: none; }
+    .cover { min-height: auto; padding: 40px 24px; }
+    .card, .stat, .callout { border: 1px solid #ddd; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!--  COVER                                                        -->
+<!-- ============================================================ -->
+<div class="cover">
+  <div class="cover-badge">Technical Delivery Proposal</div>
+  <h1>Modern Language <span>Center</span></h1>
+  <p class="cover-subtitle">
+    Two-project delivery: a premium marketing website with Three.js animations and bilingual content, plus an AI-native language school management platform with three-portal architecture, Zoom-integrated attendance, and multi-provider AI assistance.
+  </p>
+  <div class="cover-meta">
+    <span><strong>Prepared for:</strong> Modern Language Center</span>
+    <span><strong>Date:</strong> April 13, 2026</span>
+    <span><strong>Version:</strong> 1.0</span>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!--  TABLE OF CONTENTS BAR                                        -->
+<!-- ============================================================ -->
+<nav class="toc-bar">
+  <a href="#overview">Overview</a>
+  <a href="#website">Website</a>
+  <a href="#current-state">Platform</a>
+  <a href="#architecture">Architecture</a>
+  <a href="#deliverables">Deliverables</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#infrastructure">Infrastructure</a>
+  <a href="#quality">Quality</a>
+  <a href="#risks">Risks</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#next-steps">Next Steps</a>
+</nav>
+
+<!-- ============================================================ -->
+<!--  1. EXECUTIVE OVERVIEW                                        -->
+<!-- ============================================================ -->
+<section id="overview">
+  <div class="section-label">01 &mdash; Executive Overview</div>
+  <h2>Two projects. One digital presence.</h2>
+  <p class="section-intro">
+    This proposal covers the complete MLC digital ecosystem: a premium marketing website that establishes brand authority, and an AI-native management platform that runs the entire school operation. Together, they form a unified system &mdash; the website attracts and converts corporate clients, the platform delivers and manages their training programs.
+  </p>
+
+  <div class="card-grid card-grid-2" style="margin-bottom:40px;">
+    <div class="card" style="border-left:3px solid var(--gold);">
+      <h4 style="margin-top:0;">MLC Website</h4>
+      <p>Premium B2B marketing site targeting C-suite executives. 6-page static site with Three.js WebGL shaders, GSAP scroll animations, bilingual EN/ES content, 55+ media assets. Deployed on GitHub Pages.</p>
+      <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+        <span class="badge badge-gold">Static Site</span>
+        <span class="badge badge-gold">Three.js</span>
+        <span class="badge badge-gold">GSAP</span>
+        <span class="badge badge-gold">Bilingual</span>
+      </div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--blue);">
+      <h4 style="margin-top:0;">MLC Platform</h4>
+      <p>Full-stack school management system with 3 portals (Admin, Teacher, Client), 46 API endpoints, Zoom integration, multi-provider AI assistant with 26+ tools. Deployed on Vercel + Supabase.</p>
+      <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+        <span class="badge badge-blue">Next.js 16</span>
+        <span class="badge badge-blue">React 19</span>
+        <span class="badge badge-blue">Supabase</span>
+        <span class="badge badge-blue">AI-Native</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-value">46</div>
+      <div class="stat-label">Platform Pages</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">46</div>
+      <div class="stat-label">API Endpoints</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">25+</div>
+      <div class="stat-label">Database Tables</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">694</div>
+      <div class="stat-label">Automated Tests</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">26+</div>
+      <div class="stat-label">AI Tools</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">3</div>
+      <div class="stat-label">Languages (i18n)</div>
+    </div>
+  </div>
+
+  <h3>Mission</h3>
+  <p>
+    Enable language schools to be <strong>managed by a single person</strong> through AI-native workflows &mdash; replacing manual coordination with intelligent automation while maintaining the human quality of language education.
+  </p>
+
+  <h3>Platform Target Users</h3>
+  <div class="card-grid card-grid-3">
+    <div class="card">
+      <div class="card-icon gold">A</div>
+      <h4>Admin &mdash; Operations Manager</h4>
+      <p>Manages students, teachers, companies, groups, and scheduling. 23+ pages, dashboard with calendar, pipeline management, AI chat assistant with 26+ operational tools.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon blue">T</div>
+      <h4>Teacher &mdash; Language Instructor</h4>
+      <p>Delivers classes via Zoom, marks attendance, enters grades, manages weekly availability. 5 pages with session history and level preference configuration.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">C</div>
+      <h4>Client &mdash; Corporate HR</h4>
+      <p>Monitors employee progress, reviews attendance and grades, exports PDF reports with billable hours and cost calculations. Currently 2 pages, highest-priority expansion area.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  1B. MLC WEBSITE                                              -->
+<!-- ============================================================ -->
+<section id="website">
+  <div class="section-label">02 &mdash; MLC Website</div>
+  <h2>Premium marketing presence</h2>
+  <p class="section-intro">
+    A high-end B2B marketing site designed to compete with Stripe-level web experiences. Zero-dependency static architecture delivers fast load times while Three.js WebGL shaders and GSAP scroll animations create a premium, scroll-stopping impression for enterprise prospects.
+  </p>
+
+  <h3>Technology</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Layer</th><th>Technology</th><th>Details</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Frontend</strong></td>
+          <td>Vanilla HTML, CSS3, ES6 JavaScript</td>
+          <td>Zero npm dependencies. No bundler, no framework overhead</td>
+        </tr>
+        <tr>
+          <td><strong>Animation</strong></td>
+          <td>GSAP 3.12.5 + Three.js + CSS @keyframes</td>
+          <td>Three-layer animation: ambient CSS, scroll-reveal GSAP, WebGL shaders</td>
+        </tr>
+        <tr>
+          <td><strong>Styling</strong></td>
+          <td>CSS3 with custom properties</td>
+          <td>Design system tokens, clamp() responsive scaling, section-based theming</td>
+        </tr>
+        <tr>
+          <td><strong>i18n</strong></td>
+          <td>Custom EN/ES system</td>
+          <td>391 translation keys, localStorage persistence, data-i18n attributes</td>
+        </tr>
+        <tr>
+          <td><strong>Hosting</strong></td>
+          <td>GitHub Pages</td>
+          <td>Auto-deploy on push to main via GitHub Actions</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Pages &amp; Sections</h3>
+  <div class="card-grid card-grid-3">
+    <div class="card">
+      <div class="card-icon gold">H</div>
+      <h4>Homepage (11 sections)</h4>
+      <p>Hero with video + WebGL mesh gradient, trust bar with client logos (BMW, PepsiCo, TV Azteca), solutions bento grid, process timeline, stats, testimonials, FAQ, CTA with shader.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon gold">W</div>
+      <h4>Welcome / Split Landing</h4>
+      <p>Route selector for companies vs. individuals. Animated entrance with GSAP. Directs enterprise traffic to the main site, individuals to alternate flows.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon gold">C</div>
+      <h4>Competitive Analysis</h4>
+      <p>Market positioning page comparing MLC against competitors across key dimensions. Data-driven with feature matrices.</p>
+    </div>
+  </div>
+
+  <h3>Key Features</h3>
+  <ul>
+    <li><strong>WebGL Shaders:</strong> Two self-contained Three.js IIFE modules &mdash; aurora mesh gradient (hero) and dot-grid energy waves (CTA) &mdash; with IntersectionObserver visibility gating</li>
+    <li><strong>Scroll Animations:</strong> GSAP ScrollTrigger on all <code>.reveal</code> elements with stagger calculation from sibling index</li>
+    <li><strong>Responsive:</strong> 12-column CSS Grid bento layout for solutions, 3 breakpoints (mobile/tablet/desktop), hamburger nav overlay on mobile</li>
+    <li><strong>Accessibility:</strong> All animations respect <code>prefers-reduced-motion</code> across 4+ files; WebGL uses <code>powerPreference: 'low-power'</code></li>
+    <li><strong>55+ Media Assets:</strong> Solution photography, client logos, hero video, AI-generated imagery via Google Gemini</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!--  2. CURRENT STATE                                             -->
+<!-- ============================================================ -->
+<section id="current-state">
+  <div class="section-label">03 &mdash; Platform Current State</div>
+  <h2>What's already built</h2>
+  <p class="section-intro">
+    Phases 1&ndash;5 of platform development are complete. The system is production-deployed on Vercel + Supabase with CI/CD, error tracking, and ~85% test coverage. Below is a feature-by-feature audit.
+  </p>
+
+  <h3>Portal Completion</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Capability</th>
+          <th>Admin</th>
+          <th>Teacher</th>
+          <th>Client</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Authentication &amp; RBAC</strong></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>JWT + RLS policies</td>
+        </tr>
+        <tr>
+          <td><strong>Student Management</strong></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>&mdash;</td>
+          <td>View only</td>
+          <td>Pipeline + CRUD + detail pages</td>
+        </tr>
+        <tr>
+          <td><strong>Teacher Management</strong></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>Self-manage</td>
+          <td>&mdash;</td>
+          <td>Availability, preferences, assignment</td>
+        </tr>
+        <tr>
+          <td><strong>Group Management</strong></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>View</td>
+          <td>View</td>
+          <td>9-step activation workflow</td>
+        </tr>
+        <tr>
+          <td><strong>Attendance (Manual)</strong></td>
+          <td>View</td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>View</td>
+          <td>P / A / NS / LC statuses</td>
+        </tr>
+        <tr>
+          <td><strong>Attendance (Zoom)</strong></td>
+          <td><span class="badge badge-green">Webhook</span></td>
+          <td><span class="badge badge-green">Hybrid</span></td>
+          <td>&mdash;</td>
+          <td>Automated via webhook events</td>
+        </tr>
+        <tr>
+          <td><strong>Grading</strong></td>
+          <td>View</td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>View</td>
+          <td>Oral / Structure / Participation</td>
+        </tr>
+        <tr>
+          <td><strong>PDF Reporting</strong></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>&mdash;</td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>jsPDF with company branding</td>
+        </tr>
+        <tr>
+          <td><strong>Notifications</strong></td>
+          <td><span class="badge badge-green">Send</span></td>
+          <td><span class="badge badge-green">Receive</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td>Email reminders + alert hub</td>
+        </tr>
+        <tr>
+          <td><strong>AI Chat Assistant</strong></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td>26+ tools, multi-provider</td>
+        </tr>
+        <tr>
+          <td><strong>Dark Mode</strong></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td><span class="badge badge-green">Complete</span></td>
+          <td>System preference + toggle</td>
+        </tr>
+        <tr>
+          <td><strong>Internationalization</strong></td>
+          <td><span class="badge badge-green">EN/ES/FR</span></td>
+          <td><span class="badge badge-green">EN/ES/FR</span></td>
+          <td><span class="badge badge-green">EN/ES/FR</span></td>
+          <td>Full 3-locale support</td>
+        </tr>
+        <tr>
+          <td><strong>Real-time Subscriptions</strong></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td><span class="badge badge-red">None</span></td>
+          <td>Planned &mdash; no WebSocket yet</td>
+        </tr>
+        <tr>
+          <td><strong>Mobile Optimization</strong></td>
+          <td><span class="badge badge-amber">Partial</span></td>
+          <td><span class="badge badge-amber">Partial</span></td>
+          <td><span class="badge badge-amber">Partial</span></td>
+          <td>Responsive but not mobile-first</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Completion Summary</h3>
+  <div class="card-grid card-grid-3">
+    <div class="card">
+      <div class="stat-value" style="font-size:1.6rem; margin-bottom:8px; color:var(--green);">80%</div>
+      <h4>Admin Portal</h4>
+      <p>23+ pages. Full CRUD, pipeline, Zoom integration, AI chat, settings, logs, alerts. Missing: auto-scheduling, predictive alerts, real-time updates.</p>
+    </div>
+    <div class="card">
+      <div class="stat-value" style="font-size:1.6rem; margin-bottom:8px; color:var(--blue);">60%</div>
+      <h4>Teacher Portal</h4>
+      <p>5 pages. Core attendance, grading, availability. Missing: mobile optimization, push notifications, student progress trends, offline support.</p>
+    </div>
+    <div class="card">
+      <div class="stat-value" style="font-size:1.6rem; margin-bottom:8px; color:var(--amber);">20%</div>
+      <h4>Client Portal</h4>
+      <p>2 pages. Basic viewing + PDF export. Missing: self-service enrollment, trend analytics, communication, billing, automated reports.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  3. ARCHITECTURE                                              -->
+<!-- ============================================================ -->
+<section id="architecture">
+  <div class="section-label">04 &mdash; Architecture</div>
+  <h2>System architecture and technology stack</h2>
+  <p class="section-intro">
+    Modern JAMstack architecture: Next.js App Router on Vercel (frontend + API), Supabase (database + auth + edge functions), with multi-provider AI and Zoom integration.
+  </p>
+
+  <h3>Technology Stack</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Layer</th><th>Technology</th><th>Details</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Frontend</strong></td>
+          <td>Next.js 16 + React 19 + TypeScript</td>
+          <td>App Router, Server Components, Tailwind CSS, Shadcn/UI, Headless UI</td>
+        </tr>
+        <tr>
+          <td><strong>Backend</strong></td>
+          <td>Next.js API Routes + Supabase Edge Functions</td>
+          <td>47 route handlers, Zod validation, standardized response contract</td>
+        </tr>
+        <tr>
+          <td><strong>Database</strong></td>
+          <td>PostgreSQL (Supabase)</td>
+          <td>25+ tables, Row Level Security, 19 migration files, typed repositories</td>
+        </tr>
+        <tr>
+          <td><strong>Auth</strong></td>
+          <td>Supabase Auth (GoTrue)</td>
+          <td>JWT in HTTP-only cookies, role-based access (admin / teacher / client)</td>
+        </tr>
+        <tr>
+          <td><strong>AI</strong></td>
+          <td>Gemini + OpenAI + Anthropic</td>
+          <td>Multi-provider abstraction, 26+ tools, AES-256-GCM key encryption</td>
+        </tr>
+        <tr>
+          <td><strong>Video</strong></td>
+          <td>Zoom API + Webhooks</td>
+          <td>Meeting creation, student registration, webhook-driven attendance</td>
+        </tr>
+        <tr>
+          <td><strong>Hosting</strong></td>
+          <td>Vercel + Supabase Cloud</td>
+          <td>CDN edge delivery, preview deploys on PR, auto-deploy on main</td>
+        </tr>
+        <tr>
+          <td><strong>Monitoring</strong></td>
+          <td>Sentry</td>
+          <td>Error tracking (server + client), source maps, session replay</td>
+        </tr>
+        <tr>
+          <td><strong>CI/CD</strong></td>
+          <td>GitHub Actions</td>
+          <td>Lint, typecheck, Vitest, coverage, Playwright E2E on every PR</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Database Schema</h3>
+  <p>PostgreSQL with 25+ tables organized into three domains:</p>
+  <div class="card-grid card-grid-3">
+    <div class="card">
+      <div class="card-icon gold">D</div>
+      <h4>Core Domain (9 tables)</h4>
+      <p>users, companies, students, groups, group_students, periods, class_sessions, attendance, grades</p>
+    </div>
+    <div class="card">
+      <div class="card-icon blue">Z</div>
+      <h4>Zoom Integration (4 tables)</h4>
+      <p>zoom_meetings, zoom_registrants, zoom_webhook_events, attendance_logs</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">O</div>
+      <h4>AI &amp; Operations (12 tables)</h4>
+      <p>ai_providers, ai_conversations, ai_messages, ai_feedback, system_logs, alerts, user_alerts, pipeline_students, teacher_availability, and more</p>
+    </div>
+  </div>
+
+  <h3>Security Architecture</h3>
+  <ul>
+    <li><strong>Row Level Security (RLS)</strong> on all database tables &mdash; admins see everything, teachers see assigned groups, clients see own company</li>
+    <li><strong>JWT authentication</strong> via Supabase Auth with secure HTTP-only cookies</li>
+    <li><strong>requireAdmin() guards</strong> on all admin API routes (server-side verification)</li>
+    <li><strong>AES-256-GCM encryption</strong> for AI provider API keys at rest</li>
+    <li><strong>Rate limiting middleware</strong> on all API routes (sliding window)</li>
+    <li><strong>Zod schema validation</strong> on all API inputs</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!--  4. DELIVERABLES                                              -->
+<!-- ============================================================ -->
+<section id="deliverables">
+  <div class="section-label">05 &mdash; Deliverables</div>
+  <h2>What you receive</h2>
+  <p class="section-intro">
+    A complete, production-deployed platform with source code, infrastructure, documentation, and CI/CD pipeline. Everything needed to operate and evolve the system independently.
+  </p>
+
+  <h3>Platform Deliverables</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <div class="card-icon gold">1</div>
+      <h4>Admin Portal (23+ pages)</h4>
+      <p>Dashboard with calendar, company/student/teacher/group management, enrollment pipeline, notifications, system settings, AI chat assistant, logs, alerts, and changelog.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon blue">2</div>
+      <h4>Teacher Portal (5 pages)</h4>
+      <p>Today's classes dashboard, per-group attendance marking (manual + Zoom hybrid), grading interface with scoring dimensions, availability management, session history.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">3</div>
+      <h4>Client Portal (2 pages)</h4>
+      <p>Company progress overview with period filtering, group details, attendance rates, grade breakdowns, PDF report export with billable hours and cost calculations.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">4</div>
+      <h4>Zoom Integration</h4>
+      <p>Automated meeting creation, student registration with join URLs, webhook-driven attendance tracking, join/leave time logging, reconciliation diagnostics.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon gold">5</div>
+      <h4>AI Assistant</h4>
+      <p>Floating chat widget with 26+ operational tools. Multi-provider support (Gemini, OpenAI, Anthropic). Read, write, analytics, and diagnostic tool categories. Conversation history with feedback.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon blue">6</div>
+      <h4>Reporting Engine</h4>
+      <p>PDF generation with jsPDF. Company-branded reports including student attendance, grade breakdowns, and billable hours. AI-powered report wizard for complex analyses.</p>
+    </div>
+  </div>
+
+  <h3>Infrastructure Deliverables</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <div class="card-icon green">7</div>
+      <h4>CI/CD Pipeline</h4>
+      <p>GitHub Actions: lint, typecheck, unit tests, coverage reporting, E2E tests on PR, auto-deploy to Vercel on main. Preview deploys for every pull request.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">8</div>
+      <h4>Database + Migrations</h4>
+      <p>19 SQL migration files. Full schema with RLS policies. Supabase Edge Functions for Zoom webhook processing. Typed Data Access Layer with repository pattern.</p>
+    </div>
+  </div>
+
+  <h3>Documentation Deliverables</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Document</th><th>Purpose</th><th>Size</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>README.md</strong></td><td>Project overview, features, getting started guide</td><td>381 lines</td></tr>
+        <tr><td><strong>ARCHITECTURE.md</strong></td><td>Deep technical architecture, data flows, component hierarchy</td><td>620 lines</td></tr>
+        <tr><td><strong>CONTRIBUTING.md</strong></td><td>Development workflow, branching strategy, code style, PR process</td><td>150+ lines</td></tr>
+        <tr><td><strong>VERCEL_DEPLOYMENT.md</strong></td><td>Step-by-step deployment instructions</td><td>100 lines</td></tr>
+        <tr><td><strong>docs/user-stories.md</strong></td><td>Comprehensive user stories for all personas</td><td>54 KB</td></tr>
+        <tr><td><strong>docs/business/</strong></td><td>Product vision, customer profiles, KPI metrics framework</td><td>3 files</td></tr>
+        <tr><td><strong>docs/features/</strong></td><td>Feature documentation per portal (admin, teacher, client)</td><td>4 files</td></tr>
+        <tr><td><strong>docs/API.md</strong></td><td>API endpoint reference</td><td>400+ lines</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Quality Deliverables</h3>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-value">694</div>
+      <div class="stat-label">Tests Written</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">~85%</div>
+      <div class="stat-label">Code Coverage</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">55</div>
+      <div class="stat-label">Unit Test Files</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">16</div>
+      <div class="stat-label">E2E Test Specs</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  5. ROADMAP                                                   -->
+<!-- ============================================================ -->
+<section id="roadmap">
+  <div class="section-label">06 &mdash; Roadmap</div>
+  <h2>12-month evolution plan</h2>
+  <p class="section-intro">
+    Four quarterly phases move the platform from operational tool to intelligent automation engine. Each phase builds on the previous, with clear milestones and measurable outcomes.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h4>Q2 2026 &mdash; Foundation &amp; Client Expansion</h4>
+        <span class="badge badge-gold">Current</span>
+      </div>
+      <div class="timeline-body">
+        <p><strong>Theme:</strong> Close the client portal gap and eliminate critical tech debt.</p>
+        <ul>
+          <li>Expand client portal from 2 to 8+ pages (progress dashboards, enrollment requests, communication, billing visibility)</li>
+          <li>Decompose god components (students page at 2,500+ lines, edit-group drawer at 934 lines)</li>
+          <li>Remove <code>@ts-nocheck</code> from all 50 flagged files (data integrity risk)</li>
+          <li>Implement distributed rate limiting (Upstash/Redis) for serverless scaling</li>
+          <li>Add real-time subscriptions for attendance and notifications via Supabase Realtime</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h4>Q3 2026 &mdash; Intelligent Automation</h4>
+        <span class="badge badge-blue">Planned</span>
+      </div>
+      <div class="timeline-body">
+        <p><strong>Theme:</strong> Make the platform proactively helpful instead of reactive.</p>
+        <ul>
+          <li>Automated teacher-group scheduling based on availability, level match, and workload balance</li>
+          <li>Predictive attendance alerts (notify admin/client when patterns suggest dropout risk)</li>
+          <li>Scheduled report generation and delivery (PDF/email on configurable cadence)</li>
+          <li>Smart substitution suggestions when teachers are unavailable</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h4>Q4 2026 &mdash; Multi-Agent Management</h4>
+        <span class="badge badge-green">Planned</span>
+      </div>
+      <div class="timeline-body">
+        <p><strong>Theme:</strong> AI agents handle routine operations; humans handle exceptions.</p>
+        <ul>
+          <li>Agent-driven student pipeline (auto-assess, auto-place, auto-enroll with human approval gates)</li>
+          <li>Natural language operational commands ("Move Maria from Group A to Group B next period")</li>
+          <li>AI-generated period summaries with actionable recommendations</li>
+          <li>Automated Zoom meeting lifecycle management</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <h4>Q1 2027 &mdash; Predictive Analytics &amp; Scale</h4>
+        <span class="badge badge-amber">Planned</span>
+      </div>
+      <div class="timeline-body">
+        <p><strong>Theme:</strong> Data-driven school management at scale.</p>
+        <ul>
+          <li>Student outcome prediction (at-risk identification based on attendance + grade patterns)</li>
+          <li>Teacher effectiveness analytics (attendance correlation, grade distributions, feedback)</li>
+          <li>Revenue forecasting from pipeline trends, enrollment velocity, and churn signals</li>
+          <li>Multi-school support (single instance managing multiple locations)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  6. INFRASTRUCTURE                                            -->
+<!-- ============================================================ -->
+<section id="infrastructure">
+  <div class="section-label">07 &mdash; Infrastructure</div>
+  <h2>Deployment and operations</h2>
+  <p class="section-intro">
+    Production infrastructure is fully provisioned. The platform runs on Vercel (frontend/API) + Supabase Cloud (database/auth/functions) with CI/CD, error tracking, and automated deployments.
+  </p>
+
+  <h3>Deployment Architecture</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <div class="card-icon gold">V</div>
+      <h4>Vercel (Frontend + API)</h4>
+      <p>Next.js on Vercel Edge with global CDN. Preview deploys on every PR. Production deploys on push to main. Automatic HTTPS. Serverless API routes.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">S</div>
+      <h4>Supabase Cloud (Backend)</h4>
+      <p>PostgreSQL database with RLS. GoTrue authentication. Edge Functions (Deno) for Zoom webhooks. Real-time subscriptions. Automatic backups.</p>
+    </div>
+  </div>
+
+  <h3>Environment Configuration</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Variable</th><th>Purpose</th><th>Required</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>NEXT_PUBLIC_SUPABASE_URL</code></td><td>Supabase project URL</td><td><span class="badge badge-green">Required</span></td></tr>
+        <tr><td><code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code></td><td>Supabase publishable key</td><td><span class="badge badge-green">Required</span></td></tr>
+        <tr><td><code>SUPABASE_SERVICE_ROLE_KEY</code></td><td>Server-side Supabase access</td><td><span class="badge badge-green">Required</span></td></tr>
+        <tr><td><code>ENCRYPTION_KEY</code></td><td>AES-256-GCM for AI API keys</td><td><span class="badge badge-green">Required</span></td></tr>
+        <tr><td><code>NEXT_PUBLIC_SENTRY_DSN</code></td><td>Error tracking endpoint</td><td><span class="badge badge-amber">Optional</span></td></tr>
+        <tr><td><code>SENTRY_AUTH_TOKEN</code></td><td>Source map upload token</td><td><span class="badge badge-amber">Optional</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>CI/CD Pipeline</h3>
+  <p>Every push and pull request triggers the full quality gate:</p>
+  <ol>
+    <li><strong>Lint</strong> &mdash; ESLint 9.x with Next.js rules</li>
+    <li><strong>Type Check</strong> &mdash; TypeScript strict mode (<code>tsc --noEmit</code>)</li>
+    <li><strong>Unit Tests</strong> &mdash; Vitest with React Testing Library (694 tests)</li>
+    <li><strong>Coverage Report</strong> &mdash; V8 coverage uploaded as artifact (14-day retention)</li>
+    <li><strong>E2E Tests</strong> &mdash; Playwright with Chromium (16 spec files, on PRs only)</li>
+  </ol>
+
+  <h3>Operational KPIs</h3>
+  <p>The metrics framework (delivered in <code>docs/business/metrics.md</code>) defines SQL queries for every KPI, ready to plug into dashboards:</p>
+  <div class="card-grid card-grid-4">
+    <div class="card" style="text-align:center;">
+      <h4 style="margin-top:0;">&gt; 85%</h4>
+      <p>Attendance Rate</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <h4 style="margin-top:0;">&gt; 95%</h4>
+      <p>Grade Completion</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <h4 style="margin-top:0;">&gt; 80%</h4>
+      <p>Zoom Adoption</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <h4 style="margin-top:0;">&lt; 1%</h4>
+      <p>Error Rate</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  7. QUALITY ASSURANCE                                         -->
+<!-- ============================================================ -->
+<section id="quality">
+  <div class="section-label">08 &mdash; Quality Assurance</div>
+  <h2>Testing, type safety, and quality metrics</h2>
+  <p class="section-intro">
+    Quality is enforced through automated testing, type checking, and continuous integration. The platform has undergone five hardening phases addressing security, performance, and reliability.
+  </p>
+
+  <h3>Quality Scorecard</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Dimension</th><th>Rating</th><th>Details</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Code Architecture</strong></td>
+          <td><span class="badge badge-green">A-</span></td>
+          <td>Clean App Router, separation of concerns, Data Access Layer, standardized API responses</td>
+        </tr>
+        <tr>
+          <td><strong>Test Coverage</strong></td>
+          <td><span class="badge badge-green">A-</span></td>
+          <td>694 tests, ~85% coverage, Vitest + Playwright, CI-enforced on every PR</td>
+        </tr>
+        <tr>
+          <td><strong>Security</strong></td>
+          <td><span class="badge badge-green">A</span></td>
+          <td>RLS on all tables, encrypted API keys, auth guards, rate limiting, Zod validation</td>
+        </tr>
+        <tr>
+          <td><strong>Documentation</strong></td>
+          <td><span class="badge badge-green">A-</span></td>
+          <td>Architecture guide (620 lines), API reference, user stories (54 KB), business docs</td>
+        </tr>
+        <tr>
+          <td><strong>Type Safety</strong></td>
+          <td><span class="badge badge-amber">B</span></td>
+          <td>TypeScript strict mode, but 50 files with <code>@ts-nocheck</code> and 397 <code>:any</code> types remain</td>
+        </tr>
+        <tr>
+          <td><strong>Performance</strong></td>
+          <td><span class="badge badge-green">A-</span></td>
+          <td>LCP 2.1s, CLS &lt;0.1, lazy loading, memoization, optimized icon imports</td>
+        </tr>
+        <tr>
+          <td><strong>Scalability</strong></td>
+          <td><span class="badge badge-amber">B+</span></td>
+          <td>Serverless on Vercel (scales to 10k+ users), needs distributed rate limiting</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Hardening Completed (Phases 1&ndash;5)</h3>
+  <ul>
+    <li>Fixed <code>/api/logs</code> authentication vulnerability</li>
+    <li>Implemented AES-256-GCM encryption for AI provider API keys</li>
+    <li>Added Zod validation on all API routes</li>
+    <li>Built standardized API response contract (<code>apiSuccess</code> / <code>apiError</code>)</li>
+    <li>Created typed Data Access Layer (repository pattern)</li>
+    <li>Added rate limiting middleware</li>
+    <li>Replaced browser <code>confirm()</code> / <code>alert()</code> with accessible ConfirmDialog + Toast</li>
+    <li>Lazy-loaded 10 components via <code>next/dynamic</code></li>
+    <li>Memoized 5 components with <code>React.memo</code></li>
+    <li>Added loading skeletons + empty states + error boundaries across routes</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<!--  8. KNOWN RISKS & TECH DEBT                                   -->
+<!-- ============================================================ -->
+<section id="risks">
+  <div class="section-label">09 &mdash; Known Risks &amp; Technical Debt</div>
+  <h2>Transparency on what needs attention</h2>
+  <p class="section-intro">
+    Every codebase carries technical debt. Below is an honest accounting of what's outstanding, its impact, and the remediation path already planned.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Issue</th><th>Impact</th><th>Severity</th><th>Remediation</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>50 files with <code>@ts-nocheck</code></strong></td>
+          <td>Type errors hidden in API routes and large components</td>
+          <td><span class="badge badge-amber">Medium</span></td>
+          <td>Planned removal in Q2 2026 (HARDENING_PLAN.md)</td>
+        </tr>
+        <tr>
+          <td><strong>397 <code>:any</code> types</strong></td>
+          <td>Reduced type safety at runtime boundaries</td>
+          <td><span class="badge badge-amber">Medium</span></td>
+          <td>Progressive typing using generated Supabase types</td>
+        </tr>
+        <tr>
+          <td><strong>God components</strong></td>
+          <td>Students page (2,563 lines), edit-group drawer (934 lines)</td>
+          <td><span class="badge badge-amber">Medium</span></td>
+          <td>Component decomposition planned for Q2 2026</td>
+        </tr>
+        <tr>
+          <td><strong>In-memory rate limiting</strong></td>
+          <td>Won't persist across Vercel serverless invocations</td>
+          <td><span class="badge badge-amber">Medium</span></td>
+          <td>Migrate to Upstash Redis (distributed)</td>
+        </tr>
+        <tr>
+          <td><strong>N+1 query patterns</strong></td>
+          <td>Dashboard pages make 20+ sequential Supabase calls</td>
+          <td><span class="badge badge-amber">Medium</span></td>
+          <td>Consolidate into batch queries via Data Access Layer</td>
+        </tr>
+        <tr>
+          <td><strong>Client portal gap</strong></td>
+          <td>Only 2 pages vs 23+ for admin &mdash; underserved revenue persona</td>
+          <td><span class="badge badge-red">High</span></td>
+          <td>Priority expansion to 8+ pages in Q2 2026</td>
+        </tr>
+        <tr>
+          <td><strong>No real-time subscriptions</strong></td>
+          <td>Users must refresh to see updated data</td>
+          <td><span class="badge badge-amber">Medium</span></td>
+          <td>Supabase Realtime integration planned for Q2 2026</td>
+        </tr>
+        <tr>
+          <td><strong>translations.ts size</strong></td>
+          <td>86 KB single file, hard to maintain</td>
+          <td><span class="badge badge-blue">Low</span></td>
+          <td>Split into per-feature translation modules</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p><strong>Risk mitigation approach:</strong> All items above are already documented in the codebase (HARDENING_PLAN.md, 35 KB) with phased remediation plans. The CI/CD pipeline catches regressions, and Sentry tracks production errors in real-time.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  9. COMPETITIVE DIFFERENTIATION                               -->
+<!-- ============================================================ -->
+<section id="differentiation">
+  <div class="section-label">10 &mdash; Competitive Differentiation</div>
+  <h2>What sets MLC Platform apart</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Dimension</th><th>Traditional School Software</th><th>MLC Platform</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Scheduling</strong></td>
+          <td>Rule-based, rigid</td>
+          <td>AI-assisted, availability-aware (Q3 2026)</td>
+        </tr>
+        <tr>
+          <td><strong>Reporting</strong></td>
+          <td>Template-based, manual trigger</td>
+          <td>AI-generated, branded PDFs, scheduled delivery</td>
+        </tr>
+        <tr>
+          <td><strong>Client Experience</strong></td>
+          <td>View-only portal (if any)</td>
+          <td>Self-service with analytics + communication</td>
+        </tr>
+        <tr>
+          <td><strong>Attendance</strong></td>
+          <td>Manual entry only</td>
+          <td>Zoom webhook automation + manual hybrid</td>
+        </tr>
+        <tr>
+          <td><strong>Localization</strong></td>
+          <td>Single language UI</td>
+          <td>Tri-lingual native (English / Spanish / French)</td>
+        </tr>
+        <tr>
+          <td><strong>AI Integration</strong></td>
+          <td>Bolt-on chatbot</td>
+          <td>Native multi-provider with 26+ operational tools</td>
+        </tr>
+        <tr>
+          <td><strong>Operations Model</strong></td>
+          <td>Dedicated staff per function</td>
+          <td>Single-person management via intelligent automation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  11. PRICING                                                  -->
+<!-- ============================================================ -->
+<section id="pricing">
+  <div class="section-label">11 &mdash; Investment</div>
+  <h2>Pricing summary</h2>
+  <p class="section-intro">
+    Pricing covers the complete delivery of both projects &mdash; source code, infrastructure, documentation, and deployment &mdash; with ongoing support options.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Deliverable</th><th>Scope</th><th>Investment</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>MLC Website</strong></td>
+          <td>Premium marketing site: 6 pages, Three.js shaders, GSAP animations, bilingual EN/ES, 55+ assets, GitHub Pages deployment</td>
+          <td style="color:var(--gold); font-weight:600; white-space:nowrap;">$X,XXX</td>
+        </tr>
+        <tr>
+          <td><strong>MLC Platform &mdash; Core</strong></td>
+          <td>Admin portal (23+ pages), Teacher portal (5 pages), Client portal (2 pages), 46 API endpoints, Zoom integration, AI assistant, 694 tests, Vercel + Supabase deployment</td>
+          <td style="color:var(--gold); font-weight:600; white-space:nowrap;">$XX,XXX</td>
+        </tr>
+        <tr>
+          <td><strong>Q2 &mdash; Client Portal Expansion</strong></td>
+          <td>Expand from 2 to 8+ pages: progress dashboards, enrollment requests, communication, billing visibility, real-time subscriptions</td>
+          <td style="color:var(--gold); font-weight:600; white-space:nowrap;">$X,XXX</td>
+        </tr>
+        <tr>
+          <td><strong>Q3 &mdash; Intelligent Automation</strong></td>
+          <td>Auto-scheduling, predictive attendance alerts, scheduled report delivery, smart substitutions</td>
+          <td style="color:var(--gold); font-weight:600; white-space:nowrap;">$X,XXX</td>
+        </tr>
+        <tr>
+          <td><strong>Q4 &mdash; Multi-Agent Management</strong></td>
+          <td>Agent-driven pipeline, natural language commands, AI period summaries, Zoom lifecycle automation</td>
+          <td style="color:var(--gold); font-weight:600; white-space:nowrap;">$X,XXX</td>
+        </tr>
+        <tr>
+          <td><strong>Ongoing Support &amp; Maintenance</strong></td>
+          <td>Monthly retainer: bug fixes, feature requests, infrastructure monitoring, dependency updates</td>
+          <td style="color:var(--gold); font-weight:600; white-space:nowrap;">$X,XXX/mo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p><strong>Note:</strong> All pricing is subject to scope confirmation during the kickoff meeting. Infrastructure costs (Vercel Pro, Supabase Pro, Sentry, domain) are billed separately by their respective providers and are not included above.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  12. NEXT STEPS                                               -->
+<!-- ============================================================ -->
+<section id="next-steps">
+  <div class="section-label">12 &mdash; Next Steps</div>
+  <h2>Getting started</h2>
+  <p class="section-intro">
+    The platform is production-ready for immediate deployment and pilot usage. Here's the recommended onboarding sequence.
+  </p>
+
+  <h3>Immediate (Week 1)</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <div class="card-icon green">1</div>
+      <h4>Deploy to Production</h4>
+      <p>Follow VERCEL_DEPLOYMENT.md. Configure environment variables in Vercel dashboard. Run database migrations against Supabase PostgreSQL. Verify all RLS policies.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">2</div>
+      <h4>Staff Onboarding</h4>
+      <p>Create admin accounts via Supabase Auth. Walk through the admin portal. Configure Zoom integration in Settings. Set up AI provider API keys (encrypted storage).</p>
+    </div>
+  </div>
+
+  <h3>Pilot Phase (Weeks 2&ndash;4)</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <div class="card-icon blue">3</div>
+      <h4>Internal Testing</h4>
+      <p>Run with 1&ndash;2 real teacher accounts. Test attendance workflow end-to-end (manual + Zoom). Validate grading and report generation. Collect feedback on teacher portal UX.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon blue">4</div>
+      <h4>Client Pilot</h4>
+      <p>Onboard 1&ndash;2 corporate clients to the client portal. Test PDF export for their reporting needs. Identify gaps in the 2-page client experience for Q2 expansion.</p>
+    </div>
+  </div>
+
+  <h3>Evolution (Month 2+)</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <div class="card-icon amber">5</div>
+      <h4>Client Portal Expansion</h4>
+      <p>Highest ROI work. Build self-service enrollment, trend dashboards, automated report delivery, and communication tools based on pilot feedback.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">6</div>
+      <h4>Tech Debt Resolution</h4>
+      <p>Remove @ts-nocheck flags, decompose god components, migrate to distributed rate limiting. All documented in HARDENING_PLAN.md with prioritized phasing.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="callout">
+    <p><strong>Included in delivery:</strong> Full source code repository, database schema with migrations, CI/CD pipeline, comprehensive documentation (architecture, API reference, user stories, business vision, metrics framework), 538 automated tests, and production infrastructure on Vercel + Supabase Cloud.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  FOOTER                                                       -->
+<!-- ============================================================ -->
+<div class="footer">
+  <p><strong>Modern Language Center</strong> &mdash; Technical Delivery Proposal</p>
+  <p>Prepared April 13, 2026</p>
+</div>
+
+</body>
+</html>

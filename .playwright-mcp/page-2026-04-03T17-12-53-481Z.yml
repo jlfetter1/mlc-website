@@ -1,0 +1,349 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Modern Language Center" [ref=e4] [cursor=pointer]:
+        - /url: welcome.html
+        - img "Modern Language Center" [ref=e5]
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Solutions" [ref=e8] [cursor=pointer]:
+            - /url: "#solutions"
+        - listitem [ref=e9]:
+          - link "Process" [ref=e10] [cursor=pointer]:
+            - /url: "#process"
+        - listitem [ref=e11]:
+          - link "Why MLC" [ref=e12] [cursor=pointer]:
+            - /url: "#why"
+        - listitem [ref=e13]:
+          - link "Clients" [ref=e14] [cursor=pointer]:
+            - /url: "#testimonials"
+        - listitem [ref=e15]:
+          - link "FAQ" [ref=e16] [cursor=pointer]:
+            - /url: "#faq"
+        - listitem [ref=e17]:
+          - link "Request a Consultation" [ref=e18] [cursor=pointer]:
+            - /url: "#contact"
+  - generic [ref=e22]:
+    - generic [ref=e23]: Modern Language Center
+    - heading "Precision Communication for the Global Elite" [level=1] [ref=e24]
+    - paragraph [ref=e25]: We engineer cultural fluency for high-stakes business environments. From sovereign wealth funds to multinational boards, we redefine how the elite navigate the global stage.
+    - generic [ref=e26]:
+      - link "Request a Consultation" [ref=e27] [cursor=pointer]:
+        - /url: "#contact"
+      - link "Explore Our Solutions" [ref=e28] [cursor=pointer]:
+        - /url: "#solutions"
+  - generic [ref=e29]:
+    - paragraph [ref=e30]: Trusted by Mexico's most demanding organizations
+    - generic "Client logos" [ref=e32]:
+      - img "PepsiCo" [ref=e33]
+      - img "BMW" [ref=e34]
+      - img "Grupo Salinas" [ref=e35]
+      - img "TV Azteca" [ref=e36]
+      - img "Lindt" [ref=e37]
+      - img "Toyota" [ref=e38]
+      - img "HSBC" [ref=e39]
+  - generic [ref=e41]:
+    - generic [ref=e42]:
+      - generic [ref=e43]: Our Solutions
+      - heading "Transform every dimension of corporate communication" [level=2] [ref=e44]:
+        - text: Transform every dimension
+        - text: of corporate communication
+      - paragraph [ref=e45]: Every solution is campaign-ready. Every page stands alone as a landing page for your paid media.
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]: Transform your English Class
+        - generic [ref=e49]:
+          - heading "Business English Program" [level=3] [ref=e50]
+          - paragraph [ref=e51]: Award-winning CEFR-aligned English for teams. AI-adapted content for your sector, certified instructors, groups of 8 max.
+          - link "Learn more →" [ref=e52] [cursor=pointer]:
+            - /url: companies/business-english.html
+      - generic [ref=e53]:
+        - generic [ref=e54]: Transform your Productivity
+        - generic [ref=e55]:
+          - heading "Premium Production" [level=3] [ref=e56]
+          - paragraph [ref=e57]: 80% production-based. Presentations, negotiations, and boardroom fluency with Harvard Business Review and MIT Sloan material. Max 4.
+          - link "Learn more →" [ref=e58] [cursor=pointer]:
+            - /url: companies/premium-production.html
+      - generic [ref=e59]:
+        - generic [ref=e60]: Transform your Events
+        - generic [ref=e61]:
+          - heading "Last-Minute Coaching" [level=3] [ref=e62]
+          - paragraph [ref=e63]: 48-hour express preparation for critical events. Board presentations, keynotes, negotiations. Preparation, rehearsal, and post-coaching follow-up.
+          - link "Learn more →" [ref=e64] [cursor=pointer]:
+            - /url: companies/coaching.html
+      - generic [ref=e65]:
+        - img "International team of professionals collaborating" [ref=e66]
+        - paragraph [ref=e68]: Our international team spans 7 countries — delivering executive communication training at the highest level.
+      - generic [ref=e69]:
+        - generic [ref=e70]: Multilingual Excellence
+        - generic [ref=e71]:
+          - heading "Other Languages" [level=3] [ref=e72]
+          - paragraph [ref=e73]: Portuguese, French, German, Italian, Spanish for foreigners, Japanese, and Mandarin. Same methodology, same results.
+          - link "Learn more →" [ref=e74] [cursor=pointer]:
+            - /url: companies/languages.html
+      - generic [ref=e75]:
+        - generic [ref=e76]: Transform your Hiring
+        - generic [ref=e77]:
+          - heading "Recruitment Support" [level=3] [ref=e78]
+          - paragraph [ref=e79]: Official proficiency evaluations for HR. Two-stage assessment — exam plus interview — with CEFR-certified reports and candidate scorecards.
+          - link "Learn more →" [ref=e80] [cursor=pointer]:
+            - /url: companies/recruitment.html
+      - generic [ref=e81]:
+        - generic [ref=e82]: Precision & Trust
+        - generic [ref=e83]:
+          - heading "Translation & Interpretation" [level=3] [ref=e84]
+          - paragraph [ref=e85]: Legal, medical, and financial translation. Remote and on-site interpretation for events up to thousands of attendees. AI + expert linguists.
+          - link "Learn more →" [ref=e86] [cursor=pointer]:
+            - /url: companies/translation.html
+      - generic [ref=e87]:
+        - generic [ref=e88]: Transform your Credentials
+        - generic [ref=e89]:
+          - heading "Accreditation" [level=3] [ref=e90]
+          - paragraph [ref=e91]: Expert preparation for IELTS, TOEFL, TOEIC, DELF, DALF, Goethe, CELPE-BRAS, and DELE. Strategic exam techniques and simulated conditions.
+          - link "Learn more →" [ref=e92] [cursor=pointer]:
+            - /url: companies/accreditation.html
+      - generic [ref=e93]:
+        - generic [ref=e94]: Transform your World Access
+        - generic [ref=e95]:
+          - heading "Train Abroad" [level=3] [ref=e96]
+          - paragraph [ref=e97]: Executive immersion in the UK, Canada, and the US. Academic excellence, cultural integration, and professional networking. Visa support included.
+          - link "Learn more →" [ref=e98] [cursor=pointer]:
+            - /url: companies/train-abroad.html
+  - generic [ref=e100]:
+    - generic [ref=e101]:
+      - generic [ref=e102]: Our Process
+      - heading "From diagnostic to measurable results" [level=2] [ref=e103]
+      - paragraph [ref=e104]: A methodology proven over 20+ years, now powered by AI.
+    - generic [ref=e105]:
+      - generic [ref=e106]:
+        - heading "Diagnostic" [level=4] [ref=e107]
+        - paragraph [ref=e108]: Level assessment, needs analysis by department, and goal alignment with your HR team.
+      - generic [ref=e109]:
+        - heading "Custom Program" [level=4] [ref=e110]
+        - paragraph [ref=e111]: AI-personalized content for your industry. Groups by level and functional area. Dedicated instructor assignment.
+      - generic [ref=e112]:
+        - heading "Delivery" [level=4] [ref=e113]
+        - paragraph [ref=e114]: Live Zoom-integrated sessions with automated attendance. On-site, online, or hybrid. Continuous quality control.
+      - generic [ref=e115]:
+        - heading "Reporting" [level=4] [ref=e116]
+        - paragraph [ref=e117]: Monthly progress, attendance, and ROI reports. Billable hours, cost per student, and grade breakdowns for HR.
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]: 20+
+        - generic [ref=e121]: Years of Experience
+      - generic [ref=e122]:
+        - generic [ref=e123]: "8"
+        - generic [ref=e124]: Languages
+      - generic [ref=e125]:
+        - generic [ref=e126]: "7"
+        - generic [ref=e127]: Countries Represented
+      - generic [ref=e128]:
+        - generic [ref=e129]: 100+
+        - generic [ref=e130]: Companies Served
+  - generic [ref=e132]:
+    - generic [ref=e133]:
+      - generic [ref=e134]: The Difference
+      - heading "Not a school. A strategic advantage." [level=2] [ref=e135]
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - heading "Executive-Grade Delivery" [level=3] [ref=e138]
+        - paragraph [ref=e139]: Zoom-integrated live sessions with automated attendance and lifecycle management. Real-time ROI dashboards for HR. Frictionless from day one.
+      - generic [ref=e140]:
+        - heading "Zero Administrative Burden" [level=3] [ref=e141]
+        - paragraph [ref=e142]: We handle evaluation, group organization, instructor assignment, and monthly progress reporting. Your HR team does nothing except review the results.
+      - generic [ref=e143]:
+        - heading "Proven at the Highest Levels" [level=3] [ref=e144]
+        - paragraph [ref=e145]: From Supreme Court justices to pharmaceutical CEOs, from live interpretation for 5,000 at Tony Robbins events to C-suite coaching. Battle-tested methodology.
+  - generic [ref=e147]:
+    - generic [ref=e148]:
+      - generic [ref=e149]: Powered by Technology
+      - heading "AI-native infrastructure behind every program" [level=2] [ref=e150]:
+        - text: AI-native infrastructure
+        - text: behind every program
+      - paragraph [ref=e151]: Not just consultants. Our proprietary platform automates the coordination that typically requires an entire operations team.
+    - generic [ref=e152]:
+      - generic [ref=e153]:
+        - generic [ref=e154]:
+          - generic [ref=e155]: Real-Time Dashboards
+          - heading "Complete visibility for HR. Zero effort required." [level=3] [ref=e156]:
+            - text: Complete visibility for HR.
+            - text: Zero effort required.
+          - paragraph [ref=e157]: Attendance, progress, grades, billable hours, and cost-per-student — all in one dashboard your HR team can access anytime.
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - generic [ref=e172]: "247"
+            - generic [ref=e173]: Active Students
+          - generic [ref=e174]:
+            - generic [ref=e175]: 98.2%
+            - generic [ref=e176]: Attendance Rate
+          - generic [ref=e177]:
+            - generic [ref=e178]: 1,840
+            - generic [ref=e179]: Hours Delivered
+          - generic [ref=e180]:
+            - generic [ref=e181]: $12.40
+            - generic [ref=e182]: Cost per Hour
+      - generic [ref=e189]:
+        - generic [ref=e190]: AI Content Engine
+        - heading "Industry-specific vocabulary powered by AI" [level=3] [ref=e191]
+        - paragraph [ref=e192]: Our AI adapts every lesson to your sector — pharma, finance, automotive, tech, consumer goods.
+        - generic [ref=e194]:
+          - generic [ref=e195]: Pharmaceutical
+          - generic [ref=e196]: Finance
+          - generic [ref=e197]: Automotive
+          - generic [ref=e198]: Technology
+          - generic [ref=e199]: Consumer
+          - generic [ref=e200]: Logistics
+      - generic [ref=e201]:
+        - generic [ref=e202]: Zoom Integration
+        - heading "Automated attendance & class management" [level=3] [ref=e203]
+        - paragraph [ref=e204]: Webhook-based Zoom tracking. No manual attendance sheets. No missed sessions. Everything logged automatically.
+        - generic [ref=e209]: Live — Business English B2
+      - generic [ref=e215]:
+        - generic [ref=e216]: HR Reporting
+        - heading "Monthly PDF reports ready for leadership" [level=3] [ref=e217]
+        - paragraph [ref=e218]: Billable hours, cost per student, CEFR progress, attendance rates — data that justifies your training investment.
+      - generic [ref=e226]:
+        - generic [ref=e227]:
+          - generic [ref=e228]: 40+ AI Tools
+          - heading "One person can run an entire language program" [level=3] [ref=e229]
+          - paragraph [ref=e230]: Scheduling, group organization, instructor assignment, progress monitoring, invoice generation — all automated. Your team focuses on teaching and relationships.
+        - generic [ref=e232]:
+          - generic [ref=e233]: Scheduling
+          - generic [ref=e234]: Attendance
+          - generic [ref=e235]: Grading
+          - generic [ref=e236]: Invoicing
+          - generic [ref=e237]: Reporting
+          - generic [ref=e238]: Groups
+          - generic [ref=e239]: Placement
+          - generic [ref=e240]: Progress
+          - generic [ref=e241]: Zoom Sync
+          - generic [ref=e242]: PDF Export
+          - generic [ref=e243]: AI Content
+          - generic [ref=e244]: Analytics
+  - generic [ref=e247]:
+    - generic [ref=e248]:
+      - generic [ref=e249]: Client Impact
+      - heading "Results that speak" [level=2] [ref=e250]
+    - generic [ref=e251]:
+      - generic [ref=e252]:
+        - text: “
+        - paragraph [ref=e253]: "\"Modern Language Center transformed our executive team's communication. The monthly reports gave us the visibility we needed to justify the investment to the board.\""
+        - generic [ref=e256]:
+          - generic [ref=e257]: HR Director
+          - generic [ref=e258]: Pharmaceutical Company
+      - generic [ref=e259]:
+        - text: “
+        - paragraph [ref=e260]: "\"The industry-specific content makes an enormous difference. Our executives practice with real vocabulary from their day-to-day, not generic textbook exercises.\""
+        - generic [ref=e263]:
+          - generic [ref=e264]: VP of Operations
+          - generic [ref=e265]: Consumer Goods Company
+      - generic [ref=e266]:
+        - text: “
+        - paragraph [ref=e267]: "\"The coaching for our board presentation was exceptional. The preparation and attention to detail surpassed any service we've ever contracted. We closed the deal.\""
+        - generic [ref=e270]:
+          - generic [ref=e271]: CEO
+          - generic [ref=e272]: Expanding Fintech
+  - generic [ref=e274]:
+    - generic [ref=e275]:
+      - generic [ref=e276]: Questions
+      - heading "Frequently asked" [level=2] [ref=e277]
+    - generic [ref=e278]:
+      - generic [ref=e279]:
+        - button "What languages do you offer? +" [ref=e280] [cursor=pointer]
+        - paragraph [ref=e281]: English, French, Portuguese, German, Italian, Spanish for foreigners, Japanese, and Mandarin. All programs follow the same rigorous methodology and quality standards.
+      - generic [ref=e282]:
+        - button "Are classes online or in-person? +" [ref=e283] [cursor=pointer]
+        - paragraph [ref=e284]: Both. We offer Zoom-integrated live online sessions, on-site at your offices, or hybrid formats. All include automated attendance tracking and progress monitoring.
+      - generic [ref=e285]:
+        - button "How do you measure ROI? +" [ref=e286] [cursor=pointer]
+        - paragraph [ref=e287]: Monthly reports include billable hours, cost per student, attendance rates, grade breakdowns, and progress against CEFR levels. Everything your HR team needs to present to leadership.
+      - generic [ref=e288]:
+        - button "What is the free diagnostic? +" [ref=e289] [cursor=pointer]
+        - paragraph [ref=e290]: A comprehensive evaluation of your team's current levels, an analysis of your organizational objectives, and a tailored program proposal. No commitment required.
+      - generic [ref=e291]:
+        - button "What size are the groups? +" [ref=e292] [cursor=pointer]
+        - paragraph [ref=e293]: Maximum 8 per group for standard programs, organized by level and functional area. Premium Production is capped at 4. One-on-one is also available.
+      - generic [ref=e294]:
+        - button "How is content personalized by industry? +" [ref=e295] [cursor=pointer]
+        - paragraph [ref=e296]: We use AI to adapt vocabulary, case studies, and practice scenarios to your company's specific sector — pharmaceuticals, finance, technology, consumer goods, automotive, logistics, and more.
+  - generic [ref=e298]:
+    - generic [ref=e299]: Take the Next Step
+    - heading "Your competitors are already investing in executive language fluency." [level=2] [ref=e300]:
+      - text: Your competitors are already investing in
+      - text: executive language fluency.
+    - paragraph [ref=e301]: "The question is: are you?"
+    - generic [ref=e302]:
+      - link "Schedule a Consultation" [ref=e303] [cursor=pointer]:
+        - /url: mailto:hello@modernlanguagecenter.com
+      - link "Call Us Directly" [ref=e304] [cursor=pointer]:
+        - /url: tel:+525555555555
+  - contentinfo [ref=e305]:
+    - generic [ref=e306]:
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - img "Modern Language Center" [ref=e309]
+          - paragraph [ref=e310]: Precision communication for the global elite. 20+ years transforming executive talent.
+          - paragraph [ref=e311]: 📍 Mexico City
+        - generic [ref=e312]:
+          - heading "Solutions" [level=4] [ref=e313]
+          - list [ref=e314]:
+            - listitem [ref=e315]:
+              - link "Business English" [ref=e316] [cursor=pointer]:
+                - /url: companies/business-english.html
+            - listitem [ref=e317]:
+              - link "Premium Production" [ref=e318] [cursor=pointer]:
+                - /url: companies/premium-production.html
+            - listitem [ref=e319]:
+              - link "Coaching" [ref=e320] [cursor=pointer]:
+                - /url: companies/coaching.html
+            - listitem [ref=e321]:
+              - link "Other Languages" [ref=e322] [cursor=pointer]:
+                - /url: companies/languages.html
+            - listitem [ref=e323]:
+              - link "Recruitment Support" [ref=e324] [cursor=pointer]:
+                - /url: companies/recruitment.html
+            - listitem [ref=e325]:
+              - link "Accreditation" [ref=e326] [cursor=pointer]:
+                - /url: companies/accreditation.html
+            - listitem [ref=e327]:
+              - link "Translation" [ref=e328] [cursor=pointer]:
+                - /url: companies/translation.html
+            - listitem [ref=e329]:
+              - link "Train Abroad" [ref=e330] [cursor=pointer]:
+                - /url: companies/train-abroad.html
+        - generic [ref=e331]:
+          - heading "Individuals" [level=4] [ref=e332]
+          - list [ref=e333]:
+            - listitem [ref=e334]:
+              - link "Overview" [ref=e335] [cursor=pointer]:
+                - /url: individuals.html
+            - listitem [ref=e336]:
+              - link "One-on-One English" [ref=e337] [cursor=pointer]:
+                - /url: individuals/one-on-one.html
+            - listitem [ref=e338]:
+              - link "Meet Program" [ref=e339] [cursor=pointer]:
+                - /url: individuals/meet-program.html
+            - listitem [ref=e340]:
+              - link "Other Languages" [ref=e341] [cursor=pointer]:
+                - /url: individuals/languages.html
+            - listitem [ref=e342]:
+              - link "Travel Abroad" [ref=e343] [cursor=pointer]:
+                - /url: individuals/travel-abroad.html
+        - generic [ref=e344]:
+          - heading "Company" [level=4] [ref=e345]
+          - list [ref=e346]:
+            - listitem [ref=e347]:
+              - link "About Us" [ref=e348] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=e349]:
+              - link "Contact" [ref=e350] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=e351]:
+              - link "Privacy Policy" [ref=e352] [cursor=pointer]:
+                - /url: privacy.html
+            - listitem [ref=e353]:
+              - link "hello@modernlanguagecenter.com" [ref=e354] [cursor=pointer]:
+                - /url: mailto:hello@modernlanguagecenter.com
+      - generic [ref=e355]:
+        - paragraph [ref=e356]: © 2026 Modern Language Center. All rights reserved.
+        - paragraph [ref=e357]: Precision Communication for the Global Elite

@@ -1,0 +1,341 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e9]:
+        - link "Giga launches Browser Agent" [ref=e13] [cursor=pointer]:
+          - /url: ./browser-agent
+          - paragraph [ref=e21]: Giga launches Browser Agent
+        - generic [ref=e23]:
+          - img [ref=e25]:
+            - heading "AI that talks like a human. Handles millions of conversations." [level=1] [ref=e27]:
+              - mark [ref=e28]: AI that talks like a human.
+              - text: Handles millions of conversations.
+          - heading "AI agents for enterprise support" [level=2] [ref=e30]
+        - paragraph [ref=e35] [cursor=pointer]: Talk to us
+      - img [ref=e46]
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - paragraph [ref=e53]: Solve your most complex support issues with AI, up and running in two weeks.
+        - generic [ref=e54]:
+          - generic [ref=e58]:
+            - paragraph [ref=e60]: DEFLECTION RATE
+            - generic [ref=e63]: 0%
+          - generic [ref=e66]:
+            - paragraph [ref=e68]: SUPPORTED LANGUAGES
+            - generic [ref=e71]: "0"
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - paragraph [ref=e83]: CUSTOM AGENTS
+          - generic [ref=e84]:
+            - paragraph [ref=e87]: Built to handle complexity
+            - generic [ref=e89]:
+              - generic [ref=e94]:
+                - paragraph [ref=e97]: Extremely customizable
+                - paragraph [ref=e99]: Fine-tune every nuance to match your business
+              - generic [ref=e104]:
+                - paragraph [ref=e106]:
+                  - strong [ref=e107]: Auto policy writing
+                - paragraph [ref=e109]: Get started with just a transcript
+              - generic [ref=e114]:
+                - paragraph [ref=e116]: Built-in Copilot
+                - paragraph [ref=e119]: AI helps you build your ideal support agent
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - paragraph [ref=e128]:
+                  - generic [ref=e129]: Agent Canvas
+                - paragraph [ref=e133]: The fastest way to build, govern, and scale enterprise AI agents.
+              - link "Explore Agent Canvas" [ref=e135] [cursor=pointer]:
+                - /url: ./agent-canvas
+                - paragraph [ref=e137]: Explore Agent Canvas
+            - generic [ref=e138]:
+              - generic [ref=e143] [cursor=pointer]:
+                - paragraph [ref=e145]: Create the agent
+                - paragraph [ref=e147]: Ground agents in your brand standards, compliance rules, and workflows so every interaction is consistent and on-policy.
+              - paragraph [ref=e153] [cursor=pointer]: Define policies
+              - paragraph [ref=e159] [cursor=pointer]: Design the logic
+              - paragraph [ref=e165] [cursor=pointer]: Test and launch
+              - paragraph [ref=e171] [cursor=pointer]: Monitor and improve
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - paragraph [ref=e180]: Create new agent
+              - generic [ref=e181]:
+                - img [ref=e185]
+                - img [ref=e189]
+                - img [ref=e193]
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - generic [ref=e198]:
+                  - paragraph [ref=e200]: Add training documents
+                  - paragraph [ref=e202]: Attach files to give your agent business context
+                - generic [ref=e203]:
+                  - img [ref=e207]
+                  - paragraph [ref=e210]: Drag files here or click to browse
+              - generic [ref=e211]:
+                - paragraph [ref=e214]: Cancel
+                - paragraph [ref=e217]: Create agent
+              - generic [ref=e218]:
+                - paragraph [ref=e222]: Chat
+                - paragraph [ref=e226]: Voice
+                - generic [ref=e227]:
+                  - paragraph [ref=e229]: Multi-modal
+                  - img [ref=e232]
+      - generic [ref=e234]:
+        - generic [ref=e235]:
+          - paragraph [ref=e244]: SMART SUGGESTIONS
+          - generic [ref=e245]:
+            - paragraph [ref=e248]: Improve as you go
+            - generic [ref=e250]:
+              - generic [ref=e256]:
+                - paragraph [ref=e258]: Performance enhancement
+                - paragraph [ref=e260]: Designed to help you hit KPIs
+              - generic [ref=e266]:
+                - paragraph [ref=e268]: Custom suggestions
+                - paragraph [ref=e270]: Based on your unique business requirements
+              - generic [ref=e275]:
+                - paragraph [ref=e277]: Auto improve
+                - paragraph [ref=e279]: Ready-to-implement policy improvements
+        - generic [ref=e281]:
+          - generic [ref=e282]:
+            - generic [ref=e283]:
+              - generic [ref=e284]:
+                - generic [ref=e285]:
+                  - paragraph [ref=e287]:
+                    - generic [ref=e288]: Smart Insights
+                  - img [ref=e291]
+                - paragraph [ref=e296]: Your agent will surface patterns and uncover root causes, then offer tips on how to update your policies to improve support performance, based on the success metrics you choose.
+              - link "Explore Smart Insights" [ref=e298] [cursor=pointer]:
+                - /url: ./insights
+                - paragraph [ref=e300]: Explore Smart Insights
+            - generic [ref=e301]:
+              - paragraph [ref=e307] [cursor=pointer]: Choose an objective
+              - paragraph [ref=e313] [cursor=pointer]: Generate insights
+              - generic [ref=e318] [cursor=pointer]:
+                - paragraph [ref=e320]: Validate at scale
+                - paragraph [ref=e322]: Review transcripts, run hypotheses across thousands of calls, and confirm the root cause.
+          - generic [ref=e326]:
+            - generic [ref=e328]:
+              - generic [ref=e330]:
+                - paragraph [ref=e332]: Resolution Rate Improvement (Voice)
+                - img [ref=e335]
+              - generic [ref=e337]:
+                - generic [ref=e338]:
+                  - paragraph [ref=e340]: Voice
+                  - img [ref=e343]
+                - generic [ref=e345]:
+                  - img [ref=e348]
+                  - paragraph [ref=e351]: Generate insights
+              - img [ref=e354]
+            - generic [ref=e356]:
+              - generic [ref=e357]:
+                - paragraph [ref=e359]: Resolution Rate Improvement
+                - generic [ref=e361]:
+                  - generic [ref=e362]:
+                    - generic [ref=e363]:
+                      - paragraph [ref=e365]: 14%
+                      - img [ref=e368]
+                    - generic [ref=e372]: 25.0%
+                  - paragraph [ref=e374]: 1,302 of 2,170 tickets
+              - generic [ref=e375]:
+                - paragraph [ref=e377]: Insights 1 of 28
+                - img [ref=e380]
+                - img [ref=e384]
+              - generic [ref=e386]:
+                - paragraph [ref=e388]: Insight 1 of 28
+                - img [ref=e391]
+                - img [ref=e395]
+              - generic [ref=e397]:
+                - generic [ref=e398]:
+                  - generic [ref=e399]:
+                    - paragraph [ref=e401]: Add self-service reservation modification flow
+                    - paragraph [ref=e404]: Policy Modification
+                  - img [ref=e408]
+                  - paragraph [ref=e411]: 928 tickets
+                  - paragraph [ref=e413]: 13.8% improvement
+                - generic [ref=e414]:
+                  - generic [ref=e415]:
+                    - paragraph [ref=e417]: Add fallback search flow for missing confirmation
+                    - paragraph [ref=e420]: Policy Modification
+                  - img [ref=e424]
+                  - paragraph [ref=e427]: 1,190 tickets
+                  - paragraph [ref=e429]: 22.2% improvement
+                - generic [ref=e430]:
+                  - generic [ref=e431]:
+                    - paragraph [ref=e433]: Streamline unspecific transfer flow
+                    - paragraph [ref=e436]: Policy Modification
+                  - img [ref=e440]
+                  - paragraph [ref=e443]: 102 tickets
+                  - paragraph [ref=e445]: 9.7% improvement
+                - generic [ref=e446]:
+                  - generic [ref=e447]:
+                    - paragraph [ref=e449]: Add FAQ and handling rules
+                    - paragraph [ref=e452]: Knowledge Gap
+                    - img [ref=e455]
+                  - paragraph [ref=e459]: 72 tickets
+                  - paragraph [ref=e461]: 3.5% improvement
+      - generic [ref=e462]:
+        - generic [ref=e463]:
+          - paragraph [ref=e472]: NATURAL VOICE
+          - generic [ref=e473]:
+            - paragraph [ref=e476]: Engage with empathy
+            - generic [ref=e478]:
+              - generic [ref=e483]:
+                - paragraph [ref=e485]: Personalized voices
+                - paragraph [ref=e487]: Tailor your agent’s voice to match your brand
+              - generic [ref=e492]:
+                - paragraph [ref=e494]: Dynamic interrupts
+                - paragraph [ref=e496]: Designed to adapt to a global audience
+              - generic [ref=e501]:
+                - paragraph [ref=e503]: Ultra-low latency
+                - paragraph [ref=e505]: Industry-leading voice response time
+        - generic [ref=e507]:
+          - generic [ref=e509]:
+            - generic [ref=e510]:
+              - generic [ref=e511]:
+                - paragraph [ref=e513]:
+                  - generic [ref=e514]: Voice Experience
+                - img [ref=e517]
+              - paragraph [ref=e522]: Emotionally-aware agents that understand tone, intent, and context. Fluidly handle accents, interruptions, and rapid turns of conversation to ensure every conversation feels natural.
+            - link "Explore Voice Experience" [ref=e524] [cursor=pointer]:
+              - /url: ./voice-experience
+              - paragraph [ref=e526]: Explore Voice Experience
+          - paragraph [ref=e533] [cursor=pointer]: Play
+    - generic [ref=e537]:
+      - generic [ref=e538]:
+        - paragraph [ref=e546]: CUSTOMER SPOTLIGHT
+        - paragraph [ref=e549]: See how enterprises scaled customer engagement with Giga
+      - generic [ref=e550]:
+        - link "DWR rate 80%" [ref=e551] [cursor=pointer]:
+          - /url: ./doordash
+          - generic [ref=e556]:
+            - paragraph [ref=e558]: DWR rate
+            - generic [ref=e561]: 80%
+        - generic [ref=e563]:
+          - generic [ref=e565]:
+            - paragraph [ref=e568]: How DoorDash and Giga built reliable support at scale
+            - link "Learn more" [ref=e570] [cursor=pointer]:
+              - /url: ./doordash
+              - paragraph [ref=e572]: Learn more
+          - generic [ref=e573]:
+            - generic [ref=e579]:
+              - paragraph [ref=e581]: Andy Fang
+              - paragraph [ref=e583]: Co-Founder at DoorDash
+            - paragraph [ref=e585]: "\"At DoorDash, we operate at a massive scale across services, platforms, and languages. Giga leveraged usage data to deliver measurable improvements, including fewer escalations, faster resolution paths, and more efficient workflows across our teams. As we continue to grow across more than 40 countries and serve nearly 50 million people each month, partnerships like this are critical to delivering better outcomes for consumers on a global scale\""
+    - generic [ref=e588]:
+      - generic [ref=e590]:
+        - link "G i g a" [ref=e591] [cursor=pointer]:
+          - /url: ./
+          - paragraph [ref=e594]:
+            - generic [ref=e595]:
+              - generic [ref=e596]: G
+              - generic [ref=e597]: i
+              - generic [ref=e598]: g
+              - generic [ref=e599]: a
+        - generic [ref=e600]:
+          - paragraph [ref=e604]: Product
+          - paragraph [ref=e609]: Company
+      - generic [ref=e611]:
+        - link "Sign in" [ref=e613] [cursor=pointer]:
+          - /url: https://console.gigaml.com/
+          - paragraph [ref=e615]: Sign in
+        - paragraph [ref=e619] [cursor=pointer]: Talk to us
+    - generic [ref=e621]:
+      - paragraph [ref=e630]: GET A PERSONALIZED DEMO
+      - generic [ref=e631]:
+        - paragraph [ref=e634]: Ready to see the Giga AI agent in action?
+        - generic [ref=e635]:
+          - paragraph [ref=e637]: Giga’s AI agents handle complex workflows at scale, from live delivery issues to compliance decisions, while maintaining over 90% resolution accuracy in production.
+          - paragraph [ref=e643] [cursor=pointer]: Talk to us
+    - generic [ref=e650]:
+      - generic [ref=e651]:
+        - generic [ref=e652]:
+          - generic [ref=e654]:
+            - paragraph [ref=e662]: COMPLIANT
+            - generic [ref=e663]:
+              - link [ref=e664] [cursor=pointer]:
+                - /url: https://trust.giga.ai/
+              - link [ref=e666] [cursor=pointer]:
+                - /url: https://trust.giga.ai/
+              - link [ref=e668] [cursor=pointer]:
+                - /url: https://trust.giga.ai/
+              - paragraph [ref=e671]:
+                - link "5+" [ref=e672] [cursor=pointer]:
+                  - /url: https://trust.giga.ai/
+          - link "G i g a" [ref=e673] [cursor=pointer]:
+            - /url: ./
+            - img [ref=e676]
+            - paragraph [ref=e679]:
+              - generic [ref=e680]:
+                - generic [ref=e681]: G
+                - generic [ref=e682]: i
+                - generic [ref=e683]: g
+                - generic [ref=e684]: a
+        - generic [ref=e686]:
+          - generic [ref=e687]:
+            - paragraph [ref=e689]: Product
+            - generic [ref=e690]:
+              - link "Agent Canvas" [ref=e691] [cursor=pointer]:
+                - /url: ./agent-canvas
+                - paragraph [ref=e693]: Agent Canvas
+              - link "Insights" [ref=e695] [cursor=pointer]:
+                - /url: ./insights
+                - paragraph [ref=e697]: Insights
+              - link "Voice Experience" [ref=e699] [cursor=pointer]:
+                - /url: ./voice-experience
+                - paragraph [ref=e701]: Voice Experience
+              - link "Browser Agent" [ref=e703] [cursor=pointer]:
+                - /url: ./browser-agent
+                - paragraph [ref=e705]: Browser Agent
+          - generic [ref=e707]:
+            - paragraph [ref=e709]: Company
+            - generic [ref=e710]:
+              - link "Careers" [ref=e711] [cursor=pointer]:
+                - /url: ./careers
+                - paragraph [ref=e713]: Careers
+              - link "Contact" [ref=e715] [cursor=pointer]:
+                - /url: ./contact
+                - paragraph [ref=e717]: Contact
+              - link "Trust Center" [ref=e719] [cursor=pointer]:
+                - /url: https://trust.giga.ai/
+                - paragraph [ref=e721]: Trust Center
+          - generic [ref=e723]:
+            - paragraph [ref=e725]: Resources
+            - generic [ref=e726]:
+              - link "News" [ref=e727] [cursor=pointer]:
+                - /url: ./news
+                - paragraph [ref=e729]: News
+              - link "Privacy Policy" [ref=e731] [cursor=pointer]:
+                - /url: ./privacy-policy
+                - paragraph [ref=e733]: Privacy Policy
+              - link "Terms Of Service" [ref=e735] [cursor=pointer]:
+                - /url: ./terms-of-service
+                - paragraph [ref=e737]: Terms Of Service
+      - generic [ref=e741]:
+        - paragraph [ref=e743]: © 2026 Giga AI, Inc.
+        - generic [ref=e744]:
+          - link [ref=e745] [cursor=pointer]:
+            - /url: https://x.com/gigaai?lang=en
+          - link [ref=e748] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/gigaml
+  - img [ref=e750]
+  - img [ref=e759]
+  - img [ref=e762]
+  - img [ref=e765]
+  - img [ref=e768]
+  - img [ref=e797]
+  - img [ref=e799]
+  - img [ref=e801]
+  - img [ref=e803]
+  - img [ref=e805]
+  - img [ref=e816]
+  - img [ref=e818]
+  - img [ref=e820]
+  - img [ref=e822]
+  - img [ref=e824]
+  - img [ref=e826]
+  - img [ref=e829]
+  - img [ref=e832]
+  - img [ref=e835]
+  - img [ref=e839]
+  - img [ref=e841]
