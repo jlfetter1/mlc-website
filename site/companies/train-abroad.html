@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Train Abroad — Modern Language Center</title>
+<meta name="description" content="Multi-week immersion programs in the UK, Canada, and the US. From English classes during travel to full immersion. Available for executives, undergraduates, and graduate students.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://modernlanguagecenter.com/wp-content/uploads/2021/01/cropped-favicon-LC-32x32.png">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .ci-hero{padding:200px 0 130px;background:linear-gradient(135deg,rgba(10,10,15,0.7),rgba(10,10,15,0.4)),linear-gradient(180deg,#1a3658,#0f1f33);position:relative;overflow:hidden;}
+  .ci-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 20%,rgba(10,10,15,0.7) 100%);pointer-events:none;}
+  .ci-hero > *{position:relative;z-index:2;}
+  .ci-hero h1{font-family:var(--font-display);font-weight:300;font-size:clamp(2.6rem,5.5vw,4.8rem);line-height:1.05;letter-spacing:-0.025em;margin-bottom:24px;max-width:980px;}
+  .ci-hero h1 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;color:var(--gold);}
+  .dest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;}
+  .dest{position:relative;border-radius:10px;overflow:hidden;padding:48px;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--border-dark);}
+  .dest::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,0.2) 0%,rgba(10,10,15,0.88) 100%);z-index:1;}
+  .dest > *{position:relative;z-index:2;}
+  .dest.uk{background:linear-gradient(135deg,#1a2744 0%,#3d4c6a 100%);}
+  .dest.ca{background:linear-gradient(135deg,#1b4332 0%,#2d6a4f 100%);}
+  .dest.usa{background:linear-gradient(135deg,#2b1f1f 0%,#7a3c3c 100%);}
+  .dest .dest-code{font-family:var(--font-display);font-size:72px;font-weight:700;letter-spacing:-0.04em;color:var(--gold);margin-bottom:10px;line-height:1;}
+  .dest .dest-cities{font-family:var(--font-sans);font-size:16px;color:var(--text-on-dark);margin-bottom:12px;opacity:0.92;}
+  .dest .dest-desc{font-size:13px;color:var(--text-on-dark-muted);line-height:1.55;max-width:340px;}
+  .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
+  .comp-card{padding:28px;background:var(--bg-light-card);border:1px solid var(--border-light);border-radius:8px;}
+  .comp-card .comp-lbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;}
+  .comp-card h3{font-family:var(--font-display);font-size:18px;font-weight:600;margin:10px 0 8px;color:var(--text-on-light);}
+  .comp-card p{font-size:14px;color:var(--text-on-light-muted);line-height:1.55;}
+  .qblock{padding:60px 0;}
+  .qblock .q{font-family:var(--font-display);font-weight:600;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;color:var(--gold);margin-bottom:28px;max-width:1000px;}
+  .qblock .q::before{content:"\201C";margin-right:4px;}
+  .qblock .q::after{content:"\201D";margin-left:4px;}
+  .qa-row{display:flex;justify-content:space-between;align-items:flex-end;padding-top:24px;border-top:1px solid var(--border-dark);gap:32px;flex-wrap:wrap;}
+  .qa-who{font-family:var(--font-display);font-size:15px;font-weight:600;}
+  .qa-who small{display:block;color:var(--text-on-dark-muted);font-size:12px;font-weight:400;margin-top:3px;}
+  .qa-nums{display:flex;gap:32px;}
+  .qa-num{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-0.02em;text-align:right;}
+  .qa-num small{display:block;font-family:var(--font-sans);font-size:10px;color:var(--text-on-dark-faint);font-weight:400;letter-spacing:0.05em;text-transform:uppercase;margin-top:3px;}
+  @media (max-width:900px){.dest-grid,.comp-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="nav-logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#solutions">Solutions</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#components">What's Included</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li class="nav-cta"><a href="#contact" class="btn btn-gold">Schedule a consultation</a></li>
+    </ul>
+    <button class="lang-toggle" id="langToggle"><span class="lang-active">EN</span><span class="lang-divider">/</span><span class="lang-inactive">ES</span></button>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Cinematic hero -->
+<section class="ci-hero">
+  <div class="container">
+    <span class="eyebrow reveal">Train Abroad · Immersion programs</span>
+    <h1 class="reveal">Learn the language in <em>the place</em> it was made.</h1>
+    <p class="lead reveal" style="font-size:19px;max-width:740px;margin-bottom:28px;color:var(--text-on-dark-muted);">From a one-week trip with English classes to a full multi-month immersion. Designed for executives, undergraduate and graduate students, and middle and upper management — anyone whose English needs to clear a specific bar.</p>
+    <div class="reveal" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="#contact" class="btn btn-blue">Schedule an appointment</a>
+      <a href="#contact" class="btn btn-gold">Schedule a consultation →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Destinations -->
+<section class="section section-dark" id="destinations">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Where students train</span>
+      <h2>Three countries. Matched to the work.</h2>
+    </div>
+    <div class="dest-grid">
+      <div class="dest uk reveal"><div class="dest-code">UK</div><div class="dest-cities">Oxford · Cambridge · London</div><div class="dest-desc">For European-focused roles. Standard programs 4–8 weeks. Seminar-style case method. Partner university affiliations.</div></div>
+      <div class="dest ca reveal"><div class="dest-code">CA</div><div class="dest-cities">Toronto · Vancouver · Montréal</div><div class="dest-desc">For North American integration. Standard programs 4–12 weeks. Montréal also serves French-language tracks.</div></div>
+      <div class="dest usa reveal"><div class="dest-code">USA</div><div class="dest-cities">Boston · New York · San Francisco</div><div class="dest-desc">For US-facing business, capital markets, or tech roles. Standard programs 4–8 weeks.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Three components -->
+<section class="section section-light" id="components">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">What a program includes</span>
+      <h2>Language training. Cultural immersion. Network.</h2>
+      <p class="lead">Every Train Abroad program integrates language training before, during, and after travel. Programs vary in intensity — from light English classes during a corporate trip to a complete immersion semester.</p>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card reveal"><span class="comp-lbl">01 · Language Training</span><h3>Integrated, before / during / after</h3><p>Pre-trip prep to lock in the foundation. Daily sessions on the ground if the program calls for full immersion. Post-trip reinforcement to consolidate. Calibrated to participant level (CEFR-aligned).</p></div>
+      <div class="comp-card reveal"><span class="comp-lbl">02 · Cultural Integration</span><h3>Off-campus immersion</h3><p>Cultural visits, industry tours, guest lectures. English-speaking host families optional, typical for longer programs.</p></div>
+      <div class="comp-card reveal"><span class="comp-lbl">03 · Network</span><h3>Curated introductions</h3><p>Local industry peers, alumni, MLC-affiliated executives. A network that outlasts the program.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Who this is for -->
+<section class="section section-dark">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start;">
+      <div class="reveal">
+        <span class="eyebrow">The candidate profile</span>
+        <h2>Built for serious learners.</h2>
+      </div>
+      <div class="reveal">
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16px;">
+          <li style="display:flex;gap:12px;"><span style="color:var(--gold);font-weight:700;">→</span><span><b>C-suite or senior VP level &amp; upper management</b> — leadership sabbaticals and expat-prep tracks</span></li>
+          <li style="display:flex;gap:12px;"><span style="color:var(--gold);font-weight:700;">→</span><span><b>Middle management</b> — international rotation prep, regional integration</span></li>
+          <li style="display:flex;gap:12px;"><span style="color:var(--gold);font-weight:700;">→</span><span><b>Undergraduate &amp; graduate students</b> — academic immersion, MBA prep</span></li>
+          <li style="display:flex;gap:12px;"><span style="color:var(--gold);font-weight:700;">→</span><span><b>Anyone</b> — programs scale from a one-week trip with classes to a full immersion semester</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pull quote -->
+<section class="section section-dark">
+  <div class="container qblock">
+    <span class="eyebrow">Client impact</span>
+    <p class="q">I spent six weeks in Oxford studying alongside executives from twelve countries. I came back fluent — but more than that, I came back with a network I still lean on six years later.</p>
+    <div class="qa-row">
+      <div class="qa-who">CEO<small>Pharmaceutical · CDMX</small></div>
+      <div class="qa-nums">
+        <div class="qa-num">6 wk<small>In Oxford</small></div>
+        <div class="qa-num">12<small>Countries in cohort</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-dark" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>What participants ask first</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-question">Do we pick the destination or do you?</button><div class="faq-answer"><p>Collaboratively. We propose a shortlist based on goals, industry, and calendar. You make the call.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">What's the minimum program length?</button><div class="faq-answer"><p>One week for a corporate trip with English classes. Four weeks for full cultural and network components.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can families come?</button><div class="faq-answer"><p>Yes, with longer programs. Host family lodging, international schools for children — we coordinate the full package.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Who handles visas and travel?</button><div class="faq-answer"><p>We handle visa letters of invitation, program documentation, and university registration. Participants handle the actual visa application and travel bookings.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Is this tax-deductible as a training expense?</button><div class="faq-answer"><p>Typically yes in Mexico under corporate training deductions. Confirm with your tax advisor. We provide the documentation your accounting team needs.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can multiple participants attend together?</button><div class="faq-answer"><p>Yes — corporate cohorts of 3–8 are common. Shared lodging, coordinated schedules, and the same cohort across the academic program.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section">
+  <div class="cta-section reveal" id="contact">
+    <span class="eyebrow">The right program at the right moment</span>
+    <h2>Book a 30-minute consultation.<br>We'll map <span style="color:var(--gold);">the destination, the program length, and the language plan.</span></h2>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:hello@modernlanguagecenter.com?subject=Train%20Abroad%20Appointment" class="btn btn-blue">Schedule an appointment</a>
+      <a href="mailto:hello@modernlanguagecenter.com?subject=Train%20Abroad%20Consultation" class="btn btn-gold">Schedule a consultation →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-accent"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="footer-logo"><p class="footer-tagline">Precision communication for the global elite.</p></div>
+      <div class="footer-col"><h4>Solutions</h4><ul><li><a href="business-english.html">Business English</a></li><li><a href="premium-production.html">Premium Production</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="languages.html">Other Languages</a></li><li><a href="recruitment.html">Recruitment Support</a></li><li><a href="accreditation.html">Accreditation</a></li><li><a href="translation.html">Translation</a></li><li><a href="train-abroad.html">Train Abroad</a></li></ul></div>
+      <div class="footer-col"><h4>Individuals</h4><ul><li><a href="../individuals.html">Overview</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../index.html#contact">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Modern Language Center. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.min.js" } }</script>
+<script src="../js/i18n.js" defer></script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>

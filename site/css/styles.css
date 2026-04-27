@@ -152,6 +152,17 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
   border: 1px solid rgba(255,255,255,0.2);
 }
 
+.btn-blue {
+  background: #00A0DE;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-blue:hover {
+  background: #1bb6f0;
+  color: #fff;
+  box-shadow: 0 0 40px rgba(0,160,222,0.3);
+}
+
 .btn-ghost:hover {
   background: rgba(255,255,255,0.05);
   border-color: rgba(255,255,255,0.35);
@@ -211,9 +222,8 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 }
 
 .nav-logo {
-  height: 30px;
-  filter: brightness(10);
-  opacity: 0.9;
+  height: 38px;
+  opacity: 1;
 }
 
 .nav-links {
@@ -1408,8 +1418,7 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 
 /* Brand column */
 .footer-logo {
-  height: 38px;
-  filter: brightness(10);
+  height: 46px;
   margin-bottom: 1.25rem;
   display: block;
 }

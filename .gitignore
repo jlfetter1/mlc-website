@@ -1,5 +1,13 @@
 node_modules/
+.superpowers/
 MLC_SOLUTIONS_SECTION_SPEC.md
+# Windows / WSL metadata
+*:Zone.Identifier
+# Stakeholder reference materials (large; not for deploy)
+/Catálogo_JCS.pdf
+/Comments Website and Landing Pages.pdf
+/MLC Website.jpg
+site/assets/references/
 *.psd
 *.ai
 .DS_Store

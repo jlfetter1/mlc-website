@@ -127,7 +127,7 @@
 ---
 
 ## Key Staff
-- **Steve Generoux** — CEO
+- **Steve Genereux** — CEO
 - **Anabel Mejia** — Directora Comercial (Commercial Director)
 - **Christian Poblano** — Director Académico (Academic Director)
 - **Juan C. Salazar** — Director Administrativo (Administrative Director)

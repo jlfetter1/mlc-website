@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Last-Minute Coaching — Modern Language Center</title>
+<meta name="description" content="In 24-48 hours, your coaching sessions are ready. Precision preparation for board presentations, keynotes, investor calls. We match a coach within 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://modernlanguagecenter.com/wp-content/uploads/2021/01/cropped-favicon-LC-32x32.png">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .ur-hero{padding:140px 0 80px;background:linear-gradient(180deg,#2b1f1f 0%,var(--bg-dark) 100%);text-align:center;position:relative;}
+  .ur-badge{display:inline-block;background:#F59E0B;color:var(--bg-dark);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.2em;padding:6px 14px;border-radius:4px;margin-bottom:24px;}
+  .ur-hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2.6rem,5.5vw,4.5rem);line-height:1.02;letter-spacing:-0.03em;margin:0 auto 22px;max-width:980px;}
+  .ur-counter{display:flex;justify-content:center;gap:18px;margin-top:32px;flex-wrap:wrap;}
+  .ur-ct{padding:14px 22px;background:rgba(255,255,255,0.04);border:1px solid var(--border-dark);border-radius:6px;}
+  .ur-ct .n{font-family:var(--font-display);font-size:30px;font-weight:700;color:var(--gold);letter-spacing:-0.02em;}
+  .ur-ct .l{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-on-dark-faint);letter-spacing:0.15em;}
+  .events-list{column-count:2;column-gap:32px;margin-top:36px;}
+  .events-list li{display:flex;gap:12px;break-inside:avoid;font-family:var(--font-display);font-size:17px;color:var(--text-on-light);line-height:2;list-style:none;}
+  .events-list li span.arrow{color:var(--gold);font-weight:700;}
+  .rsg-grid{display:flex;flex-direction:column;gap:18px;margin-top:36px;}
+  .rsg-step{display:grid;grid-template-columns:80px 1fr;gap:24px;padding:28px;background:var(--bg-dark-2);border:1px solid var(--border-dark);border-radius:8px;align-items:start;}
+  .rsg-step .rsg-num{font-family:var(--font-display);font-size:48px;font-weight:700;color:var(--gold);letter-spacing:-0.04em;line-height:0.9;}
+  .rsg-step h3{font-family:var(--font-display);font-size:20px;font-weight:600;margin-bottom:10px;color:var(--text-on-dark);}
+  .rsg-step ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--text-on-dark-muted);line-height:1.5;}
+  .rsg-step ul li{display:flex;gap:10px;}
+  .rsg-step ul li::before{content:"–";color:var(--gold);}
+  .qblock{padding:60px 0;}
+  .qblock .q{font-family:var(--font-display);font-weight:600;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;color:var(--gold);margin-bottom:28px;max-width:1000px;}
+  .qblock .q::before{content:"\201C";margin-right:4px;}
+  .qblock .q::after{content:"\201D";margin-left:4px;}
+  .qa-row{display:flex;justify-content:space-between;align-items:flex-end;padding-top:24px;border-top:1px solid var(--border-dark);gap:32px;flex-wrap:wrap;}
+  .qa-who{font-family:var(--font-display);font-size:15px;font-weight:600;}
+  .qa-who small{display:block;color:var(--text-on-dark-muted);font-size:12px;font-weight:400;margin-top:3px;}
+  .qa-nums{display:flex;gap:32px;}
+  .qa-num{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-0.02em;text-align:right;}
+  .qa-num small{display:block;font-family:var(--font-sans);font-size:10px;color:var(--text-on-dark-faint);font-weight:400;letter-spacing:0.05em;text-transform:uppercase;margin-top:3px;}
+  @media (max-width:900px){.events-list{column-count:1;}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="nav-logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#solutions">Solutions</a></li>
+      <li><a href="#events">When This Is the Call</a></li>
+      <li><a href="#framework">Framework</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li class="nav-cta"><a href="#contact" class="btn btn-gold">Request coaching now</a></li>
+    </ul>
+    <button class="lang-toggle" id="langToggle"><span class="lang-active">EN</span><span class="lang-divider">/</span><span class="lang-inactive">ES</span></button>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Urgent hero -->
+<section class="ur-hero">
+  <div class="container">
+    <span class="ur-badge">LIVE · 24-48 HOURS</span>
+    <h1 class="reveal">The moment that matters is near.<br>In <span style="color:var(--gold)">24-48 hours</span>, your coaching sessions are ready.</h1>
+    <p class="lead reveal" style="margin:0 auto 24px;max-width:760px;color:var(--text-on-dark-muted);font-size:18px;">We evaluate the student's level, analyze their event needs, and develop a program. Board presentations. Keynotes. Investor calls. Press interviews. Delivered on-site or remote, on your timeline.</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="#contact" class="btn btn-blue">Schedule an appointment</a>
+      <a href="#contact" class="btn btn-gold">Request coaching now →</a>
+    </div>
+    <div class="ur-counter reveal">
+      <div class="ur-ct"><div class="n">24h</div><div class="l">RESPONSE WINDOW</div></div>
+      <div class="ur-ct"><div class="n">24-48h</div><div class="l">COACHING STARTS</div></div>
+      <div class="ur-ct"><div class="n">7</div><div class="l">DAYS A WEEK</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Events we've saved -->
+<section class="section section-light" id="events">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">When this is the call</span>
+      <h2>The events we've saved.</h2>
+      <p class="lead">When a high-stakes English moment has no runway.</p>
+    </div>
+    <ul class="events-list reveal">
+      <li><span class="arrow">→</span><span>Board presentations with international directors present</span></li>
+      <li><span class="arrow">→</span><span>Investor earnings calls and Q&amp;A</span></li>
+      <li><span class="arrow">→</span><span>Press conferences and media interviews</span></li>
+      <li><span class="arrow">→</span><span>Keynote addresses at industry events</span></li>
+      <li><span class="arrow">→</span><span>Panel moderation (especially bilingual panels)</span></li>
+      <li><span class="arrow">→</span><span>Closing negotiations with international counterparties</span></li>
+      <li><span class="arrow">→</span><span>Regulatory hearings and testimony</span></li>
+      <li><span class="arrow">→</span><span>Awards acceptance speeches</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Ready-Set-Go framework -->
+<section class="section section-dark" id="framework">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Ready-Set-Go · Language Coaching</span>
+      <h2>Five steps. Built around your event.</h2>
+      <p class="lead">A repeatable framework that scales from a board presentation to an investor call to a regulatory hearing.</p>
+    </div>
+    <div class="rsg-grid">
+      <div class="rsg-step reveal">
+        <div class="rsg-num">01</div>
+        <div>
+          <h3>Needs Analysis</h3>
+          <ul><li>Pre-Coaching Interview and Survey</li></ul>
+        </div>
+      </div>
+      <div class="rsg-step reveal">
+        <div class="rsg-num">02</div>
+        <div>
+          <h3>Set: Rehearsal</h3>
+          <ul>
+            <li>First run-through of the presentation</li>
+            <li>Provide feedback on delivery (intonation, pronunciation, structure, confidence)</li>
+            <li>Provide detailed notes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rsg-step reveal">
+        <div class="rsg-num">03</div>
+        <div>
+          <h3>Ready: Preparation and Refinement</h3>
+          <ul>
+            <li>Review and Practice Final Presentation</li>
+            <li>Refine vocabulary, syntax, and grammar</li>
+            <li>Prepare student for first run-through (online meeting)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rsg-step reveal">
+        <div class="rsg-num">04</div>
+        <div>
+          <h3>Be: Final Run</h3>
+          <ul>
+            <li>Final 'mock' run-through of the complete presentation</li>
+            <li>Focus on pacing, timing, and correction of recurrent stress</li>
+            <li>Provide detailed final feedback and recording of final run-through</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rsg-step reveal">
+        <div class="rsg-num">05</div>
+        <div>
+          <h3>Post-Coaching</h3>
+          <ul><li>Brief Survey and Feedback Session</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pull quote -->
+<section class="section section-dark">
+  <div class="container qblock">
+    <span class="eyebrow">Client impact</span>
+    <p class="q">We had three days before the all-hands. Our Compensation &amp; Benefits Manager had never presented in English to an international audience before. MLC's coach ran her through the framework end-to-end. She closed the room.</p>
+    <div class="qa-row">
+      <div class="qa-who">Chief of Staff<small>Multinational corporate · CDMX</small></div>
+      <div class="qa-nums">
+        <div class="qa-num">3 days<small>Lead time</small></div>
+        <div class="qa-num">5×<small>Run-throughs</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-dark" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>What teams ask first</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-question">What's the fastest you can start?</button><div class="faq-answer"><p>We started a session 24 hours after the inbound. Average response time is 24 hours, 7 days a week.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Available outside Mexico?</button><div class="faq-answer"><p>Remote coaching works anywhere. On-site is CDMX, Monterrey, and Guadalajara by default; we travel for a fee.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">What does this cost?</button><div class="faq-answer"><p>Fixed per-session pricing. No retainer. Pricing shared in the intake call.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Who are the coaches?</button><div class="faq-answer"><p>Senior MLC instructors with 15+ years of corporate coaching experience, vetted for executive prep. Many are former simultaneous interpreters — they think in both languages at the pace a high-stakes moment demands.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can you help with the slides or the script too?</button><div class="faq-answer"><p>Yes, as an add-on. The coach can review (and suggest edits to) the deck or script as part of the session.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Will the executive be ready?</button><div class="faq-answer"><p>If they have content mastery and basic English conversational ability (B1+), yes. If they're at A2 or below, we'll be honest in the intake and recommend alternative prep.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section">
+  <div class="cta-section reveal" id="contact" style="background:linear-gradient(180deg,#2b1f1f,var(--bg-dark));">
+    <span class="eyebrow" style="color:#F59E0B;">The clock is running</span>
+    <h2><span style="color:var(--gold);">Request coaching now.</span><br>We'll match a coach within 24 hours.</h2>
+    <p class="lead">7 days a week. 24-hour response window.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:hello@modernlanguagecenter.com?subject=Coaching%20Appointment" class="btn btn-blue">Schedule an appointment</a>
+      <a href="mailto:hello@modernlanguagecenter.com?subject=URGENT%20Coaching" class="btn btn-gold">Request coaching →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-accent"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="footer-logo"><p class="footer-tagline">Precision communication for the global elite.</p></div>
+      <div class="footer-col"><h4>Solutions</h4><ul><li><a href="business-english.html">Business English</a></li><li><a href="premium-production.html">Premium Production</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="languages.html">Other Languages</a></li><li><a href="recruitment.html">Recruitment Support</a></li><li><a href="accreditation.html">Accreditation</a></li><li><a href="translation.html">Translation</a></li><li><a href="train-abroad.html">Train Abroad</a></li></ul></div>
+      <div class="footer-col"><h4>Individuals</h4><ul><li><a href="../individuals.html">Overview</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../index.html#contact">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Modern Language Center. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.min.js" } }</script>
+<script src="../js/i18n.js" defer></script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>

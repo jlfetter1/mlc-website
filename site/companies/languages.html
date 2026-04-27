@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Other Languages — Modern Language Center</title>
+<meta name="description" content="Eight languages, one methodology. CEFR-aligned corporate training in Portuguese, French, German, Italian, Japanese, Mandarin, and Spanish for foreigners.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Noto+Serif+JP:wght@500;700&family=Noto+Serif+SC:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://modernlanguagecenter.com/wp-content/uploads/2021/01/cropped-favicon-LC-32x32.png">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  .lang-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px;}
+  .lang-cell{padding:24px;background:var(--bg-dark-2);border:1px solid var(--border-dark);border-radius:8px;display:flex;flex-direction:column;justify-content:space-between;min-height:200px;}
+  .lang-name{font-family:var(--font-display);font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.05;}
+  .lang-cell[data-ja] .lang-name{font-family:'Noto Serif JP',serif;}
+  .lang-cell[data-zh] .lang-name{font-family:'Noto Serif SC',serif;}
+  .lang-en{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;margin-top:8px;display:block;}
+  .lang-desc{font-size:13px;color:var(--text-on-dark-muted);line-height:1.5;margin-top:18px;}
+  .qblock{padding:60px 0;}
+  .qblock .q{font-family:var(--font-display);font-weight:600;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;color:var(--gold);margin-bottom:28px;max-width:1000px;}
+  .qblock .q::before{content:"\201C";margin-right:4px;}
+  .qblock .q::after{content:"\201D";margin-left:4px;}
+  .qa-row{display:flex;justify-content:space-between;align-items:flex-end;padding-top:24px;border-top:1px solid var(--border-dark);gap:32px;flex-wrap:wrap;}
+  .qa-who{font-family:var(--font-display);font-size:15px;font-weight:600;}
+  .qa-who small{display:block;color:var(--text-on-dark-muted);font-size:12px;font-weight:400;margin-top:3px;}
+  .qa-nums{display:flex;gap:32px;}
+  .qa-num{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-0.02em;text-align:right;}
+  .qa-num small{display:block;font-family:var(--font-sans);font-size:10px;color:var(--text-on-dark-faint);font-weight:400;letter-spacing:0.05em;text-transform:uppercase;margin-top:3px;}
+  @media (max-width:900px){.lang-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.lang-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="nav-logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#solutions">Solutions</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#methodology">Methodology</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li class="nav-cta"><a href="#contact" class="btn btn-gold">Schedule a diagnostic</a></li>
+    </ul>
+    <button class="lang-toggle" id="langToggle"><span class="lang-active">EN</span><span class="lang-divider">/</span><span class="lang-inactive">ES</span></button>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Hero with native-script grid -->
+<section class="section section-dark" id="languages" style="padding:160px 0 80px;">
+  <div class="container">
+    <span class="eyebrow reveal">Other Languages · For multilingual teams</span>
+    <h1 class="reveal" style="font-size:clamp(2.8rem,5.5vw,4.5rem);max-width:900px;">Eight languages.<br><span style="color:var(--gold);">One standard.</span></h1>
+    <p class="lead reveal" style="margin-bottom:24px;color:var(--text-on-dark-muted);">The same CEFR rigor, AI-adapted content, and monthly HR reporting that made our Business English program Mexico's corporate standard — delivered across every language your team needs.</p>
+    <div class="reveal" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="#contact" class="btn btn-blue">Schedule an appointment</a>
+      <a href="#contact" class="btn btn-gold">Schedule a diagnostic →</a>
+    </div>
+
+    <div class="lang-grid reveal">
+      <div class="lang-cell"><div><div class="lang-name" style="color:#10B981;">Português</div><div class="lang-en">Portuguese · BR / PT</div></div><div class="lang-desc">LATAM expansion, Brazil partners, supply chain operations.</div></div>
+      <div class="lang-cell"><div><div class="lang-name" style="color:#6366F1;">Français</div><div class="lang-en">French</div></div><div class="lang-desc">French parent companies — pharma, luxury, automotive, aerospace.</div></div>
+      <div class="lang-cell"><div><div class="lang-name" style="color:#F59E0B;">Deutsch</div><div class="lang-en">German</div></div><div class="lang-desc">Industrial, manufacturing, and precision-engineering teams. Technical vocabulary by specialization.</div></div>
+      <div class="lang-cell"><div><div class="lang-name" style="color:#EC4899;">Italiano</div><div class="lang-en">Italian</div></div><div class="lang-desc">Luxury, fashion, design, and culinary sectors. Regional variants available.</div></div>
+      <div class="lang-cell" data-ja><div><div class="lang-name" style="color:#8B5CF6;">日本語</div><div class="lang-en">Japanese</div></div><div class="lang-desc">Long-cycle Japanese business partnerships. Keigo (business honorifics) as a dedicated module.</div></div>
+      <div class="lang-cell" data-zh><div><div class="lang-name" style="color:#06B6D4;">中文</div><div class="lang-en">Mandarin</div></div><div class="lang-desc">Manufacturing supply chain, technology, and emerging Chinese-owned operations.</div></div>
+      <div class="lang-cell"><div><div class="lang-name" style="color:#2563EB;">Español</div><div class="lang-en">Spanish for foreigners</div></div><div class="lang-desc">International executives relocated to Mexico. Business Spanish with Mexican cultural context.</div></div>
+      <div class="lang-cell"><div><div class="lang-name" style="color:var(--gold);">English</div><div class="lang-en">See Business English →</div></div><div class="lang-desc"><a href="business-english.html" style="color:var(--text-on-dark);text-decoration:underline;">Our flagship program. Separate page.</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Methodology -->
+<section class="section section-light" id="methodology">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start;">
+      <div class="reveal">
+        <span class="eyebrow">The methodology is identical</span>
+        <h2>What changes is the language.<br>Not the rigor.</h2>
+      </div>
+      <div class="reveal">
+        <p class="lead" style="font-size:17px;">Every language program runs the same 4-step methodology — <b>Assess, Design, Deliver, Prove</b>. Same cohort sizing (max 8). Same AI content adaptation per industry. Same monthly HR reports. <span style="color:var(--text-on-light);">The only thing that changes is what your team learns to say.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pull quote — German nurses success story -->
+<section class="section section-dark">
+  <div class="container qblock">
+    <span class="eyebrow">Client impact</span>
+    <p class="q">Twenty-four certified nurses, eight months from zero German to B2. Onsite total immersion. Successfully sent to Germany to work.</p>
+    <div class="qa-row">
+      <div class="qa-who">Healthcare placement program<small>Onsite total immersion · 8 months</small></div>
+      <div class="qa-nums">
+        <div class="qa-num">24<small>Nurses certified</small></div>
+        <div class="qa-num">0 → B2<small>In 8 months</small></div>
+        <div class="qa-num">100%<small>Placement rate</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-dark" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>What teams ask first</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-question">What's the minimum group size for less common languages?</button><div class="faq-answer"><p>Business English: cohorts of 8. For Japanese, Mandarin, Italian we can start at 3 or run one-on-one tracks.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can we mix languages in one program?</button><div class="faq-answer"><p>Yes. English for the company + French for executives + Mandarin for the supply chain lead. One HR contract, one report, one invoice.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Are instructors native speakers?</button><div class="faq-answer"><p>All non-English languages are taught by native speakers or near-native C2-certified instructors with recognized teaching credentials.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Same monthly HR report?</button><div class="faq-answer"><p>Yes. CEFR progression, attendance, billable hours, cost-per-student — identical report format across every language.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Can you handle regional dialects?</button><div class="faq-answer"><p>Yes. Portuguese can be European or Brazilian. Spanish for foreigners can emphasize Mexican, rioplatense, or neutral LATAM. French can lean Hexagonal or Québécois.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section">
+  <div class="cta-section reveal" id="contact">
+    <span class="eyebrow">Whatever your team needs to speak</span>
+    <h2>A diagnostic is <span style="color:var(--gold);">free.</span><br>Across any of the eight.</h2>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:hello@modernlanguagecenter.com?subject=Other%20Languages%20Appointment" class="btn btn-blue">Schedule an appointment</a>
+      <a href="mailto:hello@modernlanguagecenter.com?subject=Other%20Languages%20Diagnostic" class="btn btn-gold">Schedule a diagnostic →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-accent"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="footer-logo"><p class="footer-tagline">Precision communication for the global elite.</p></div>
+      <div class="footer-col"><h4>Solutions</h4><ul><li><a href="business-english.html">Business English</a></li><li><a href="premium-production.html">Premium Production</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="languages.html">Other Languages</a></li><li><a href="recruitment.html">Recruitment Support</a></li><li><a href="accreditation.html">Accreditation</a></li><li><a href="translation.html">Translation</a></li><li><a href="train-abroad.html">Train Abroad</a></li></ul></div>
+      <div class="footer-col"><h4>Individuals</h4><ul><li><a href="../individuals.html">Overview</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../index.html#contact">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Modern Language Center. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.min.js" } }</script>
+<script src="../js/i18n.js" defer></script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>
