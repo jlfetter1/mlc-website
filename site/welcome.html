@@ -14,7 +14,7 @@
 <body>
 
     <section class="welcome">
-        <img src="assets/logos/mlc-logo-color.png"
+        <img src="assets/logos/mlc-logo-white.png"
              alt="Modern Language Center" class="welcome-logo">
 
         <div class="welcome-lang">
@@ -22,7 +22,7 @@
         </div>
 
         <a href="index.html" class="welcome-half" id="welcomeCompanies">
-            <div class="welcome-half-bg" style="background-image:url('assets/hero-companies.jpg'); background-color: var(--bg-tertiary);"></div>
+            <div class="welcome-half-bg" style="background-image:url('assets/hero-office.jpg'); background-color: var(--bg-dark-2);"></div>
             <div class="welcome-content">
                 <span class="eyebrow">For Companies</span>
                 <h2>Enterprise Language<br>Solutions</h2>
@@ -33,7 +33,7 @@
         <div class="welcome-divider"></div>
 
         <a href="individuals.html" class="welcome-half" id="welcomeIndividuals">
-            <div class="welcome-half-bg" style="background-image:url('assets/hero-individuals.jpg'); background-color: var(--bg-tertiary);"></div>
+            <div class="welcome-half-bg" style="background-image:url('assets/photo-team.jpg'); background-color: var(--bg-dark-2);"></div>
             <div class="welcome-content">
                 <span class="eyebrow">For Individuals</span>
                 <h2>Executive Language<br>Mastery</h2>
@@ -46,7 +46,7 @@
     <script>
     document.addEventListener('DOMContentLoaded', () => {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReducedMotion) return;
+      if (prefersReducedMotion || !window.gsap) return;
 
       // Stagger entrance
       const contents = document.querySelectorAll('.welcome-content');

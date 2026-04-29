@@ -12,6 +12,29 @@ const translations = {
     "nav.clients": "Clients",
     "nav.faq": "FAQ",
     "nav.cta": "Request a Consultation",
+    "common.nav.solutions": "Solutions",
+    "common.nav.process": "Process",
+    "common.nav.proof": "Proof",
+    "common.nav.faq": "FAQ",
+    "common.nav.why": "Why MLC",
+    "common.nav.services": "Services",
+    "common.nav.languages": "Languages",
+    "common.nav.methodology": "Methodology",
+    "common.nav.appointment": "Schedule an appointment",
+    "common.cta.appointment": "Schedule an appointment",
+    "common.cta.diagnostic": "Schedule a free diagnostic",
+    "common.cta.diagnosticArrow": "Schedule a free diagnostic →",
+    "form.name": "Name",
+    "form.email": "Work email",
+    "form.company": "Company",
+    "form.phone": "Phone",
+    "form.teamSize": "Team size",
+    "form.city": "City",
+    "form.city.cdmx": "CDMX",
+    "form.city.mty": "Monterrey",
+    "form.city.gdl": "Guadalajara",
+    "form.city.other": "Other",
+    "form.note": "CEFR assessment + custom proposal delivered within 48 hours. Your data stays with MLC — we don't sell leads.",
 
     // Hero
     "hero.eyebrow": "Modern Language Center",
@@ -149,8 +172,8 @@ const translations = {
     "cta.eyebrow": "Take the Next Step",
     "cta.h2": "Your competitors are already investing in<br>executive language fluency.",
     "cta.lead": "The question is: are you?",
-    "cta.btn1": "Schedule a Consultation",
-    "cta.btn2": "Call Us Directly",
+    "cta.btn1": "Schedule an appointment",
+    "cta.btn2": "Schedule a free diagnostic",
 
     // Footer
     "foot.brand": "Precision communication for the global elite. 20+ years transforming executive talent.",
@@ -177,6 +200,29 @@ const translations = {
     "nav.clients": "Clientes",
     "nav.faq": "FAQ",
     "nav.cta": "Solicitar una Consulta",
+    "common.nav.solutions": "Soluciones",
+    "common.nav.process": "Proceso",
+    "common.nav.proof": "Prueba",
+    "common.nav.faq": "FAQ",
+    "common.nav.why": "Por qué MLC",
+    "common.nav.services": "Servicios",
+    "common.nav.languages": "Idiomas",
+    "common.nav.methodology": "Metodología",
+    "common.nav.appointment": "Agendar una cita",
+    "common.cta.appointment": "Agendar una cita",
+    "common.cta.diagnostic": "Agendar diagnóstico gratuito",
+    "common.cta.diagnosticArrow": "Agendar diagnóstico gratuito →",
+    "form.name": "Nombre",
+    "form.email": "Correo de trabajo",
+    "form.company": "Empresa",
+    "form.phone": "Teléfono",
+    "form.teamSize": "Tamaño del equipo",
+    "form.city": "Ciudad",
+    "form.city.cdmx": "CDMX",
+    "form.city.mty": "Monterrey",
+    "form.city.gdl": "Guadalajara",
+    "form.city.other": "Otra",
+    "form.note": "Evaluación CEFR + propuesta personalizada en 48 horas. Tus datos se quedan con MLC — no vendemos prospectos.",
 
     // Hero
     "hero.eyebrow": "Modern Language Center",
@@ -314,8 +360,8 @@ const translations = {
     "cta.eyebrow": "Da el Siguiente Paso",
     "cta.h2": "Tus competidores ya están invirtiendo en<br>fluidez lingüística ejecutiva.",
     "cta.lead": "La pregunta es: ¿y tú?",
-    "cta.btn1": "Agendar una Consulta",
-    "cta.btn2": "Llámanos Directamente",
+    "cta.btn1": "Agendar una cita",
+    "cta.btn2": "Agendar diagnóstico gratuito",
 
     // Footer
     "foot.brand": "Comunicación de precisión para la élite global. Más de 20 años transformando talento ejecutivo.",
@@ -363,6 +409,16 @@ const translations = {
       } else {
         el.textContent = dict[key];
       }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.dataset.i18nPlaceholder;
+      if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+    });
+
+    document.querySelectorAll('[data-i18n-value]').forEach(el => {
+      const key = el.dataset.i18nValue;
+      if (dict[key] !== undefined) el.setAttribute('value', dict[key]);
     });
 
     // Update toggle button labels

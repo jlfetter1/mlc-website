@@ -134,6 +134,19 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 
 .btn:active { transform: scale(0.97); }
 
+.btn:focus-visible,
+.lang-toggle:focus-visible,
+.nav-toggle:focus-visible,
+.faq-question:focus-visible,
+.lead-form input:focus-visible,
+.lead-form select:focus-visible,
+.lander-form input:focus-visible,
+.lander-form select:focus-visible,
+.lander-form button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
 .btn-gold {
   background: var(--gold);
   color: var(--bg-dark);
@@ -765,6 +778,112 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 
 .section-header { text-align: center; margin-bottom: 4rem; }
 .section-header .lead { margin: 1rem auto 0; }
+
+/* ---------- Solution Landers ---------- */
+.solution-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.solution-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg,
+      rgba(10,10,15,0.96) 0%,
+      rgba(10,10,15,0.88) 35%,
+      rgba(10,10,15,0.58) 62%,
+      rgba(10,10,15,0.2) 100%),
+    var(--solution-hero-image);
+  background-size: cover;
+  background-position: var(--solution-hero-position, center);
+  opacity: 0.88;
+}
+
+.solution-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(10,10,15,0.7) 0%, transparent 22%),
+    linear-gradient(0deg, var(--bg-dark) 0%, transparent 28%);
+}
+
+.solution-hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.solution-hero .lead,
+.solution-hero h1 {
+  text-shadow: 0 2px 24px rgba(10,10,15,0.5);
+}
+
+.lead-form {
+  width: min(100%, 880px);
+  margin: 2rem auto 0;
+  padding: 24px;
+  background: rgba(17,17,24,0.88);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.lead-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.lead-form input,
+.lead-form select {
+  width: 100%;
+  height: 44px;
+  background: var(--bg-dark-3);
+  border: 1px solid var(--border-dark);
+  border-radius: 6px;
+  padding: 0 14px;
+  color: var(--text-on-dark);
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+
+.lead-form input::placeholder,
+.lead-form select {
+  color: var(--text-on-dark-faint);
+}
+
+.lead-form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lead-form-actions .btn {
+  border: 0;
+}
+
+.lead-form-note,
+.lead-form-status {
+  margin: 0;
+  color: var(--text-on-dark-faint);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lead-form-status[data-state="success"] { color: #8FE3B0; }
+.lead-form-status[data-state="error"] { color: #FCA5A5; }
 
 /* ---------- Cards ---------- */
 .card {
@@ -1564,6 +1683,7 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
   .timeline-track { display: none; }
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .lead-form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
@@ -1631,6 +1751,20 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
   .hero-content .lead { font-size: 1rem; max-width: 100%; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { justify-content: center; }
+  .solution-hero::before {
+    background:
+      linear-gradient(180deg,
+        rgba(10,10,15,0.72) 0%,
+        rgba(10,10,15,0.76) 42%,
+        rgba(10,10,15,0.97) 100%),
+      var(--solution-hero-image);
+    background-size: cover;
+    background-position: var(--solution-hero-position, center);
+  }
+  .lead-form { padding: 18px; }
+  .lead-form-grid { grid-template-columns: 1fr; }
+  .lead-form-actions { flex-direction: column; }
+  .lead-form-actions .btn { width: 100%; justify-content: center; }
 }
 
 /* ---------- Grid Photo Break ---------- */
@@ -2380,7 +2514,8 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
     transition-duration: 0.01ms !important;
   }
   html { scroll-behavior: auto; }
-  .trust-logos { animation: none; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .trust-logos { animation: none; transform: none !important; }
   .trust-logos-wrap { mask-image: none; -webkit-mask-image: none; }
 }
 

@@ -62,7 +62,8 @@
       .pstrip .pstep .pn{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:0.15em;margin-bottom:8px;display:block;}
       .pstrip .pstep h4{font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--text-on-light);margin-bottom:4px;}
       .pstrip .pstep p{font-size:13px;color:var(--text-on-light-muted);line-height:1.5;}
-      @media (max-width:900px){.stat-cards,.deliv-grid{grid-template-columns:1fr;}.report-shell .stats-row,.report-shell .secondary-stats{grid-template-columns:1fr 1fr;}.pstrip{flex-direction:column;}.pstrip .pstep{border-right:none;border-bottom:1px solid var(--border-light);}}
+      @media (max-width:900px){.be-hero-grid,.be-report-grid{grid-template-columns:1fr !important;}.stat-cards,.deliv-grid{grid-template-columns:1fr;}.report-shell .stats-row,.report-shell .secondary-stats{grid-template-columns:1fr 1fr;}.pstrip{flex-direction:column;}.pstrip .pstep{border-right:none;border-bottom:1px solid var(--border-light);}}
+      @media (max-width:560px){.lf-row2{grid-template-columns:1fr;}.report-shell{padding:22px;}.report-shell .company{margin:0 -22px 16px;}.report-shell .rh,.report-shell .verify{flex-direction:column;gap:8px;align-items:flex-start;}.report-shell .stats-row,.report-shell .secondary-stats{grid-template-columns:1fr;}.qa-nums{width:100%;justify-content:space-between;gap:16px;}.qa-num{text-align:left;}}
     </style>
     <script type="application/ld+json">
     {
@@ -80,14 +81,14 @@
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="../index.html"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="nav-logo"></a>
+    <a href="../index.html"><img src="../assets/logos/mlc-logo-white.png" alt="Modern Language Center" class="nav-logo"></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#solutions">Solutions</a></li>
+      <li><a href="../index.html#solutions" data-i18n="common.nav.solutions">Solutions</a></li>
       <li><a href="#inside">What's Inside</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#proof">Proof</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li class="nav-cta"><a href="#contact" class="btn btn-gold">Schedule a free diagnostic</a></li>
+      <li><a href="#process" data-i18n="common.nav.process">Process</a></li>
+      <li><a href="#proof" data-i18n="common.nav.proof">Proof</a></li>
+      <li><a href="#faq" data-i18n="common.nav.faq">FAQ</a></li>
+      <li class="nav-cta"><a href="#contact" class="btn btn-gold" data-i18n="common.cta.diagnostic">Schedule a free diagnostic</a></li>
     </ul>
     <button class="lang-toggle" id="langToggle"><span class="lang-active">EN</span><span class="lang-divider">/</span><span class="lang-inactive">ES</span></button>
     <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
@@ -95,26 +96,28 @@
 </nav>
 
 <!-- HERO with form -->
-<section class="section section-dark" style="padding:160px 0 80px;">
+<section class="section section-dark solution-hero" style="--solution-hero-image:url('../assets/solutions/business-english.jpg');--solution-hero-position:center right;padding:160px 0 80px;">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;">
+    <div class="be-hero-grid" style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;">
       <div class="reveal">
         <span class="eyebrow">Business English Program · For corporate teams</span>
         <h1 style="font-size:clamp(2.4rem,5vw,3.8rem);">The Business English program <span style="color:var(--gold)">HR can defend to the CFO.</span></h1>
         <p class="lead" style="margin-bottom:28px;color:var(--text-on-dark-muted);">CEFR-aligned curriculum. AI-adapted to your sector. Live instructors. Monthly reports ready for leadership review. 20 years transforming executive talent at BMW, PepsiCo, Grupo Salinas, and Médica Sur.</p>
         <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
-          <a href="#contact" class="btn btn-blue">Schedule an appointment</a>
-          <a href="#contact" class="btn btn-gold">Schedule a free diagnostic →</a>
+          <a href="#contact" class="btn btn-blue" data-i18n="common.cta.appointment">Schedule an appointment</a>
+          <a href="#contact" class="btn btn-gold" data-i18n="common.cta.diagnosticArrow">Schedule a free diagnostic →</a>
         </div>
       </div>
-      <form class="lander-form reveal" onsubmit="event.preventDefault();alert('Form endpoint not yet wired — see infra plan.');">
+      <form class="lander-form reveal" data-mlc-form>
+        <input type="hidden" name="source_page" value="business-english">
         <span class="lf-eb">Free · No commitment</span>
         <h4>See where your team stands in 48 hours</h4>
-        <input type="text" placeholder="Name" required>
-        <div class="lf-row2"><input type="email" placeholder="Work email" required><input type="text" placeholder="Company" required></div>
-        <div class="lf-row2"><input type="text" placeholder="Team size"><select><option>City</option><option>CDMX</option><option>Monterrey</option><option>Guadalajara</option><option>Other</option></select></div>
-        <button type="submit">Get my diagnostic →</button>
+        <input type="text" name="name" placeholder="Name" data-i18n-placeholder="form.name" required>
+        <div class="lf-row2"><input type="email" name="email" placeholder="Work email" data-i18n-placeholder="form.email" required><input type="text" name="company" placeholder="Company" data-i18n-placeholder="form.company" required></div>
+        <div class="lf-row2"><input type="text" name="team_size" placeholder="Team size" data-i18n-placeholder="form.teamSize"><select name="city"><option data-i18n="form.city">City</option><option data-i18n="form.city.cdmx">CDMX</option><option data-i18n="form.city.mty">Monterrey</option><option data-i18n="form.city.gdl">Guadalajara</option><option data-i18n="form.city.other">Other</option></select></div>
+        <button type="submit" name="intent" value="diagnostic">Get my diagnostic →</button>
         <p class="lf-tiny">CEFR assessment + custom proposal delivered within 48 hours. Your data stays with MLC — we don't sell leads.</p>
+        <p class="lf-tiny" data-form-status aria-live="polite"></p>
       </form>
     </div>
   </div>
@@ -179,7 +182,7 @@
 <!-- THE REPORT, SHOWN -->
 <section class="section section-light">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div class="be-report-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
       <div class="reveal">
         <span class="eyebrow">The monthly report</span>
         <h2>The thing you're actually buying.</h2>
@@ -267,14 +270,26 @@
 <!-- FINAL CTA — equal-weight two-button -->
 <section class="section">
   <div class="cta-section reveal" id="contact">
-    <canvas class="cta-canvas" id="ctaCanvas"></canvas>
     <span class="eyebrow">The next step</span>
     <h2>Your diagnostic is free.<br>Your proposal is <span style="color:var(--gold)">in your inbox within 48 hours.</span></h2>
     <p class="lead">No sales theater. We assess your team, hand you a proposal, you decide.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="mailto:hello@modernlanguagecenter.com?subject=Business%20English%20Appointment" class="btn btn-blue">Schedule an appointment</a>
-      <a href="mailto:hello@modernlanguagecenter.com?subject=Business%20English%20Diagnostic" class="btn btn-gold">Schedule a free diagnostic →</a>
-    </div>
+    <form class="lead-form" data-mlc-form>
+      <input type="hidden" name="source_page" value="business-english">
+      <div class="lead-form-grid">
+        <input type="text" name="name" placeholder="Name" data-i18n-placeholder="form.name" required>
+        <input type="email" name="email" placeholder="Work email" data-i18n-placeholder="form.email" required>
+        <input type="text" name="company" placeholder="Company" data-i18n-placeholder="form.company" required>
+        <input type="tel" name="phone" placeholder="Phone" data-i18n-placeholder="form.phone">
+        <input type="text" name="team_size" placeholder="Team size" data-i18n-placeholder="form.teamSize">
+        <select name="city"><option data-i18n="form.city">City</option><option data-i18n="form.city.cdmx">CDMX</option><option data-i18n="form.city.mty">Monterrey</option><option data-i18n="form.city.gdl">Guadalajara</option><option data-i18n="form.city.other">Other</option></select>
+      </div>
+      <div class="lead-form-actions">
+        <button type="submit" name="intent" value="appointment" class="btn btn-blue" data-i18n="common.cta.appointment">Schedule an appointment</button>
+        <button type="submit" name="intent" value="diagnostic" class="btn btn-gold" data-i18n="common.cta.diagnostic">Schedule a free diagnostic</button>
+      </div>
+      <p class="lead-form-note" data-i18n="form.note">CEFR assessment + custom proposal delivered within 48 hours. Your data stays with MLC — we don't sell leads.</p>
+      <p class="lead-form-status" data-form-status aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -284,7 +299,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="footer-logo">
+        <img src="../assets/logos/mlc-logo-white.png" alt="Modern Language Center" class="footer-logo">
         <p class="footer-tagline">Precision communication for the global elite. 20+ years transforming executive talent.</p>
         <div class="footer-contact-block">
           <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Av. Miguel Ángel de Quevedo 24,<br>Int 203, Col Chimalistac, CDMX</span></div>
@@ -303,7 +318,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.min.js" } }</script>
-<script type="module" src="../js/cta-shader.js"></script>
 <script src="../js/i18n.js" defer></script>
 <script src="../js/main.js" defer></script>
 </body>

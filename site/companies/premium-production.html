@@ -40,13 +40,13 @@
 
 <nav class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="../index.html"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="nav-logo"></a>
+    <a href="../index.html"><img src="../assets/logos/mlc-logo-white.png" alt="Modern Language Center" class="nav-logo"></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#solutions">Solutions</a></li>
+      <li><a href="../index.html#solutions" data-i18n="common.nav.solutions">Solutions</a></li>
       <li><a href="#scenarios">Scenarios</a></li>
       <li><a href="#standards">Standards</a></li>
-      <li><a href="../index.html#why">Why MLC</a></li>
-      <li class="nav-cta"><a href="#contact" class="btn btn-gold">Schedule a free diagnostic</a></li>
+      <li><a href="../index.html#why" data-i18n="common.nav.why">Why MLC</a></li>
+      <li class="nav-cta"><a href="#contact" class="btn btn-gold" data-i18n="common.cta.diagnostic">Schedule a free diagnostic</a></li>
     </ul>
     <button class="lang-toggle" id="langToggle"><span class="lang-active">EN</span><span class="lang-divider">/</span><span class="lang-inactive">ES</span></button>
     <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
@@ -54,14 +54,14 @@
 </nav>
 
 <!-- Editorial hero -->
-<section class="ed-hero">
+<section class="ed-hero solution-hero" style="--solution-hero-image:url('../assets/solutions/premium-production.jpg');--solution-hero-position:center right;">
   <div class="container">
     <span class="eyebrow reveal">Premium Production · For C-suite &amp; senior leaders</span>
     <h1 class="reveal">Fluency that <span class="ac">holds up</span> at the boardroom table.</h1>
     <p class="lead reveal" style="font-size:20px;max-width:780px;margin-bottom:36px;color:var(--text-on-dark-muted);">80% production-based. Presentations, negotiations, and boardroom fluency with case studies from prestigious business schools. Groups of 4 students max.</p>
     <div class="reveal" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
-      <a href="#contact" class="btn btn-blue">Schedule an appointment</a>
-      <a href="#contact" class="btn btn-gold">Schedule a free diagnostic →</a>
+      <a href="#contact" class="btn btn-blue" data-i18n="common.cta.appointment">Schedule an appointment</a>
+      <a href="#contact" class="btn btn-gold" data-i18n="common.cta.diagnosticArrow">Schedule a free diagnostic →</a>
     </div>
   </div>
 </section>
@@ -152,14 +152,26 @@
 <!-- Final CTA -->
 <section class="section">
   <div class="cta-section reveal" id="contact">
-    <canvas class="cta-canvas" id="ctaCanvas"></canvas>
     <span class="eyebrow">A conversation, not a pitch</span>
     <h2>Book a 30-minute call.<br>We'll talk about <span style="color:var(--gold)">whether Premium Production</span> is right for the executive in question — honestly.</h2>
     <p class="lead">Not every leader needs this program. Some need Business English, some need One-on-One, some need Coaching before a specific event.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="mailto:hello@modernlanguagecenter.com?subject=Premium%20Production%20Appointment" class="btn btn-blue">Schedule an appointment</a>
-      <a href="mailto:hello@modernlanguagecenter.com?subject=Premium%20Production%20Diagnostic" class="btn btn-gold">Schedule a free diagnostic →</a>
-    </div>
+    <form class="lead-form" data-mlc-form>
+      <input type="hidden" name="source_page" value="premium-production">
+      <div class="lead-form-grid">
+        <input type="text" name="name" placeholder="Name" data-i18n-placeholder="form.name" required>
+        <input type="email" name="email" placeholder="Work email" data-i18n-placeholder="form.email" required>
+        <input type="text" name="company" placeholder="Company" data-i18n-placeholder="form.company" required>
+        <input type="tel" name="phone" placeholder="Phone" data-i18n-placeholder="form.phone">
+        <input type="text" name="team_size" placeholder="Team size" data-i18n-placeholder="form.teamSize">
+        <select name="city"><option data-i18n="form.city">City</option><option data-i18n="form.city.cdmx">CDMX</option><option data-i18n="form.city.mty">Monterrey</option><option data-i18n="form.city.gdl">Guadalajara</option><option data-i18n="form.city.other">Other</option></select>
+      </div>
+      <div class="lead-form-actions">
+        <button type="submit" name="intent" value="appointment" class="btn btn-blue" data-i18n="common.cta.appointment">Schedule an appointment</button>
+        <button type="submit" name="intent" value="diagnostic" class="btn btn-gold" data-i18n="common.cta.diagnostic">Schedule a free diagnostic</button>
+      </div>
+      <p class="lead-form-note" data-i18n="form.note">CEFR assessment + custom proposal delivered within 48 hours. Your data stays with MLC — we don't sell leads.</p>
+      <p class="lead-form-status" data-form-status aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -168,7 +180,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="footer-logo">
+        <img src="../assets/logos/mlc-logo-white.png" alt="Modern Language Center" class="footer-logo">
         <p class="footer-tagline">Precision communication for the global elite. 20+ years transforming executive talent.</p>
       </div>
       <div class="footer-col"><h4>Solutions</h4><ul><li><a href="business-english.html">Business English</a></li><li><a href="premium-production.html">Premium Production</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="languages.html">Other Languages</a></li><li><a href="recruitment.html">Recruitment Support</a></li><li><a href="accreditation.html">Accreditation</a></li><li><a href="translation.html">Translation</a></li><li><a href="train-abroad.html">Train Abroad</a></li></ul></div>
@@ -182,7 +194,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.min.js" } }</script>
-<script type="module" src="../js/cta-shader.js"></script>
 <script src="../js/i18n.js" defer></script>
 <script src="../js/main.js" defer></script>
 </body>

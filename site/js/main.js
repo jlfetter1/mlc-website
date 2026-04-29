@@ -6,9 +6,99 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  gsap.registerPlugin(ScrollTrigger);
+  const hasGsap = Boolean(window.gsap && window.ScrollTrigger);
+  if (hasGsap) {
+    gsap.registerPlugin(ScrollTrigger);
+  }
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------- HubSpot-ready lead form stub ----------
+  const HUBSPOT_ENDPOINT = '';
+
+  function getCurrentLang() {
+    return localStorage.getItem('mlc-lang') || document.documentElement.lang || 'en';
+  }
+
+  function collectFormPayload(form, submitter) {
+    const data = new FormData(form);
+    const params = new URLSearchParams(window.location.search);
+    const payload = {
+      name: data.get('name') || '',
+      work_email: data.get('email') || '',
+      company: data.get('company') || '',
+      phone: data.get('phone') || '',
+      team_size: data.get('team_size') || '',
+      city: data.get('city') || '',
+      source_page: data.get('source_page') || window.location.pathname,
+      intent: submitter?.value || data.get('intent') || 'diagnostic',
+      utm_source: params.get('utm_source') || '',
+      utm_medium: params.get('utm_medium') || '',
+      utm_campaign: params.get('utm_campaign') || '',
+      utm_term: params.get('utm_term') || '',
+      utm_content: params.get('utm_content') || ''
+    };
+    return payload;
+  }
+
+  async function submitForm(form, submitter) {
+    const status = form.querySelector('[data-form-status]');
+    const lang = getCurrentLang();
+    const copy = {
+      sending: lang === 'es' ? 'Enviando...' : 'Sending...',
+      success: lang === 'es'
+        ? 'Recibido. MLC dará seguimiento con el siguiente paso.'
+        : 'Received. MLC will follow up with the next step.',
+      error: lang === 'es'
+        ? 'No pudimos enviar el formulario. Escríbenos a hello@modernlanguagecenter.com.'
+        : 'We could not submit the form. Email hello@modernlanguagecenter.com.'
+    };
+    const payload = collectFormPayload(form, submitter);
+
+    if (status) {
+      status.dataset.state = '';
+      status.textContent = copy.sending;
+    }
+
+    try {
+      if (HUBSPOT_ENDPOINT) {
+        const response = await fetch(HUBSPOT_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ properties: payload })
+        });
+        if (!response.ok) throw new Error('HubSpot submission failed');
+      } else {
+        localStorage.setItem('mlc-last-lead-stub', JSON.stringify({
+          ...payload,
+          submitted_at: new Date().toISOString()
+        }));
+        await new Promise(resolve => window.setTimeout(resolve, 250));
+      }
+
+      form.reset();
+      if (status) {
+        status.dataset.state = 'success';
+        status.textContent = copy.success;
+      }
+      return payload;
+    } catch (error) {
+      if (status) {
+        status.dataset.state = 'error';
+        status.textContent = copy.error;
+      }
+      return null;
+    }
+  }
+
+  window.submitForm = submitForm;
+
+  document.querySelectorAll('[data-mlc-form]').forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      submitForm(form, event.submitter);
+    });
+  });
 
 
 
@@ -38,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---------- Scroll reveals ----------
-  if (!prefersReducedMotion) {
+  if (!prefersReducedMotion && hasGsap) {
 
     gsap.utils.toArray('.reveal').forEach(el => {
       // Calculate stagger delay if inside a grid
@@ -113,6 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.stat-number[data-count]').forEach(stat => {
     const target = parseInt(stat.dataset.count, 10);
     if (isNaN(target)) return;
+
+    if (!hasGsap) {
+      stat.textContent = target + '+';
+      return;
+    }
 
     ScrollTrigger.create({
       trigger: stat,

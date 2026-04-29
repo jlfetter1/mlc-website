@@ -44,13 +44,13 @@
 
 <nav class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="../index.html"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="nav-logo"></a>
+    <a href="../index.html"><img src="../assets/logos/mlc-logo-white.png" alt="Modern Language Center" class="nav-logo"></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#solutions">Solutions</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#proof">Proof</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li class="nav-cta"><a href="#contact" class="btn btn-gold">Request a quote</a></li>
+      <li><a href="../index.html#solutions" data-i18n="common.nav.solutions">Solutions</a></li>
+      <li><a href="#services" data-i18n="common.nav.services">Services</a></li>
+      <li><a href="#proof" data-i18n="common.nav.proof">Proof</a></li>
+      <li><a href="#faq" data-i18n="common.nav.faq">FAQ</a></li>
+      <li class="nav-cta"><a href="#contact" class="btn btn-gold" data-i18n="common.cta.diagnostic">Schedule a free diagnostic</a></li>
     </ul>
     <button class="lang-toggle" id="langToggle"><span class="lang-active">EN</span><span class="lang-divider">/</span><span class="lang-inactive">ES</span></button>
     <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
@@ -58,19 +58,19 @@
 </nav>
 
 <!-- Editorial hero -->
-<section class="ed-hero">
+<section class="ed-hero solution-hero" style="--solution-hero-image:url('../assets/solutions/translation.jpg');--solution-hero-position:center right;">
   <div class="container">
     <span class="eyebrow reveal">Translation &amp; Interpretation · For high-stakes work</span>
     <h1 class="reveal">When a mistranslation costs <span class="ac">the deal.</span><br>Or <span class="ac">the court case.</span></h1>
     <p class="lead reveal" style="font-size:20px;max-width:820px;color:var(--text-on-dark-muted);">Certified translation for legal, medical, and financial documents. Simultaneous interpretation for corporate events, board meetings, and regulatory hearings. Delivered by the team trusted by Supreme Court justices, pharmaceutical CEOs, and global personal-development brands running 10,000-attendee events.</p>
     <div class="reveal" style="display:flex;gap:14px;align-items:center;margin-top:32px;flex-wrap:wrap;">
-      <a href="#contact" class="btn btn-blue">Schedule an appointment</a>
-      <a href="#contact" class="btn btn-gold">Request a quote →</a>
+      <a href="#contact" class="btn btn-blue" data-i18n="common.cta.appointment">Schedule an appointment</a>
+      <a href="#contact" class="btn btn-gold" data-i18n="common.cta.diagnosticArrow">Schedule a free diagnostic →</a>
     </div>
   </div>
 </section>
 
-<!-- Credentials strip — anonymized Tony Robbins reference -->
+<!-- Credentials strip — anonymized marquee-event reference -->
 <section class="creds-strip" id="proof">
   <div class="container">
     <span class="eyebrow" style="margin-bottom:20px;">The trust is earned</span>
@@ -157,11 +157,24 @@
 <section class="section">
   <div class="cta-section reveal" id="contact">
     <span class="eyebrow">When the stakes are real</span>
-    <h2><span style="color:var(--gold);">Request a quote.</span><br>We respond within 4 hours. Weekend included.</h2>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="mailto:hello@modernlanguagecenter.com?subject=Translation%20Appointment" class="btn btn-blue">Schedule an appointment</a>
-      <a href="mailto:hello@modernlanguagecenter.com?subject=Translation%20Quote" class="btn btn-gold">Request a quote →</a>
-    </div>
+    <h2><span style="color:var(--gold);">Start with the document or event brief.</span><br>We respond within 4 hours. Weekend included.</h2>
+    <form class="lead-form" data-mlc-form>
+      <input type="hidden" name="source_page" value="translation">
+      <div class="lead-form-grid">
+        <input type="text" name="name" placeholder="Name" data-i18n-placeholder="form.name" required>
+        <input type="email" name="email" placeholder="Work email" data-i18n-placeholder="form.email" required>
+        <input type="text" name="company" placeholder="Company" data-i18n-placeholder="form.company" required>
+        <input type="tel" name="phone" placeholder="Phone" data-i18n-placeholder="form.phone">
+        <input type="text" name="team_size" placeholder="Team size" data-i18n-placeholder="form.teamSize">
+        <select name="city"><option data-i18n="form.city">City</option><option data-i18n="form.city.cdmx">CDMX</option><option data-i18n="form.city.mty">Monterrey</option><option data-i18n="form.city.gdl">Guadalajara</option><option data-i18n="form.city.other">Other</option></select>
+      </div>
+      <div class="lead-form-actions">
+        <button type="submit" name="intent" value="appointment" class="btn btn-blue" data-i18n="common.cta.appointment">Schedule an appointment</button>
+        <button type="submit" name="intent" value="diagnostic" class="btn btn-gold" data-i18n="common.cta.diagnostic">Schedule a free diagnostic</button>
+      </div>
+      <p class="lead-form-note" data-i18n="form.note">CEFR assessment + custom proposal delivered within 48 hours. Your data stays with MLC — we don't sell leads.</p>
+      <p class="lead-form-status" data-form-status aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -169,7 +182,7 @@
   <div class="footer-accent"></div>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><img src="../assets/logos/mlc-logo-color.png" alt="Modern Language Center" class="footer-logo"><p class="footer-tagline">Precision communication for the global elite.</p></div>
+      <div class="footer-brand"><img src="../assets/logos/mlc-logo-white.png" alt="Modern Language Center" class="footer-logo"><p class="footer-tagline">Precision communication for the global elite.</p></div>
       <div class="footer-col"><h4>Solutions</h4><ul><li><a href="business-english.html">Business English</a></li><li><a href="premium-production.html">Premium Production</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="languages.html">Other Languages</a></li><li><a href="recruitment.html">Recruitment Support</a></li><li><a href="accreditation.html">Accreditation</a></li><li><a href="translation.html">Translation</a></li><li><a href="train-abroad.html">Train Abroad</a></li></ul></div>
       <div class="footer-col"><h4>Individuals</h4><ul><li><a href="../individuals.html">Overview</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../index.html#contact">Contact</a></li><li><a href="../privacy.html">Privacy Policy</a></li></ul></div>
