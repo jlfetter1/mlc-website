@@ -1687,20 +1687,37 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 }
 
 @media (max-width: 768px) {
-  .nav { top: 10px; width: calc(100% - 24px); padding: 0 12px 0 16px; }
+  .nav {
+    top: 10px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    transform: none;
+    padding: 0 12px 0 16px;
+  }
+  .nav-inner > a:first-child,
+  .lang-toggle,
+  .nav-toggle {
+    position: relative;
+    z-index: 102;
+  }
   .nav-links { display: none; }
   .nav-toggle { display: flex; align-items: center; justify-content: center; }
   .nav-links.open {
     display: flex;
     flex-direction: column;
     position: fixed;
-    inset: 0;
+    top: -10px;
+    left: -12px;
+    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
     background: rgba(10,10,15,0.97);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     padding: 7rem 2.5rem 3rem;
     gap: 0.5rem;
-    z-index: 99;
+    z-index: 101;
   }
   .nav-links.open a {
     font-size: 1.75rem;
@@ -1713,7 +1730,16 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
   .nav-links.open a:hover { color: var(--gold); background: none; }
   .nav-links.open a::after { display: none; }
   .nav-cta { margin-left: 0; margin-top: 1rem; }
-  .nav-links.open .nav-cta .btn-gold { width: 100%; justify-content: center; font-size: 0.9rem; padding: 1rem; }
+  .nav-links.open .nav-cta .btn-gold {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 1rem;
+    color: #0A0A0F;
+    background: #fff;
+    border-bottom: none;
+  }
+  body.nav-open { overflow: hidden; }
   .welcome { flex-direction: column; }
   .welcome-half { min-height: 50vh; }
   .welcome-divider { display: none; }
@@ -1751,6 +1777,14 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
   .hero-content .lead { font-size: 1rem; max-width: 100%; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { justify-content: center; }
+  .section { padding: clamp(48px, 12vw, 72px) 0; }
+  .solution-hero { padding: 128px 0 72px !important; }
+  .solution-hero h1 { font-size: clamp(2.25rem, 10vw, 3.2rem) !important; }
+  .solution-hero .lead {
+    font-size: 1.05rem !important;
+    line-height: 1.6;
+    max-width: 100%;
+  }
   .solution-hero::before {
     background:
       linear-gradient(180deg,
@@ -1761,10 +1795,30 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
     background-size: cover;
     background-position: var(--solution-hero-position, center);
   }
-  .lead-form { padding: 18px; }
-  .lead-form-grid { grid-template-columns: 1fr; }
+  .cta-section {
+    padding: clamp(44px, 11vw, 64px) 1rem;
+    margin: 0 0.75rem;
+  }
+  .cta-section h2 {
+    font-size: clamp(1.9rem, 8vw, 2.4rem);
+    line-height: 1.08;
+  }
+  .cta-section .lead { margin-bottom: 1.25rem; }
+  .lead-form { padding: 16px; gap: 10px; }
+  .lead-form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lead-form input,
+  .lead-form select {
+    height: 42px;
+    padding: 0 11px;
+    font-size: 13px;
+    min-width: 0;
+  }
   .lead-form-actions { flex-direction: column; }
   .lead-form-actions .btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 360px) {
+  .lead-form-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- Grid Photo Break ---------- */
@@ -2191,7 +2245,7 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.06);
   color: var(--text-on-dark-faint);
-  transition: all 0.6s ease;
+  transition: background 260ms ease, border-color 260ms ease, color 260ms ease, transform 260ms var(--ease-out), box-shadow 260ms ease;
   transform: scale(1);
 }
 
@@ -2407,7 +2461,7 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
   color: var(--text-on-dark-muted);
-  transition: all 0.3s ease;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
 }
 
 .tool-badge:nth-child(3n+1) { border-color: rgba(37,99,235,0.15); }

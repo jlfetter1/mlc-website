@@ -115,15 +115,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('navLinks');
 
   if (navToggle && navLinks) {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-controls', navLinks.id || 'navLinks');
+
+    const setMenuOpen = open => {
+      navLinks.classList.toggle('open', open);
+      navToggle.classList.toggle('active', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('nav-open', open);
+    };
+
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      navToggle.classList.toggle('active');
+      setMenuOpen(!navLinks.classList.contains('open'));
     });
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('active');
+        setMenuOpen(false);
       });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+        setMenuOpen(false);
+        navToggle.focus();
+      }
     });
   }
 
@@ -243,16 +257,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---------- FAQ Accordion ----------
-  document.querySelectorAll('.faq-item').forEach(item => {
+  document.querySelectorAll('.faq-item').forEach((item, index) => {
     const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
     if (!question) return;
+    if (answer && !answer.id) {
+      answer.id = `faq-answer-${index + 1}`;
+      question.setAttribute('aria-controls', answer.id);
+    }
+    question.setAttribute('aria-expanded', String(item.classList.contains('open')));
 
     question.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
       document.querySelectorAll('.faq-item').forEach(other => {
-        if (other !== item) other.classList.remove('open');
+        if (other !== item) {
+          other.classList.remove('open');
+          other.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+        }
       });
       item.classList.toggle('open', !isOpen);
+      question.setAttribute('aria-expanded', String(!isOpen));
     });
   });
 
@@ -332,21 +356,6 @@ document.addEventListener('DOMContentLoaded', () => {
         zoomLabel.textContent = 'Live — Business English B2  ' + m + ':' + String(s).padStart(2, '0');
       }, 1000);
     }
-  }
-
-  // ---------- Button press feedback ----------
-  if (!prefersReducedMotion) {
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('mousedown', () => {
-        btn.style.transform = 'scale(0.97)';
-      });
-      btn.addEventListener('mouseup', () => {
-        btn.style.transform = '';
-      });
-      btn.addEventListener('mouseleave', () => {
-        btn.style.transform = '';
-      });
-    });
   }
 
 });
