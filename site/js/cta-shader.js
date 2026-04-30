@@ -137,12 +137,12 @@ import * as THREE from 'three';
   }, { threshold: 0.1 });
   observer.observe(canvas.parentElement);
 
-  const clock = new THREE.Clock();
+  const startTime = performance.now();
 
   function animate() {
     requestAnimationFrame(animate);
     if (!isVisible) return;
-    material.uniforms.uTime.value = clock.getElapsedTime();
+    material.uniforms.uTime.value = (performance.now() - startTime) / 1000;
     renderer.render(scene, camera);
   }
 

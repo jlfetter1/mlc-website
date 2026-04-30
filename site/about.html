@@ -24,7 +24,15 @@
   .num-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:32px;}
   .num-strip .nv{font-family:var(--font-display);font-size:44px;font-weight:700;color:var(--gold);letter-spacing:-0.03em;line-height:1;}
   .num-strip .nl{font-size:11px;color:var(--text-on-light-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:8px;line-height:1.3;}
+  .about-story-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start;}
+  .about-pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:32px;}
+  .about-team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px;}
+  .pillar,.team-card{min-width:0;overflow-wrap:break-word;}
   @media (max-width:900px){.num-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:768px){
+    .about-story-grid,.about-pillars-grid,.about-team-grid{grid-template-columns:1fr;gap:24px;}
+    .num-strip{grid-template-columns:1fr 1fr;gap:18px;}
+  }
 </style>
 </head>
 <body>
@@ -56,7 +64,7 @@
 <!-- Story -->
 <section class="section section-light" id="story">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start;">
+    <div class="about-story-grid">
       <div class="reveal">
         <span class="eyebrow">Why MLC exists</span>
         <h2>The gap we were built to fill.</h2>
@@ -75,7 +83,7 @@
       <span class="eyebrow">What we believe</span>
       <h2>Three pillars.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:32px;">
+    <div class="about-pillars-grid">
       <div class="pillar reveal"><span class="pn">01</span><h3 style="color:var(--text-on-light);">Live instruction beats software.</h3><p>Corporate language training is a human problem. Software drills grammar; it can't teach an executive how to lose a negotiation gracefully or hold a room through a Q&amp;A.</p></div>
       <div class="pillar reveal"><span class="pn">02</span><h3 style="color:var(--text-on-light);">Content must fit the work.</h3><p>Generic lessons about vacations don't teach your team to negotiate a supply contract. Our AI content engine adapts every session to your sector.</p></div>
       <div class="pillar reveal"><span class="pn">03</span><h3 style="color:var(--text-on-light);">Measure everything you promise.</h3><p>If we say a program delivers, we deliver numbers. CEFR progression. Attendance. Cost-per-student. Training without measurement is faith-based spending. We don't do faith.</p></div>
@@ -90,7 +98,7 @@
       <span class="eyebrow">Who you'll work with</span>
       <h2>The people behind the program.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px;">
+    <div class="about-team-grid">
       <div class="team-card reveal"><div class="team-photo"></div><h4>Steve Genereux</h4><p>CEO</p></div>
       <div class="team-card reveal"><div class="team-photo"></div><h4>Anabel Mejía</h4><p>Commercial Director</p></div>
       <div class="team-card reveal"><div class="team-photo"></div><h4>Christian Poblano</h4><p>Academic Director</p></div>

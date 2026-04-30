@@ -137,12 +137,12 @@ import * as THREE from 'three';
     meshMaterial.uniforms.uAspect.value = rect.width / rect.height;
   }
 
-  const clock = new THREE.Clock();
+  const startTime = performance.now();
 
   function animate() {
     requestAnimationFrame(animate);
     if (!isVisible) return;
-    meshMaterial.uniforms.uTime.value = clock.getElapsedTime();
+    meshMaterial.uniforms.uTime.value = (performance.now() - startTime) / 1000;
     renderer.render(scene, camera);
   }
 

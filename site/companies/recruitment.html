@@ -13,6 +13,7 @@
   .scorecard{background:#fff;color:#1a2744;border-radius:10px;padding:32px;box-shadow:0 32px 100px rgba(0,0,0,0.5);font-family:var(--font-sans);}
   .scorecard h4{font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:-0.01em;margin-bottom:2px;}
   .scorecard small{font-family:'JetBrains Mono',monospace;font-size:10px;color:#8a97ad;}
+  .recruitment-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
   .sc-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #e4e7ec;padding-bottom:14px;margin-bottom:18px;}
   .sc-table{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:12px;}
   .sc-table th{text-align:left;padding:8px 10px;background:#f0f2f6;color:#5a6677;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;}
@@ -48,7 +49,9 @@
   .qa-nums{display:flex;gap:32px;}
   .qa-num{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-0.02em;text-align:right;}
   .qa-num small{display:block;font-family:var(--font-sans);font-size:10px;color:var(--text-on-dark-faint);font-weight:400;letter-spacing:0.05em;text-transform:uppercase;margin-top:3px;}
-  @media (max-width:900px){.stages-grid,.used-grid{grid-template-columns:1fr 1fr;}.sc-feedback{grid-template-columns:1fr;}}
+  .scorecard,.scorecard *{min-width:0;}
+  .scorecard p{overflow-wrap:break-word;}
+  @media (max-width:900px){.recruitment-hero-grid,.stages-grid,.used-grid{grid-template-columns:1fr;}.sc-feedback{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -71,7 +74,7 @@
 <!-- Hero with detailed scorecard -->
 <section class="section section-dark solution-hero" style="--solution-hero-image:url('../assets/solutions/recruitment.jpg');--solution-hero-position:center right;padding:160px 0 80px;">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div class="recruitment-hero-grid">
       <div class="reveal">
         <span class="eyebrow">Recruitment Support · For HR teams</span>
         <h1 style="font-size:clamp(2.4rem,5vw,3.8rem);">Hire with <span style="color:var(--gold);">certainty.</span> Skip the interview guesswork.</h1>

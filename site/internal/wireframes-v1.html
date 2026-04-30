@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MLC Wireframes v1 — all pages</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,6 +188,25 @@
 
   /* misc */
   .tiny-dots{width:30px;height:6px;background:radial-gradient(circle at center,var(--faint) 1px,transparent 1.2px) 0 0/7px 6px;display:inline-block;margin-left:8px;opacity:0.6;}
+
+  @media (max-width:768px){
+    body{padding:28px 0;}
+    .doc-head{padding:0 20px;margin-bottom:24px;}
+    .doc-head h1{font-size:28px;}
+    .doc-toc{grid-template-columns:1fr;padding:18px 20px;margin:0 20px 40px;gap:8px;}
+    .page{margin:0 12px 48px;border-radius:8px;}
+    .page-head{flex-direction:column;align-items:flex-start;gap:10px;padding:18px;}
+    .page-head .pnote{text-align:left;max-width:none;}
+    .sec,.qblock,.fcta{padding:44px 20px;}
+    .trust{padding:16px 20px;flex-wrap:wrap;}
+    .g2,.g2-e,.g3,.g4,.g5,.delta-row{grid-template-columns:1fr;gap:18px;}
+    .pstrip{flex-direction:column;}
+    .pstrip .step{border-right:none;border-bottom:1px solid var(--line);}
+    .pstrip .step:last-child{border-bottom:none;}
+    h2.display{font-size:38px;}
+    h2.mid{font-size:30px;}
+    .qattr,.qa-row{align-items:flex-start;}
+  }
 </style>
 </head>
 <body>
@@ -1181,5 +1201,6 @@
   <p>Eleven pages. Eleven different compositions. Same design system. Ready for stakeholder walkthrough and iteration.</p>
 </div>
 
+<script src="../js/i18n.js" defer></script>
 </body>
 </html>

@@ -33,7 +33,9 @@
   .qa-nums{display:flex;gap:32px;}
   .qa-num{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-0.02em;text-align:right;}
   .qa-num small{display:block;font-family:var(--font-sans);font-size:10px;color:var(--text-on-dark-faint);font-weight:400;letter-spacing:0.05em;text-transform:uppercase;margin-top:3px;}
-  @media (max-width:900px){.scenarios-grid,.nn-grid{grid-template-columns:1fr;}}
+  .premium-problem-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start;}
+  .premium-problem-grid > *{min-width:0;}
+  @media (max-width:900px){.scenarios-grid,.nn-grid,.premium-problem-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -69,7 +71,7 @@
 <!-- The problem essay -->
 <section class="section section-dark" style="padding:80px 0;">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start;">
+    <div class="premium-problem-grid">
       <div class="reveal">
         <span class="eyebrow">The problem with most executive English programs</span>
         <h2>Your team doesn't need more vocabulary.<br>They need more reps.</h2>
