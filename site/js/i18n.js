@@ -74,7 +74,7 @@ const translations = {
     "sol.abroad.tag": "Transform your world access",
     "sol.abroad.h3": "Train Abroad",
     "sol.abroad.p": "Executive immersion in the UK, Canada, and the US. Academic excellence, cultural integration, and professional networking.",
-    "sol.learn": "Learn more &rarr;",
+    "sol.learn": "Learn more →",
 
     // Process
     "proc.eyebrow": "Our Process",
@@ -108,7 +108,7 @@ const translations = {
     "why.admin.li6": "Invoice generation",
     "why.roi.h3": "Measurable ROI",
     "why.roi.p": "Every dollar justified with data. Monthly progress reports, CEFR-level tracking, attendance rates, and cost-per-student breakdowns — ready for leadership review.",
-    "why.roi.link": "See how the platform works &rarr;",
+    "why.roi.link": "See how the platform works →",
 
     // Platform
     "plat.eyebrow": "Powered by Technology",
@@ -262,7 +262,7 @@ const translations = {
     "sol.abroad.tag": "Transforma tu acceso al mundo",
     "sol.abroad.h3": "Capacitación en el Extranjero",
     "sol.abroad.p": "Inmersión ejecutiva en Reino Unido, Canadá y EE.UU. Excelencia académica, integración cultural y networking profesional.",
-    "sol.learn": "Más información &rarr;",
+    "sol.learn": "Más información →",
 
     // Process
     "proc.eyebrow": "Nuestro Proceso",
@@ -296,7 +296,7 @@ const translations = {
     "why.admin.li6": "Generación de facturas",
     "why.roi.h3": "ROI Medible",
     "why.roi.p": "Cada peso justificado con datos. Reportes mensuales de progreso, seguimiento de niveles CEFR, tasas de asistencia y desgloses de costo por alumno — listos para revisión directiva.",
-    "why.roi.link": "Conoce cómo funciona la plataforma &rarr;",
+    "why.roi.link": "Conoce cómo funciona la plataforma →",
 
     // Platform
     "plat.eyebrow": "Impulsado por Tecnología",
@@ -449,7 +449,7 @@ translations.fr = {
   "sol.abroad.tag": "Transformez votre accès au monde",
   "sol.abroad.h3": "Former à l’étranger",
   "sol.abroad.p": "Immersion exécutive au Royaume-Uni, au Canada et aux États-Unis. Excellence académique, intégration culturelle et réseautage professionnel.",
-  "sol.learn": "Apprendre encore plus&rarr;",
+  "sol.learn": "Apprendre encore plus→",
   "proc.eyebrow": "Notre processus",
   "proc.h2": "Votre tableau vous demandera comment vous avez mesuré cela.<br>Voici votre réponse.",
   "proc.lead": "Une méthodologie éprouvée depuis plus de 20 ans, désormais propulsée par l'IA.",
@@ -479,7 +479,7 @@ translations.fr = {
   "why.admin.li6": "Génération de facture",
   "why.roi.h3": "Retour sur investissement mesurable",
   "why.roi.p": "Chaque dollar justifié par des données. Rapports de progression mensuels, suivi au niveau du CECR, taux de fréquentation et répartition des coûts par étudiant – prêts pour un examen par la direction.",
-  "why.roi.link": "Découvrez comment fonctionne la plateforme&rarr;",
+  "why.roi.link": "Découvrez comment fonctionne la plateforme→",
   "plat.eyebrow": "Propulsé par la technologie",
   "plat.h2": "Infrastructure native de l'IA<br>derrière chaque programme",
   "plat.lead": "Pas seulement des consultants. Notre plateforme propriétaire automatise la coordination qui nécessite généralement toute une équipe opérationnelle.",
@@ -3202,7 +3202,7 @@ Object.assign(pageTextTranslations.fr, {
 
 (function() {
   const STORAGE_KEY = 'mlc-lang';
-  const SUPPORTED_LANGS = ['en', 'es', 'fr'];
+  const SUPPORTED_LANGS = ['en', 'es'];
   const originalTextNodes = new WeakMap();
   const originalAttrs = new WeakMap();
   let originalsCaptured = false;
