@@ -173,7 +173,7 @@ const translations = {
     // CTA
     "cta.eyebrow": "Take the Next Step",
     "cta.h2": "Your competitors are already investing in<br>executive language fluency.",
-    "cta.lead": "The question is: are you?",
+    "cta.lead": "The question is: <span class=\"cta-emphasis\">are you?</span>",
     "cta.btn1": "Schedule an appointment",
     "cta.btn2": "Schedule a free diagnostic",
 
@@ -363,7 +363,7 @@ const translations = {
     // CTA
     "cta.eyebrow": "Da el Siguiente Paso",
     "cta.h2": "Tus competidores ya están invirtiendo en<br>fluidez lingüística ejecutiva.",
-    "cta.lead": "La pregunta es: ¿y tú?",
+    "cta.lead": "La pregunta es: <span class=\"cta-emphasis\">¿y tú?</span>",
     "cta.btn1": "Agendar una cita",
     "cta.btn2": "Agendar diagnóstico gratuito",
 
@@ -540,7 +540,7 @@ translations.fr = {
   "faq.a6": "Nous utilisons l'IA pour adapter le vocabulaire, les études de cas et les scénarios pratiques au secteur spécifique de votre entreprise : produits pharmaceutiques, finance, technologie, biens de consommation, automobile, logistique, etc.",
   "cta.eyebrow": "Passez à l'étape suivante",
   "cta.h2": "Vos concurrents investissent déjà dans<br>maîtrise du langage exécutif.",
-  "cta.lead": "La question est : l’êtes-vous ?",
+  "cta.lead": "La question est : <span class=\"cta-emphasis\">l’êtes-vous ?</span>",
   "cta.btn1": "Prendre rendez-vous",
   "cta.btn2": "Planifiez un diagnostic gratuit",
   "foot.brand": "Communication de précision pour l’élite mondiale. Plus de 20 ans à transformer les talents des dirigeants.",

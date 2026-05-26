@@ -1493,6 +1493,8 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 .cta-section > * { position: relative; z-index: 1; }
 .cta-section h2 { margin-bottom: 1rem; }
 .cta-section .lead { margin: 0 auto 2rem; color: var(--text-on-dark-muted); }
+.cta-section .cta-emphasis { display: inline-block; font-family: var(--font-display, 'Space Grotesk', system-ui, sans-serif); font-size: 1.6em; font-weight: 600; color: var(--gold); letter-spacing: -0.01em; line-height: 1; }
+@media (max-width: 768px) { .cta-section .cta-emphasis { font-size: 1.4em; } }
 
 /* ---------- Footer ---------- */
 .footer {
