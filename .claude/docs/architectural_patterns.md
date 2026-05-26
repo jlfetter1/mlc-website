@@ -66,7 +66,7 @@ IntersectionObserver gates RAF loops so off-screen shaders don't burn GPU (`cta-
 
 ## Internationalization (i18n)
 
-Flat translation dictionary with dot-notation keys in `site/js/i18n.js:6-336`. ~391 keys covering all page content in EN/ES.
+Flat translation dictionary with dot-notation keys in `site/js/i18n.js:6-336`. Comprehensive EN/ES coverage for all page content (~141 keys per language).
 
 **Flow:** User clicks `.lang-toggle` -> `localStorage('mlc-lang')` persists choice -> IIFE walks all `[data-i18n]` elements and sets `textContent` (or `innerHTML` if value contains `<`).
 

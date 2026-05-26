@@ -15,15 +15,17 @@ Premium B2B website for Modern Language Center (MLC) - enterprise language train
 
 ```
 site/                    # Deployed directory (GitHub Pages serves this)
-  index.html             # Main homepage (all 11 sections)
-  welcome.html           # Split landing page (companies vs individuals)
+  index.html             # Main homepage (all 11 sections) — canonical entry
+  welcome.html           # Optional split-entry page routing to index.html (companies) or individuals.html (individuals, not yet built). Not linked from index.html.
+  competitive-analysis.html  # Standalone research deck (shares styles.css)
+  proposal.html          # Standalone proposal deck (shares styles.css)
   css/styles.css         # Full design system (~2400 lines)
   js/
     main.js              # Scroll animations, nav, FAQ, stat counters
-    i18n.js              # Translation dictionary (391 keys) + language switcher
+    i18n.js              # EN/ES translation dictionary + language switcher
     mesh-gradient.js     # Three.js aurora shader (hero section)
     cta-shader.js        # Three.js dot grid shader (CTA section)
-    gemini-images.js     # Node.js CLI for Gemini image generation (not served)
+    gemini-images.js     # Node.js CLI for Gemini image generation — tooling, not served at runtime. Co-located here for historical reasons; do not import from page scripts.
   assets/                # Images, videos, logos, solution photos
 .github/workflows/
   deploy.yml             # GitHub Pages deployment (checkout -> upload site/ -> deploy)
@@ -53,6 +55,23 @@ python -m http.server -d site
 - **All animations** must check `prefers-reduced-motion` and degrade gracefully
 - **WebGL shaders** are self-contained IIFEs that manage their own scene lifecycle and use IntersectionObserver to pause when off-screen
 - **Card easing:** `cubic-bezier(0.23,1,0.32,1)` throughout
+
+## Asset Conventions
+
+- `site/assets/solutions/*.jpg` — hero image for each solution card (one per solution, lowercase-kebab name matching the solution key)
+- `site/assets/logos/*.svg` — client brand logos; prefer SVG, keep PNG/ICO only as fallbacks. Trust-bar logos follow the `brands_home-<BRAND>.svg` naming
+- `site/assets/hero-*.jpg`, `photo-*.jpg`, `hero-video.mp4` — top-level hero and photo imagery referenced from multiple pages
+- Compress JPEGs to ≤200KB where possible; prefer SVG for anything vector
+- **Root-level JPEGs** (`proposal-*.jpeg`, `simple-*.jpeg`, `final-*.jpeg`) are generated deliverables from the `image-generator/` and `proposal/` tooling — not served by the site and should not be referenced from `site/`
+
+## Testing & Validation
+
+No tests, linters, or typecheckers are configured. Validate changes by:
+1. Running a local static server (`npx serve site` or `python -m http.server -d site`)
+2. Checking the browser console for errors
+3. Testing EN/ES toggle, nav scroll state, FAQ expand, and scroll-reveal animations
+4. Verifying `prefers-reduced-motion` path (DevTools → Rendering → Emulate CSS media feature)
+5. Mobile breakpoint (<768px) and tablet breakpoint (768–1024px)
 
 ## Additional Documentation
 
