@@ -16,7 +16,9 @@ Premium B2B website for Modern Language Center (MLC) - enterprise language train
 ```
 site/                    # Deployed directory (GitHub Pages serves this)
   index.html             # Main homepage (all 11 sections) — canonical entry
-  welcome.html           # Optional split-entry page routing to index.html (companies) or individuals.html (individuals, not yet built). Not linked from index.html.
+  individuals.html       # Individuals lander
+  about.html, privacy.html
+  companies/             # Eight solution landers (business-english, premium-production, coaching, recruitment, accreditation, translation, languages, train-abroad)
   competitive-analysis.html  # Standalone research deck (shares styles.css)
   proposal.html          # Standalone proposal deck (shares styles.css)
   css/styles.css         # Full design system (~2400 lines)
