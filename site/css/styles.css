@@ -107,6 +107,24 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
   margin-bottom: 1.25rem;
 }
 
+/* Featured eyebrow — extra prominence for a flagship section signpost
+   ("La Diferencia"). Emphasis via size, weight, and a drawn gold rule
+   (no italics); scoped so other eyebrows are unaffected. */
+.eyebrow-feature {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.5rem;
+}
+.eyebrow-feature::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0.7rem auto 0;
+}
+
 .lead {
   font-size: 1.125rem;
   font-weight: 400;
@@ -235,7 +253,7 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 }
 
 .nav-logo {
-  height: 38px;
+  height: 46px;
   opacity: 1;
 }
 
@@ -320,25 +338,30 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 
 .lang-active {
   font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   color: #fff;
   letter-spacing: 0.04em;
 }
 
 .lang-divider {
   font-family: var(--font-sans);
-  font-size: 12px;
-  color: rgba(255,255,255,0.25);
-  margin: 0 1px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin: 0 2px;
 }
 
 .lang-inactive {
   font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.4);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.78);
   letter-spacing: 0.04em;
+  transition: color 200ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .lang-toggle:hover .lang-inactive { color: #fff; }
 }
 
 /* Mobile toggle */
