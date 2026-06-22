@@ -201,7 +201,10 @@ const translations = {
     "foot.privacy": "Privacy Policy",
 
     // Business English
-    "be.h1": "Results HR can present to the CFO <span style='color:var(--gold)'>with confidence.</span>"
+    "be.h1": "Results HR can present to the CFO <span style='color:var(--gold)'>with confidence.</span>",
+
+    // Accreditation
+    "acc.h1": "Certify your team. <span style='color:var(--gold)'>The guarantee of specialized, high-impact preparation.</span>"
   },
 
   es: {
@@ -401,7 +404,10 @@ const translations = {
     "foot.privacy": "Política de Privacidad",
 
     // Business English
-    "be.h1": "Resultados que RRHH puede presentar <span style='color:var(--gold)'>con confianza</span> al CFO."
+    "be.h1": "Resultados que RRHH puede presentar <span style='color:var(--gold)'>con confianza</span> al CFO.",
+
+    // Accreditation
+    "acc.h1": "Certifica a tu equipo. <span style='color:var(--gold)'>La garantía de una preparación especializada y de alto impacto.</span>"
   }
 };
 
@@ -1184,7 +1190,6 @@ Object.assign(pageTextTranslations.es, {
   "German": "Alemán",
   "GERMAN": "ALEMÁN",
   "Get my diagnostic →": "Obtener mi diagnóstico →",
-  "Get your team": "Obtén la certificación para tu equipo",
   "Global Brand": "Marca mundial",
   "Global personal-development brand · 10,000+ attendees · CDMX": "Marca global de desarrollo personal · 10,000+ asistentes · CDMX",
   "Goethe-Zertifikat": "Certificación Goethe",
@@ -1442,7 +1447,6 @@ Object.assign(pageTextTranslations.es, {
   "Nurses certified": "enfermeras certificadas",
   "Of top-tier leaders complete our program.": "De líderes de primer nivel completan nuestro programa.",
   "Off-campus immersion": "Inmersión fuera del campus",
-  "On the timeline the credential requires.": "En el cronograma que requiere la certificación.",
   "On-site, remote, hybrid.": "Presencial, remoto, híbrido.",
   "On-site, remote, or hybrid — and how do you handle CDMX + MTY + GDL?": "Presencial, remoto o híbrido, ¿y cómo se maneja CDMX + MTY + GDL?",
   "On-site, remote, or hybrid.": "Presencial, remota o híbrida.",
@@ -2519,7 +2523,6 @@ Object.assign(pageTextTranslations.fr, {
   "German": "Allemand",
   "GERMAN": "ALLEMAND",
   "Get my diagnostic →": "Obtenir mon diagnostic →",
-  "Get your team": "Obtenez votre équipe",
   "Global Brand": "Marque mondiale",
   "Global personal-development brand · 10,000+ attendees · CDMX": "Marque mondiale de développement personnel · Plus de 10 000 participants · CDMX",
   "Goethe-Zertifikat": "Goethe-Zertifikat",
@@ -2777,7 +2780,6 @@ Object.assign(pageTextTranslations.fr, {
   "Nurses certified": "Infirmières certifiées",
   "Of top-tier leaders complete our program.": "Des leaders de haut niveau terminent notre programme.",
   "Off-campus immersion": "Immersion hors campus",
-  "On the timeline the credential requires.": "Sur la chronologie requise par les informations d'identification.",
   "On-site, remote, hybrid.": "Sur site, à distance, hybride.",
   "On-site, remote, or hybrid — and how do you handle CDMX + MTY + GDL?": "Sur site, à distance ou hybride — et comment gérez-vous CDMX + MTY + GDL ?",
   "On-site, remote, or hybrid.": "Sur site, à distance ou hybride.",

@@ -11,8 +11,11 @@
 <link rel="stylesheet" href="../css/styles.css">
 <style>
   .cert-row{margin-bottom:32px;}
-  .cert-row .row-lbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:0.15em;margin-bottom:12px;display:block;}
+  .cert-row .row-lbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-on-dark-faint);letter-spacing:0.15em;margin-bottom:12px;display:block;}
   .cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .cert-cell{display:flex;flex-direction:column;}
+  .cert-cell .cert-lang{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-on-dark-faint);letter-spacing:0.12em;margin-bottom:8px;display:block;}
+  .cert-cell .cert-badge{flex:1;}
   .cert-badge{padding:18px;background:var(--bg-dark-2);border:1px solid var(--border-dark);border-radius:8px;text-align:center;}
   .cert-code{font-family:var(--font-display);font-size:17px;font-weight:700;color:var(--gold);letter-spacing:0.02em;margin-bottom:6px;}
   .cert-full{font-size:11px;color:var(--text-on-dark-muted);line-height:1.4;}
@@ -46,7 +49,7 @@
 <section class="section section-dark solution-hero" style="--solution-hero-image:url('../assets/solutions/accreditation.jpg');--solution-hero-position:center right;padding:160px 0 70px;">
   <div class="container">
     <span class="eyebrow reveal">Accreditation · Certification prep</span>
-    <h1 class="reveal" style="font-size:clamp(2.6rem,5vw,4.2rem);max-width:1000px;">Get your team <span style="color:var(--gold);">certified.</span><br>On the timeline the credential requires.</h1>
+    <h1 class="reveal" style="font-size:clamp(2.6rem,5vw,4.2rem);max-width:1000px;" data-i18n="acc.h1">Certify your team. <span style="color:var(--gold);">The guarantee of specialized, high-impact preparation.</span></h1>
     <p class="lead reveal" style="margin-bottom:32px;color:var(--text-on-dark-muted);">IELTS, TOEFL, TOEIC, DELF, DALF, Goethe, CELPE-BRAS, DELE. Whether the certification is for a credential, MBA application, immigration filing, or internal promotion — MLC prep is built around the specific exam, with a named target date and target score.</p>
     <div class="reveal" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
       <a href="#contact" class="btn btn-blue" data-i18n="common.cta.appointment">Schedule an appointment</a>
@@ -62,29 +65,24 @@
       <span class="eyebrow">The certifications we prep</span>
       <h2>Eight exams. Five languages.<br>One methodology.</h2>
     </div>
-    <div class="cert-grid reveal">
-      <div>
+    <div class="reveal">
+      <div class="cert-row">
         <span class="row-lbl">English</span>
-        <div class="cert-badge"><div class="cert-code">IELTS</div><div class="cert-full">Academic / General · MBA, immigration, credential</div></div>
-        <div class="cert-badge"><div class="cert-code">TOEFL iBT</div><div class="cert-full">US graduate admissions · 120-point</div></div>
-        <div class="cert-badge"><div class="cert-code">TOEIC</div><div class="cert-full">Corporate · Japan-facing roles</div></div>
-        <div class="cert-badge"><div class="cert-code">FCE / CAE / CPE</div><div class="cert-full">Cambridge · B2 / C1 / C2</div></div>
+        <div class="cert-grid">
+          <div class="cert-badge"><div class="cert-code">IELTS</div><div class="cert-full">Academic / General · MBA, immigration, credential</div></div>
+          <div class="cert-badge"><div class="cert-code">TOEFL iBT</div><div class="cert-full">US graduate admissions · 120-point</div></div>
+          <div class="cert-badge"><div class="cert-code">TOEIC</div><div class="cert-full">Corporate · Japan-facing roles</div></div>
+          <div class="cert-badge"><div class="cert-code">FCE / CAE / CPE</div><div class="cert-full">Cambridge · B2 / C1 / C2</div></div>
+        </div>
       </div>
-      <div>
-        <span class="row-lbl">French</span>
-        <div class="cert-badge"><div class="cert-code">DELF / DALF</div><div class="cert-full">Practical (B1/B2) or academic (C1/C2)</div></div>
-      </div>
-      <div>
-        <span class="row-lbl">German</span>
-        <div class="cert-badge"><div class="cert-code">Goethe-Zertifikat</div><div class="cert-full">A1 through C2</div></div>
-      </div>
-      <div>
-        <span class="row-lbl">Spanish</span>
-        <div class="cert-badge"><div class="cert-code">DELE</div><div class="cert-full">A1 through C2 · Instituto Cervantes</div></div>
-      </div>
-      <div>
-        <span class="row-lbl">Brazilian Portuguese</span>
-        <div class="cert-badge"><div class="cert-code">CELPE-BRAS</div><div class="cert-full">Brazilian Portuguese</div></div>
+      <div class="cert-row">
+        <span class="row-lbl">Other Languages</span>
+        <div class="cert-grid">
+          <div class="cert-cell"><span class="cert-lang">French</span><div class="cert-badge"><div class="cert-code">DELF / DALF</div><div class="cert-full">Practical (B1/B2) or academic (C1/C2)</div></div></div>
+          <div class="cert-cell"><span class="cert-lang">German</span><div class="cert-badge"><div class="cert-code">Goethe-Zertifikat</div><div class="cert-full">A1 through C2</div></div></div>
+          <div class="cert-cell"><span class="cert-lang">Spanish</span><div class="cert-badge"><div class="cert-code">DELE</div><div class="cert-full">A1 through C2 · Instituto Cervantes</div></div></div>
+          <div class="cert-cell"><span class="cert-lang">Brazilian Portuguese</span><div class="cert-badge"><div class="cert-code">CELPE-BRAS</div><div class="cert-full">Brazilian Portuguese</div></div></div>
+        </div>
       </div>
     </div>
   </div>
