@@ -354,7 +354,7 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 .lang-inactive {
   font-family: var(--font-sans);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   color: rgba(255,255,255,0.78);
   letter-spacing: 0.04em;
   transition: color 200ms ease;
