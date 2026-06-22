@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
         seconds++;
         const m = Math.floor(seconds / 60);
         const s = seconds % 60;
-        zoomLabel.textContent = 'Live — Business English B2  ' + m + ':' + String(s).padStart(2, '0');
+        zoomLabel.textContent = 'Live · Business English B2  ' + m + ':' + String(s).padStart(2, '0');
       }, 1000);
     }
   }
