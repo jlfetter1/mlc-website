@@ -34,7 +34,7 @@ const translations = {
     "form.city.mty": "Monterrey",
     "form.city.gdl": "Guadalajara",
     "form.city.other": "Other",
-    "form.note": "CEFR assessment + custom proposal delivered within 48 hours. Your data stays with MLC — we don't sell leads.",
+    "form.note": "CEFR assessment + custom proposal delivered within 48 hours. Your privacy is our priority; we never share your data.",
 
     // Hero
     "hero.eyebrow": "Modern Language Center",
@@ -125,7 +125,7 @@ const translations = {
     "plat.dash.s4": "Cost per Hour",
     "plat.ai.eyebrow": "AI Content Engine",
     "plat.ai.h3": "Industry-specific vocabulary powered by AI",
-    "plat.ai.p": "Our AI adapts every lesson to your sector — pharma, finance, automotive, tech, consumer goods.",
+    "plat.ai.p": "Our AI adapts every lesson to your sector: pharma, finance, automotive, tech, consumer goods.",
     "plat.ai.preview": "Generated lesson preview",
     "plat.zoom.eyebrow": "Zoom Integration",
     "plat.zoom.h3": "Automated attendance & class management",
@@ -224,7 +224,7 @@ const translations = {
     "form.city.mty": "Monterrey",
     "form.city.gdl": "Guadalajara",
     "form.city.other": "Otra",
-    "form.note": "Evaluación CEFR + propuesta personalizada en 48 horas. Tus datos se quedan con MLC — no vendemos prospectos.",
+    "form.note": "Evaluación CEFR + propuesta personalizada en 48 horas. Tu privacidad es nuestra prioridad; nunca compartimos tus datos.",
 
     // Hero
     "hero.eyebrow": "Modern Language Center",
@@ -268,7 +268,7 @@ const translations = {
 
     // Process
     "proc.eyebrow": "Nuestro Proceso",
-    "proc.h2": "Tu junta directiva preguntará cómo mediste esto.<br>Aquí está tu respuesta.",
+    "proc.h2": "Tu junta directiva preguntará cómo mediste esto.<br>Aquí está la respuesta.",
     "proc.lead": "Una metodología probada por más de 20 años, ahora potenciada por IA.",
     "proc.s1.h4": "Evaluar",
     "proc.s1.p": "Mapeamos el nivel, brechas y objetivos de cada equipo con tu líder de RH.",
@@ -315,7 +315,7 @@ const translations = {
     "plat.dash.s4": "Costo por Hora",
     "plat.ai.eyebrow": "Motor de Contenido IA",
     "plat.ai.h3": "Vocabulario específico por industria impulsado por IA",
-    "plat.ai.p": "Nuestra IA adapta cada lección a tu sector — farmacéutica, finanzas, automotriz, tecnología, consumo.",
+    "plat.ai.p": "Nuestra IA adapta cada lección a tu sector: farmacéutica, finanzas, automotriz, tecnología o consumo.",
     "plat.ai.preview": "Vista previa de lección generada",
     "plat.zoom.eyebrow": "Integración Zoom",
     "plat.zoom.h3": "Asistencia automatizada y gestión de clases",
@@ -918,7 +918,7 @@ Object.assign(pageTextTranslations.es, {
   "Case studies, role-plays, drills — all from your sector's actual vocabulary.": "Estudios de casos, juegos de roles, simulacros: todo ello a partir del vocabulario real de su sector.",
   "CEFR + role review, per participant.": "MCER + revisión de roles, por participante.",
   "CEFR + role review.": "MCER + revisión de roles.",
-  "CEFR assessment + custom proposal delivered within 48 hours. Your data stays with MLC — we don't sell leads.": "Evaluación MCER + propuesta personalizada entregada en 48 horas. Sus datos permanecen en MLC: no vendemos clientes potenciales.",
+  "CEFR assessment + custom proposal delivered within 48 hours. Your privacy is our priority; we never share your data.": "Evaluación CEFR + propuesta personalizada en 48 horas. Tu privacidad es nuestra prioridad; nunca compartimos tus datos.",
   "CEFR CERTIFIED · CANDIDATE ID: #7842": "CERTIFICADO CEFR · ID DEL CANDIDATO: #7842",
   "CEFR CERTIFIED · ID #7842": "CERTIFICADO CEFR · ID #7842",
   "CEFR coverage": "Cobertura del MCER",
@@ -2255,7 +2255,7 @@ Object.assign(pageTextTranslations.fr, {
   "Case studies, role-plays, drills — all from your sector's actual vocabulary.": "Études de cas, jeux de rôle, exercices, le tout à partir du vocabulaire actuel de votre secteur.",
   "CEFR + role review, per participant.": "CECR + révision des rôles, par participant.",
   "CEFR + role review.": "CECR + révision des rôles.",
-  "CEFR assessment + custom proposal delivered within 48 hours. Your data stays with MLC — we don't sell leads.": "Évaluation CECR + proposition personnalisée livrée sous 48 heures. Vos données restent chez MLC — nous ne vendons pas de prospects.",
+  "CEFR assessment + custom proposal delivered within 48 hours. Your privacy is our priority; we never share your data.": "Évaluation CECR + proposition personnalisée livrée sous 48 heures. Vos données restent chez MLC — nous ne vendons pas de prospects.",
   "CEFR CERTIFIED · CANDIDATE ID: #7842": "CERTIFIÉ CECR · ID CANDIDAT : #7842",
   "CEFR CERTIFIED · ID #7842": "CERTIFIÉ CECR · ID #7842",
   "CEFR coverage": "Couverture du CECR",
