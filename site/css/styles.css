@@ -1514,6 +1514,16 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 .faq-list { max-width: 700px; margin: 0 auto; }
 .faq-item { border-bottom: 1px solid var(--border-dark); }
 
+/* Highlighted FAQ — draws the eye to a key question (e.g. retake policy).
+   Gold left accent + faint tint; works on dark and light sections. */
+.faq-item.faq-highlight {
+  border-left: 2px solid var(--gold);
+  background: rgba(197, 164, 108, 0.06);
+  padding-left: 18px;
+  border-radius: 0 6px 6px 0;
+}
+.faq-item.faq-highlight .faq-question { color: var(--gold); }
+
 .faq-question {
   width: 100%;
   background: none;
