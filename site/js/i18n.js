@@ -198,7 +198,10 @@ const translations = {
     "foot.travelAbroad": "Travel Abroad",
     "foot.about": "About Us",
     "foot.contact": "Contact",
-    "foot.privacy": "Privacy Policy"
+    "foot.privacy": "Privacy Policy",
+
+    // Business English
+    "be.h1": "Results HR can present to the CFO <span style='color:var(--gold)'>with confidence.</span>"
   },
 
   es: {
@@ -395,7 +398,10 @@ const translations = {
     "foot.travelAbroad": "Viaja al Extranjero",
     "foot.about": "Nosotros",
     "foot.contact": "Contacto",
-    "foot.privacy": "Política de Privacidad"
+    "foot.privacy": "Política de Privacidad",
+
+    // Business English
+    "be.h1": "Resultados que RRHH puede presentar <span style='color:var(--gold)'>con confianza</span> al CFO."
   }
 };
 
@@ -898,7 +904,7 @@ Object.assign(pageTextTranslations.es, {
   "Built for serious learners.": "Creado para estudiantes serios.",
   "Built-in chat that understands your school data — ask questions, generate reports, get suggestions": "Chat integrado que comprende los datos de su escuela: haga preguntas, genere informes y obtenga sugerencias",
   "Business English": "Inglés de negocios",
-  "Business English HR can defend to the CFO. CEFR-aligned, AI-adapted, monthly leadership-ready reports.": "El inglés comercial RR.HH. puede defenderse ante el director financiero. Informes mensuales preparados para el liderazgo, alineados con el MCER, adaptados a la IA.",
+  "Business English results HR can present to the CFO with confidence. CEFR-aligned, AI-adapted, monthly leadership-ready reports.": "Resultados de inglés comercial que RRHH puede presentar con confianza al CFO. Alineado con el MCER, adaptado con IA, con informes mensuales listos para el liderazgo.",
   "Business English Program — Modern Language Center": "Programa de inglés de negocios — Modern Language Center",
   "Business English Program · For corporate teams": "Programa de inglés de negocios · Para equipos corporativos",
   "Business English: cohorts of 8. For Japanese, Mandarin, Italian we can start at 3 or run one-on-one tracks.": "Inglés de negocios: grupos de 8. Para japonés, mandarín e italiano podemos comenzar con 3 o realizar pistas individuales.",
@@ -1166,7 +1172,7 @@ Object.assign(pageTextTranslations.es, {
   "FRENCH": "FRANCÉS",
   "French parent companies — pharma, luxury, automotive, aerospace.": "Empresas matrices francesas: farmacéutica, de lujo, automovilística y aeroespacial.",
   "French parent companies — pharma, luxury, automotive.": "Empresas matrices francesas: farmacéutica, de lujo y automovilística.",
-  "From a one-week trip with English classes to a full multi-month immersion. Designed for executives, undergraduate and graduate students, and middle and upper management — anyone whose English needs to clear a specific bar.": "Desde un viaje de una semana con clases de inglés hasta una inmersión completa de varios meses. Diseñado para ejecutivos, directivos, estudiantes de licenciatura y posgrado: cualquier persona cuyo inglés necesite superar un nivel específico. Además, tenemos programas para niños y jóvenes en escuelas exclusivas.",
+  "From a one-week trip with English classes to a full multi-month immersion. Designed for executives, managers, and directors, as well as undergraduate and graduate students; in general, for anyone who needs an accelerated, measurable improvement in their English. We also run dedicated programs for children and teens at exclusive boarding schools abroad.": "Desde una estancia de una semana con clases de inglés hasta una inmersión completa de varios meses. Diseñado para ejecutivos, gerentes y directivos, así como para estudiantes de licenciatura y posgrado; en general, para cualquier persona que requiera una mejora acelerada y medible de su nivel de inglés. También ofrecemos programas especializados para niños y adolescentes en exclusivos internados en el extranjero.",
   "Full mock every 3 weeks. Score trajectory transparent.": "Simulacro completo cada 3 semanas. Trayectoria de puntuación transparente.",
   "Full mock exam": "Examen simulado completo",
   "Full mock is regularly scheduled. Score trajectory transparent.": "Se programan periódicamente simulacros completos. Progreso de puntuación real y transparente.",
@@ -1225,7 +1231,6 @@ Object.assign(pageTextTranslations.es, {
   "How long does the full assessment take?": "¿Cuánto tiempo lleva la evaluación completa?",
   "How long until I see results?": "¿Cuánto tiempo hasta que vea resultados?",
   "How quickly can I start?": "¿Qué tan rápido puedo empezar?",
-  "HR can defend to the CFO.": "que RRHH puede presentar con confianza al CFO.",
   "HR director evaluating candidate scorecards": "Director de recursos humanos evaluando cuadros de mando de candidatos",
   "HR Directors have sat through enough vendor pitches. You know the promise. What you don't know is what lands in your inbox on the 1st of every month. This does.": "Los directores de recursos humanos han escuchado suficientes presentaciones de proveedores. Ya conoces la promesa. Lo que no sabes es lo que llega a tu bandeja de entrada el día 1 de cada mes. Esto sí.",
   "HR Focus": "Enfoque en RRHH",
@@ -1668,7 +1673,6 @@ Object.assign(pageTextTranslations.es, {
   "Ten thousand attendees, four language pairs, zero misses. The MLC interpretation team ran that event like airline operations — nothing was left to chance.": "Diez mil asistentes, tres conferencias al mismo tiempo en la misma sede con servicio de traducción simultánea y cero margen para errores. El equipo de interpretación de MLC coordinó el evento con precisión absoluta: cada detalle estuvo controlado y nada se dejó al azar.",
   "Testimonials": "Testimonios",
   "Text": "Texto",
-  "The Business English program": "Un programa de inglés de negocios respaldado por resultados",
   "The cadence, every quarter": "La cadencia, cada trimestre.",
   "The candidate profile": "El perfil del candidato",
   "The CEFR progression data is what won the budget renewal. Our board saw the curve and approved an expansion into the Monterrey office the same meeting.": "Los datos de progresión del MCER fueron clave para la renovación del presupuesto. Nuestra junta directiva vio la curva de avance y aprobó la expansión a la oficina de Monterrey en la misma reunión.",
@@ -2235,7 +2239,7 @@ Object.assign(pageTextTranslations.fr, {
   "Built for serious learners.": "Conçu pour les apprenants sérieux.",
   "Built-in chat that understands your school data — ask questions, generate reports, get suggestions": "Chat intégré qui comprend les données de votre école : posez des questions, générez des rapports, obtenez des suggestions",
   "Business English": "Anglais des affaires",
-  "Business English HR can defend to the CFO. CEFR-aligned, AI-adapted, monthly leadership-ready reports.": "L'anglais des affaires RH peut se défendre auprès du directeur financier. Rapports mensuels adaptés au leadership, alignés sur le CECR et adaptés à l'IA.",
+  "Business English results HR can present to the CFO with confidence. CEFR-aligned, AI-adapted, monthly leadership-ready reports.": "L'anglais des affaires RH peut se défendre auprès du directeur financier. Rapports mensuels adaptés au leadership, alignés sur le CECR et adaptés à l'IA.",
   "Business English Program — Modern Language Center": "Programme d'anglais des affaires — Modern Language Center",
   "Business English Program · For corporate teams": "Programme d'anglais des affaires · Pour les équipes d'entreprise",
   "Business English: cohorts of 8. For Japanese, Mandarin, Italian we can start at 3 or run one-on-one tracks.": "Anglais des affaires : cohortes de 8. Pour le japonais, le mandarin et l'italien, nous pouvons commencer à 3 ou organiser des cours individuels.",
@@ -2503,7 +2507,7 @@ Object.assign(pageTextTranslations.fr, {
   "FRENCH": "FRANÇAIS",
   "French parent companies — pharma, luxury, automotive, aerospace.": "Sociétés mères françaises – pharmaceutique, luxe, automobile, aérospatiale.",
   "French parent companies — pharma, luxury, automotive.": "Sociétés mères françaises – pharma, luxe, automobile.",
-  "From a one-week trip with English classes to a full multi-month immersion. Designed for executives, undergraduate and graduate students, and middle and upper management — anyone whose English needs to clear a specific bar.": "D'un voyage d'une semaine avec cours d'anglais à une immersion complète de plusieurs mois. Conçu pour les cadres, les étudiants de premier cycle et des cycles supérieurs, ainsi que les cadres intermédiaires et supérieurs – toute personne dont l'anglais doit franchir une barre spécifique.",
+  "From a one-week trip with English classes to a full multi-month immersion. Designed for executives, managers, and directors, as well as undergraduate and graduate students; in general, for anyone who needs an accelerated, measurable improvement in their English. We also run dedicated programs for children and teens at exclusive boarding schools abroad.": "D'un voyage d'une semaine avec cours d'anglais à une immersion complète de plusieurs mois. Conçu pour les cadres, les étudiants de premier cycle et des cycles supérieurs, ainsi que les cadres intermédiaires et supérieurs – toute personne dont l'anglais doit franchir une barre spécifique.",
   "Full mock every 3 weeks. Score trajectory transparent.": "Simulation complète toutes les 3 semaines. Trajectoire de score transparente.",
   "Full mock exam": "Examen blanc complet",
   "Full mock is regularly scheduled. Score trajectory transparent.": "Une simulation complète est régulièrement programmée. Trajectoire de score transparente.",
@@ -2562,7 +2566,6 @@ Object.assign(pageTextTranslations.fr, {
   "How long does the full assessment take?": "Combien de temps dure l’évaluation complète ?",
   "How long until I see results?": "Combien de temps faudra-t-il pour voir des résultats ?",
   "How quickly can I start?": "En combien de temps puis-je commencer ?",
-  "HR can defend to the CFO.": "Les RH peuvent se défendre auprès du directeur financier.",
   "HR director evaluating candidate scorecards": "Directeur des ressources humaines évaluant les cartes de pointage des candidats",
   "HR Directors have sat through enough vendor pitches. You know the promise. What you don't know is what lands in your inbox on the 1st of every month. This does.": "Les directeurs des ressources humaines ont assisté à suffisamment d’argumentaires avec les fournisseurs. Vous connaissez la promesse. Ce que vous ne savez pas, c'est ce qui arrive dans votre boîte de réception le 1er de chaque mois. C'est le cas.",
   "HR Focus": "Focus RH",
@@ -3005,7 +3008,6 @@ Object.assign(pageTextTranslations.fr, {
   "Ten thousand attendees, four language pairs, zero misses. The MLC interpretation team ran that event like airline operations — nothing was left to chance.": "Dix mille participants, quatre paires de langues, zéro échec. L’équipe d’interprétation du MLC a géré cet événement comme les opérations d’une compagnie aérienne : rien n’a été laissé au hasard.",
   "Testimonials": "Témoignages",
   "Text": "Texte",
-  "The Business English program": "Le programme d'anglais des affaires",
   "The cadence, every quarter": "La cadence, chaque trimestre",
   "The candidate profile": "Le profil du candidat",
   "The CEFR progression data is what won the budget renewal. Our board saw the curve and approved an expansion into the Monterrey office the same meeting.": "Les données de progression du CECR sont ce qui a valu le renouvellement du budget. Notre conseil d'administration a vu la courbe et a approuvé une expansion du bureau de Monterrey au cours de la même réunion.",
