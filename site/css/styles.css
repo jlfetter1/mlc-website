@@ -778,6 +778,66 @@ h4 { font-size: 1rem; font-weight: 600; font-family: var(--font-display); }
 .section-light .card p { color: var(--text-on-light-muted); }
 .section-light .card h3 { color: var(--text-on-light); }
 
+/* ---------- Personalization statement (whitespace-forward) ---------- */
+.personalize {
+  /* extra breathing room beyond the base section rhythm */
+  padding-top: calc(var(--section-pad) * 1.15);
+  padding-bottom: calc(var(--section-pad) * 1.15);
+}
+.personalize .container { max-width: 980px; }
+.personalize-head {
+  max-width: 760px;
+  margin: 0 auto 4.5rem;
+  text-align: center;
+}
+.personalize-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.2vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.personalize-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.75rem;
+}
+.personalize-points li {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+.pp-mark {
+  color: var(--gold);
+  font-weight: 700;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+.personalize-points p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--text-on-light-muted);
+}
+.personalize-close {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.6vw, 1.95rem);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  color: var(--text-on-light);
+}
+.personalize-close .pp-accent { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .personalize-head { margin-bottom: 3rem; }
+  .personalize-points { grid-template-columns: 1fr; gap: 1.6rem; margin-bottom: 3rem; }
+}
+
 /* Light solution cards — already white, no overrides needed */
 
 /* Light testimonials */

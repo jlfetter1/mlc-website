@@ -112,6 +112,13 @@ const translations = {
     "why.roi.p": "Every dollar justified with data. Monthly progress reports, CEFR-level tracking, attendance rates, and cost-per-student breakdowns — ready for leadership review.",
     "why.roi.link": "See how the platform works →",
 
+    // Personalization
+    "pers.h2": "Training as personalized as your business.",
+    "pers.p1": "Adapted to your industry, goals, and teams.",
+    "pers.p2": "Focused on real business situations, not theory.",
+    "pers.p3": "Personalization without sacrificing consistency, metrics, or quality control.",
+    "pers.close": "Personalization where it matters. <span class=\"pp-accent\">Consistency where it counts.</span>",
+
     // Platform
     "plat.eyebrow": "Powered by Technology",
     "plat.h2": "AI-native infrastructure<br>behind every program",
@@ -301,6 +308,13 @@ const translations = {
     "why.roi.h3": "ROI Medible",
     "why.roi.p": "Cada inversión justificada con datos. Reportes mensuales de progreso, seguimiento de niveles MCER, tasas de asistencia y desgloses de costo por estudiante, listos para revisión directiva.",
     "why.roi.link": "Conoce cómo funciona la plataforma →",
+
+    // Personalization
+    "pers.h2": "Capacitación tan personalizada como tu negocio.",
+    "pers.p1": "Adaptada a tu industria, objetivos y equipos.",
+    "pers.p2": "Enfocada en situaciones reales de negocio, no en teoría.",
+    "pers.p3": "Personalización sin sacrificar consistencia, métricas ni control de calidad.",
+    "pers.close": "Personalización donde importa. <span class=\"pp-accent\">Consistencia donde cuenta.</span>",
 
     // Platform
     "plat.eyebrow": "Impulsado por Tecnología",
